@@ -1,0 +1,415 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0px;
+}
+
+.footer {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: x-small;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.linknor {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #666666;
+}
+
+.linkact {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #000000;
+}
+
+a.linknor:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: Crimson;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.linknor_dropdown {
+    font-family: Helvetica;
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: 600
+}
+
+.linknor_dropdown1 {
+    font-family: Helvetica;
+    font-size: 11px;
+    color: #F70F51;
+    font-weight: 600
+}
+
+.linknor_dropdownIntermediate {
+    font-family: Helvetica;
+    font-size: 11px;
+    color: #0F0FF7;
+    font-weight: 600
+}
+
+.linkFilter {
+    font-family: Helvetica;
+    font-size: 11px;
+    color: Yellow;
+    font-weight: 600
+}
+
+.linkact_dropdown {
+    font-family: Helvetica;
+    font-size: 11px;
+    color: #000000;
+    font-weight: 600
+}
+
+#nav_table {
+    border: 1px solid #7CA2B5;
+}
+
+#primaryNavBox {
+    font-family: arial;
+    font-size: 11px;
+    color: #3B73B9;
+}
+
+#primaryNavBoxCurrent {
+    font-family: arial;
+    font-size: 11px;
+    color: #24211D;
+}
+
+#nav_arrow {
+    margin-right: 4px;
+    margin-left: 2px;
+}
+
+#globalInput {
+    font-family: arial;
+    font-size: 12px;
+    width: 50px;
+}
+
+#globalDrop {
+    font-family: arial;
+    font-size: 11px;
+    width: 50px;
+}
+
+#spot_under {
+    padding-left: 0px;
+    padding-top: 12px;
+    padding-right: 20px;
+}
+
+#spot_under_right {
+    padding-left: 0px;
+    padding-top: 12px;
+    padding-right: 10px;
+}
+
+#spot_self {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 10px;
+}
+
+#leftblue12Text {
+    font-family: arial;
+    font-size: 12px;
+    color: #3B73B9;
+    line-height: 1.6;
+    padding-left: 15px;
+}
+
+#leftgrey12Text {
+    font-family: arial;
+    font-size: 12px;
+    color: #999999;
+    line-height: 1.6;
+    padding-left: 15px;
+}
+
+#dropmenudiv {
+    position: absolute;
+    border: 0px solid black;
+    font: normal 11px Arial;
+    line-height: 18px;
+    z-index: 100;
+}
+
+.zed {
+    z-index: 5;
+}
+
+.second {
+    border-bottom: 1px solid #7CA2B5;
+    padding-left: 10px;
+    height: 20px;
+    background-color: White;
+}
+
+.third {
+    padding-left: 10px;
+    height: 20px;
+}
+
+.lnk {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #24211D;
+}
+
+.heading_Top {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #35577D;
+}
+
+.heading {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #35577D;
+}
+
+.sub_head_body_txt {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #35577D;
+}
+
+.body-text {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #686663;
+    line-height: 125%;
+    overflow: hidden;
+}
+
+.error-text {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #ff0000;
+    line-height: 125%;
+    font-weight: bold;
+}
+
+.txt {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #686663;
+    line-height: 125%;
+}
+
+.txtPrint {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: Black;
+}
+
+.headerlabelHand {
+    font-family: Verdana;
+    font-size: 8pt;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    color: #993333;
+    text-decoration: none;
+}
+
+.generalText {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #000000
+}
+
+.subHeading {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #B64810
+}
+
+.inputBoxDrop {
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Courier New;
+}
+
+/* .buttonbg {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: #FFFFFF;
+    border: 1px #c53E03 solid;
+    cursor: hand;
+    background-image: url(images/button_bg.gif);
+} */
+
+.searchLabel {
+    FONT-SIZE: 10px;
+    COLOR: #803530;
+    FONT-FAMILY: Verdana, Courier New;
+    text-decoration: none;
+}
+
+.titleBg {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+    background-color: #FA8328
+}
+
+.contentBold {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.content {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none;
+}
+
+.headerlabel {
+    font-family: Verdana;
+    font-size: 8pt;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+    color: #993333;
+    text-decoration: none;
+}
+
+.itemstyle {
+    font-family: Verdana;
+    font-size: 8pt;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none;
+    background-color: #f0d9d9;
+}
+
+.alternatingstyle {
+    font-family: Verdana;
+    font-size: 8pt;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none;
+    background-color: #f7f7d7;
+}
+
+.headerstyle {
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: normal;
+    color: White;
+    text-decoration: none;
+    text-align: center;
+    background-color: #993333
+}
+
+.grandtotalstyle {
+    font-family: Verdana;
+    font-size: 8pt;
+    font-weight: bold;
+    line-height: normal;
+    color: White;
+    text-decoration: none;
+    background-color: #660033;
+    border-collapse: collapse;
+    border-top-color: White;
+    text-align: right;
+}
+
+.printheaderstyle {
+    font-family: Verdana;
+    font-size: 8pt;
+    font-weight: bold;
+    line-height: normal;
+    color: Black;
+    text-decoration: none;
+    text-align: right;
+}
+
+.printitemstyle {
+    font-family: Verdana;
+    font-size: 8pt;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    color: Black;
+    text-decoration: none;
+    text-align: right;
+}
+
+.printsubtotalstyle {
+    font-family: Verdana;
+    font-size: 8pt;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    color: Black;
+    text-decoration: none;
+    text-align: right;
+}
+
+.errorMsg {
+    font-family: Times New Roman, Arial;
+    font-size: 22pt;
+    font-style: normal;
+    line-height: normal;
+    color: #000000;
+    text-decoration: none;
+}
