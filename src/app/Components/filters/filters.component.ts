@@ -17,12 +17,14 @@ export class FiltersComponent implements OnInit {
   ngOnInit() {
     this._route.paramMap.subscribe((data) => {
       this.menuId = (data.get('code'));
+      if (this.menuId) {
+        this.GetReport(this.menuId);
+      }
     });
-    this.GetReport(this.menuId);
   }
 
   GetReport(menuId: string) {
-    this._filter.GetReport(menuId);
+
   }
 
 }

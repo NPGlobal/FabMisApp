@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -6,9 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class FilterService {
 
-  constructor() { }
+  origin = 'localhost://';
+  constructor(private _http: HttpClient) { }
 
-  GetReport(menuId: string) {
-
+  GetFiltersData(): Observable<any> {
+    const apiUrl = this.origin + 'api/Controler/GetFiltersData/';
+    return this._http.get<any>(apiUrl);
   }
 }
