@@ -18,7 +18,7 @@ export class LayoutComponent implements OnInit {
    constructor(private _router: Router) { }
 
   ngOnInit() {
-    this.MenuList = [{MenuId: 500, ParentId: 0, MenuCaption: 'Home' },
+    this.MenuList = [
     {MenuId: 1, ParentId: 0, MenuCaption: 'Product' },
     {MenuId: 2, ParentId: 0, MenuCaption: 'Sale and Stock I' },
     {MenuId: 3, ParentId: 0, MenuCaption: 'Sale and Stock II' },

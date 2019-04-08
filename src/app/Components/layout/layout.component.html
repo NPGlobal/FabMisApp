@@ -26,38 +26,46 @@
               </tr>
               <tr>
                 <td align="left" colspan="2">
-                  <table border="1" width="100%">
+                  <table  style="border-color:grey;" border="2" width="100%">
                     <tr>
-                      <td width=10></td>
+                      <td width=22px></td>
                       <td bgcolor="#993333" align="center">
-                        <ng-container *ngFor="let menu of MenuList">
-                       <!-- for Menu -->
-                          <div class="dropdown" *ngIf="menu.ParentId===0">
-                          <button routerLinkActive="active" (mouseover)="abc(menu.MenuId);"
-                          routerLink={{menu.MenuCaption}} class="dropbtn">{{menu.MenuCaption}}</button>
-                        
-                           <!-- for SubMenu -->
-                           <!-- <ng-container *ngFor="let subMenu of MenuList"> -->
-                          <div class="dropdown-content">
+                        <div class="dropdown">
+                          <button routerLinkActive="active" routerLink="home" class="dropbtn">Home (FC4)</button>
+                        </div>
+                      </td>
+                      <ng-container *ngFor="let menu of MenuList">
+                        <td bgcolor="#993333" align="center" *ngIf="menu.ParentId===0">
+                          <!-- for Menu -->
+                          <div class="dropdown">
+                            <button routerLinkActive="active" (mouseover)="abc(menu.MenuId);"
+                              routerLink={{menu.MenuCaption}} class="dropbtn">{{menu.MenuCaption}}</button>
+
+                            <!-- for SubMenu -->
+                            <!-- <ng-container *ngFor="let subMenu of MenuList"> -->
+                            <div class="dropdown-content">
                               <table cellspacing="0" cellpadding="0" id="nav_table" width="207">
                                 <tbody>
                                   <tr *ngFor="let subMenu of MenuList">
                                     <td class="second" *ngIf="subMenu.ParentId===prmMenuId">
                                       <!-- <a href="RptProductList.aspx" class="linknor_dropdown1">Product List </a> -->
                                       <!-- <a routerLinkActive="active" routerLink="filter" class="linknor_dropdown1">Product List </a> -->
-                                      <a [routerLink]="['/filter', subMenu.MenuId]" class="linknor_dropdown1">{{subMenu.MenuCaption}} </a>
+                                      <a [routerLink]="['/filters', subMenu.MenuId]"
+                                        class="linknor_dropdown1">{{subMenu.MenuCaption}} </a>
                                     </td>
                                   </tr>
                                 </tbody>
                               </table>
+                            </div>
+                            <!-- </ng-container> -->
                           </div>
-                           <!-- </ng-container> -->
-                        </div>
-                        </ng-container>
-                      </td>
-                      </tr>
-                      </table>
-                      </td>
+
+                        </td>
+                      </ng-container>
+                      <td width=22px></td>
+                    </tr>
+                  </table>
+                </td>
               </tr>
             </tbody>
           </table>
