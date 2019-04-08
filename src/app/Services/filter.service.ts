@@ -10,8 +10,8 @@ export class FilterService {
   origin = 'localhost://';
   constructor(private _http: HttpClient) { }
 
-  GetFiltersData(): Observable<any> {
-    const apiUrl = this.origin + 'api/Controler/GetFiltersData/';
+  GetMenuListAndFilterData(): Observable<any> {
+    const apiUrl = this.origin + 'api/Controler/GetMenuListAndFilterData/';
     return this._http.get<any>(apiUrl);
   }
 }

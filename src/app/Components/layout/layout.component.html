@@ -29,35 +29,36 @@
                   <table border="1" width="100%">
                     <tr>
                       <td width=10></td>
-                      <td bgcolor="#993333" align="center">
+                      <td bgcolor="#993333" align="left">
                         <ng-container *ngFor="let menu of MenuList">
-                       <!-- for Menu -->
+                          <!-- for Menu -->
                           <div class="dropdown" *ngIf="menu.ParentId===0">
-                          <button routerLinkActive="active" (mouseover)="abc(menu.MenuId);"
-                          routerLink={{menu.MenuCaption}} class="dropbtn">{{menu.MenuCaption}}</button>
-                        
-                           <!-- for SubMenu -->
-                           <!-- <ng-container *ngFor="let subMenu of MenuList"> -->
-                          <div class="dropdown-content">
+                            <button routerLinkActive="active" (mouseover)="GetSubMenu(menu.MenuID);"
+                              routerLink={{menu.MenuCaption}} class="dropbtn">{{menu.MenuCaption}}</button>
+
+                            <!-- for SubMenu -->
+                            <!-- <ng-container *ngFor="let subMenu of MenuList"> -->
+                            <div class="dropdown-content">
                               <table cellspacing="0" cellpadding="0" id="nav_table" width="207">
                                 <tbody>
                                   <tr *ngFor="let subMenu of MenuList">
                                     <td class="second" *ngIf="subMenu.ParentId===prmMenuId">
                                       <!-- <a href="RptProductList.aspx" class="linknor_dropdown1">Product List </a> -->
                                       <!-- <a routerLinkActive="active" routerLink="filter" class="linknor_dropdown1">Product List </a> -->
-                                      <a [routerLink]="['/filter', subMenu.MenuId]" class="linknor_dropdown1">{{subMenu.MenuCaption}} </a>
+                                      <a [routerLink]="['/filter', subMenu.MenuID]"
+                                        class="linknor_dropdown1">{{subMenu.MenuCaption}} </a>
                                     </td>
                                   </tr>
                                 </tbody>
                               </table>
+                            </div>
+                            <!-- </ng-container> -->
                           </div>
-                           <!-- </ng-container> -->
-                        </div>
                         </ng-container>
                       </td>
-                      </tr>
-                      </table>
-                      </td>
+                    </tr>
+                  </table>
+                </td>
               </tr>
             </tbody>
           </table>

@@ -11,6 +11,8 @@ import { FilterService } from 'src/app/Services/filter.service';
 export class FiltersComponent implements OnInit {
 
   menuId: string;
+  FilterList: any[];
+  HideAndShowFilters: any[];
   constructor(private _route: ActivatedRoute,
     private _filter: FilterService) { }
 
@@ -24,7 +26,14 @@ export class FiltersComponent implements OnInit {
   }
 
   GetReport(menuId: string) {
+    // this._filter.GetMenuListAndFilterData().subscribe((data) => {
+    //   this.FilterList = data.Table[1];
+    // });
 
+    if (this.FilterList) {
+      // tslint:disable-next-line:triple-equals
+      this.HideAndShowFilters = this.FilterList.filter(x => x.MenuID == menuId);
+    }
   }
 
 }
