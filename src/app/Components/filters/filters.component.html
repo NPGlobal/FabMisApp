@@ -1,258 +1,301 @@
 <div class="AllFilters" *ngIf="HideAndShowFilters && HideAndShowFilters.length > 0">
 
   <div class="Calendars">
+    <div *ngIf="FilterList[0].From===1">
     <label>From
       <input class="menuFormat" type="date">
     </label>
-
+  </div>
+  <div *ngIf="FilterList[0].To===1">
     <label>To
       <input class="menuFormat" type="date">
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Date===1">
     <label>Date
       <input class="menuFormat" type="date">
     </label>
-
+    </div>
+    <div *ngIf="FilterList[0].Upto===1">
     <label>Upto
       <input class="menuFormat" type="date">
     </label>
-  </div>
-
+   </div>
+</div>
   <div class="Dropdowns">
+      <div *ngIf="FilterList[0].Seasonality===1">
     <label>Seasonality
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+    </div>
+    <div *ngIf="FilterList[0].Status===1">
     <label>Status
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+    </div>
+    <div *ngIf="FilterList[0].Division===1">
     <label>Division
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+    </div>
+    <div *ngIf="FilterList[0].Dept===1">
     <label>Dept
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+  </div>
+  <div *ngIf="FilterList[0].Subdept===1">
     <label>Subdept
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Category===1">
     <label>Category
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+  </div>
+  <div *ngIf="FilterList[0].Compn===1">
     <label>Compn
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Subcompn===1">
     <label>Subcompn
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+    </div>
+    <div *ngIf="FilterList[0].Aspect1===1">
     <label>Aspect1
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Aspect2===1">
     <label>Aspect2
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
-    <label>Aspect3
+</div>
+<div *ngIf="FilterList[0].Aspect3===1">
+      <label>Aspect3
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Aspect4===1">
     <label>Aspect4
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+  </div>
+    <div *ngIf="FilterList[0].Color===1">
     <label>Color
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+    </div>
+    <div *ngIf="FilterList[0].Size===1">
     <label>Size
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
-    <label>State Name
+</div>
+<div *ngIf="FilterList[0].State===1">
+      <label>State Name
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].FromMonthYear===1">
     <label>From Month-Year
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].ToMonthYear===1">
     <label>To Month-Year
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Search===1">
     <label>Search on
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+  </div>
+  <div *ngIf="FilterList[0].EDAMonth===1">
     <label>EDA - Month
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+  </div>
+  <div *ngIf="FilterList[0].EDAYear===1">
     <label>EDA - Year
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].TargetMonth===1">
     <label>Target - Month
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].TargetYear===1">
     <label>Target - Year
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].DLType===1">
     <label>DL Type
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].DLFormat===1">
     <label>DL Format
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].SKUMasterName===1">
     <label>SKU Master Name
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].BelowPercent===1">
     <label>Below %
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].AbovePercent===1">
     <label>Above %
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Month===1">
     <label>Month
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Year===1">
     <label>Year
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Type===1">
     <label>Type
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].ValueOrPercent===1">
     <label>Value or %
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].StatusSelection===1">
     <label>Status Selection
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].EmployeeName===1">
     <label>Employee Name
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].ReportView===1">
     <label>Report View
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+  </div>
+  <div *ngIf="FilterList[0].POStatus===1">
     <label>PO Status
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].ShippedStatus===1">
     <label>Shipped Status
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+  </div>
+  <div *ngIf="FilterList[0].ReportType===1">
     <label>Report Type
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
+<div *ngIf="FilterList[0].Promotions===1">
     <label>Promotions
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+  </div>
+  <div *ngIf="FilterList[0].SourceType===1">
     <label>Source Type
       <select class="menuFormat">
         <option>Select</option>
       </select>
     </label>
-
+</div>
   </div>
 
   <div class="Popups">
@@ -271,18 +314,21 @@
   </div>
 
   <div class="Textboxes">
+      <div *ngIf="FilterList[0].LongDescription===1">
     <label>Long Description
       <input class="menuFormat" type="text">
     </label>
-
+      </div>
+      <div *ngIf="FilterList[0].SKUIdDescription===1">
     <label>SKUID/ SKU Description
       <input class="menuFormat" type="text">
     </label>
-
+      </div>
+      <div *ngIf="FilterList[0].SKUDescription===1">
     <label>SKU Description
       <input class="menuFormat" type="text">
     </label>
-
+      </div>
     <label>DL No/ PromoName/ Long Description
       <input class="menuFormat" type="text">
     </label>
