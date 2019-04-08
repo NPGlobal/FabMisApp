@@ -1,5 +1,5 @@
 export class MenuMaster {
-    MenuID: number;
+    MenuId: number;
     ParentId: number;
     MenuCaption: string;
 }

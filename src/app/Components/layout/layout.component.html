@@ -38,7 +38,7 @@
                         <td bgcolor="#993333" align="center" *ngIf="menu.ParentId===0">
                           <!-- for Menu -->
                           <div class="dropdown">
-                            <button routerLinkActive="active" (mouseover)="abc(menu.MenuId);"
+                            <button routerLinkActive="active" (mouseover)="GetSubMenu(menu.MenuId);"
                               routerLink={{menu.MenuCaption}} class="dropbtn">{{menu.MenuCaption}}</button>
 
                             <!-- for SubMenu -->
@@ -50,7 +50,7 @@
                                     <td class="second" *ngIf="subMenu.ParentId===prmMenuId">
                                       <!-- <a href="RptProductList.aspx" class="linknor_dropdown1">Product List </a> -->
                                       <!-- <a routerLinkActive="active" routerLink="filter" class="linknor_dropdown1">Product List </a> -->
-                                      <a [routerLink]="['/filters', subMenu.MenuId]"
+                                      <a [routerLink]="['/filter', subMenu.MenuId]"
                                         class="linknor_dropdown1">{{subMenu.MenuCaption}} </a>
                                     </td>
                                   </tr>

@@ -29,10 +29,12 @@ export class FiltersComponent implements OnInit {
     // this._filter.GetMenuListAndFilterData().subscribe((data) => {
     //   this.FilterList = data.Table[1];
     // });
+    this.FilterList = [{FilterId: 1, MenuId: 10,	Seasonality: 1,	Status: 1,	From: 1,	To: 0,	Division: 0,	Dept: 1,	Subdept: 0,
+Category: 0,	Compn: 0, Subcompn: 0,	Aspect1: 0,	Aspect2: 0,	Aspect3: 0,	Aspect4: 0,	Color: 1,	Size: 1}];
 
     if (this.FilterList) {
       // tslint:disable-next-line:triple-equals
-      this.HideAndShowFilters = this.FilterList.filter(x => x.MenuID == menuId);
+      this.HideAndShowFilters = this.FilterList.filter(x => x.MenuId == menuId);
     }
   }
 
