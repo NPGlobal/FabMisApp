@@ -1,0 +1,2457 @@
+<HTML>
+
+<HEAD>
+  <title>Reporting Module</title>
+</HEAD>
+
+<body bgColor="#ffffff" leftMargin="0" topMargin="0" style="font: 400 10.66667px Arial;color: #993333;font-size: 11px;">
+  <form name="Form1" method="post" action="storeFilter.aspx?caption=PH+Filter&amp;MenuId=210" id="Form1">
+
+    <table style="WIDTH: 850px; HEIGHT: 431px" cellSpacing="0" border="0" class="ewrew">
+      <tr>
+        <td colspan="2" align="center">
+          <span id="lblCaption"
+            style="font-weight:bold;font-family:Verdana; font-size:14px;text-decoration:underline; text-align:center;">Please
+            Select - PH Filter</span>
+        </td>
+      </tr>
+      <!-- For Promo -->
+      <table>
+
+        <tbody>
+          <tr>
+            <td class="headerlabel">Promo</td>
+          </tr>
+
+          <tr>
+            <td>
+              <select size="4" name="lstUnselectedPromo" multiple="multiple" id="lstUnselectedPromo" class="headerlabel"
+                style="height:358px;width:350px;color: #993333;">
+
+              </select>
+            </td>
+            <td>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="submit" name="btnMovRightPromo" value=">" id="btnMovRightPromo" style="width:50px;">
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="submit" name="btnMovLeftPromo" value="<" id="btnMovLeftPromo" style="width:50px;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="submit" name="btnMovRightAllPromo" value=">>" id="btnMovRightAllPromo"
+                        style="width:50px;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="submit" name="btnMovLeftAllPromo" value="<<" id="btnMovLeftAllPromo"
+                        style="width:50px;">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+            <td>
+              <select size="4" name="lstSelectedPromo" multiple="multiple" id="lstSelectedPromo" class="headerlabel"
+                style="height:358px;width:350px;color: #993333;">
+                <option value="0">-</option>
+                <option value="54">2015 A - Q1</option>
+                <option value="51">2015 B - Q2</option>
+                <option value="52">2015 C - Q3</option>
+                <option value="53">2015 D - Q4</option>
+                <option value="72">2016 A - Q1</option>
+                <option value="73">2016 B - Q2</option>
+                <option value="74">2016 C - Q3</option>
+                <option value="75">2016 D - Q4</option>
+                <option value="109">AANGAN Q1 2017</option>
+                <option value="124">AANGAN Q2 2017</option>
+                <option value="29">Aasawari</option>
+                <option value="111">Air India 2017</option>
+                <option value="135">Apr - Jun 18 all generic</option>
+                <option value="160">Apr - Jun 19 all generic</option>
+                <option value="35">Apr 14-Jun 14 (A2)</option>
+                <option value="57">Apr 15-Jun 15 (B2)</option>
+                <option value="99">Apr-Jun 17 all generic</option>
+                <option value="16">Ballads</option>
+                <option value="63">Bana 2015</option>
+                <option value="94">Bana 2016</option>
+                <option value="116">Bana 2017</option>
+                <option value="138">Bana 2018</option>
+                <option value="22">Be the change</option>
+                <option value="26">Chanderi Maheshwari promotion</option>
+                <option value="45">Chikankari 2015</option>
+                <option value="80">Chikankari 2016</option>
+                <option value="101">Chikankari 2017</option>
+                <option value="128">Chikankari 2018</option>
+                <option value="155">Chikankari 2019</option>
+                <option value="171">Chikankari 2020</option>
+                <option value="165">Festive Generic</option>
+                <option value="38">Flow 1</option>
+                <option value="87">Flow 10</option>
+                <option value="89">Flow 10B</option>
+                <option value="90">Flow 11A</option>
+                <option value="93">Flow 11B</option>
+                <option value="95">Flow 12</option>
+                <option value="105">Flow 13</option>
+                <option value="108">Flow 14</option>
+                <option value="110">Flow 15</option>
+                <option value="121">Flow 16</option>
+                <option value="122">Flow 17</option>
+                <option value="127">Flow 18</option>
+                <option value="150">Flow 19</option>
+                <option value="39">Flow 2</option>
+                <option value="151">Flow 20</option>
+                <option value="41">Flow 3</option>
+                <option value="42">Flow 4</option>
+                <option value="56">Flow 5</option>
+                <option value="64">Flow 6</option>
+                <option value="66">Flow 7</option>
+                <option value="67">Flow 8</option>
+                <option value="68">Flow 9</option>
+                <option value="13">FOLK ART</option>
+                <option value="50">GARA</option>
+                <option value="149">HDC</option>
+                <option value="161">Indian Summer 19</option>
+                <option value="47">Indigo 2014</option>
+                <option value="59">Indigo 2015</option>
+                <option value="82">Indigo 2016</option>
+                <option value="103">Indigo 2017</option>
+                <option value="136">Indigo 2018</option>
+                <option value="126">ISQ</option>
+                <option value="65">ISQ 2015-17</option>
+                <option value="48">Jalrang</option>
+                <option value="131">Jan - Mar 18 all generic</option>
+                <option value="152">Jan - Mar 19 all generic</option>
+                <option value="170">Jan - Mar 20 all generic</option>
+                <option value="34">Jan 14-Mar 14 (A1)</option>
+                <option value="43">Jan 15-Mar 15 (B1)</option>
+                <option value="98">Jan- Mar 17 all generic</option>
+                <option value="140">Jul - Sep 18 all generic</option>
+                <option value="36">Jul 14-Sep 14 (A3)</option>
+                <option value="115">Jul-Sep 17 all generic</option>
+                <option value="14">Kaleidoscope Eyes</option>
+                <option value="71">Kesaria Q3 2015</option>
+                <option value="62">Kesaria Q4 2015</option>
+                <option value="97">Kids promotion</option>
+                <option value="123">Launch 1-Yoga Spa/Maternity</option>
+                <option value="146">Launch 2-Yoga Spa/Maternity</option>
+                <option value="147">Launch 3-Yoga Spa/Maternity</option>
+                <option value="31">Malahar</option>
+                <option value="6">MASAI MARA</option>
+                <option value="4">MEDITERRANEAN</option>
+                <option value="104">Men’s western 2017</option>
+                <option value="92">Monsoon 2016</option>
+                <option value="113">Monsoon 2017</option>
+                <option value="137">Monsoon 2018</option>
+                <option value="5">NARANGEE</option>
+                <option value="12">Natural Fibre 2012</option>
+                <option value="17">Natural Fibre 2013</option>
+                <option value="10">NIZAM</option>
+                <option value="168">Non promo</option>
+                <option value="144">Oct - Dec 18 all generic</option>
+                <option value="37">Oct 14-Dec 14 (A4)</option>
+                <option value="118">Oct-Dec 17 all generic</option>
+                <option value="7">PAISLEY</option>
+                <option value="61">Pre Festive 15</option>
+                <option value="83">Pre Festive 16</option>
+                <option value="114">Pre Festive 17</option>
+                <option value="139">Pre Festive 18</option>
+                <option value="164">Pre-festive 19</option>
+                <option value="163">Pre-festive Generic</option>
+                <option value="169">Promo</option>
+                <option value="27">Qaiser Bagh</option>
+                <option value="166">Rajwada</option>
+                <option value="84">Rajwada 2016</option>
+                <option value="117">Rajwada 2017</option>
+                <option value="142">Rajwada 2018</option>
+                <option value="1">RANGBARSE</option>
+                <option value="28">Red &amp; Black 2013</option>
+                <option value="70">Red &amp; Black 2015</option>
+                <option value="86">Red &amp; Black 2016</option>
+                <option value="125">Red &amp; Black 2017</option>
+                <option value="145">Red &amp; Black 2018</option>
+                <option value="21">Red &amp; White 2013</option>
+                <option value="24">Rhythm &amp; Blues</option>
+                <option value="3">ROMANTICS</option>
+                <option value="25">SAIGON 1</option>
+                <option value="8">SAIGON 2</option>
+                <option value="30">Saranga</option>
+                <option value="40">Sindura</option>
+                <option value="167">Special Occasion</option>
+                <option value="120">Special Occasion 2017</option>
+                <option value="141">Special Occasion 2018</option>
+                <option value="148">Special Occasion Summer 2018</option>
+                <option value="158">Special Occasion Summer 2019</option>
+                <option value="174">Special Occasion Summer 2020</option>
+                <option value="32">Spring 2014</option>
+                <option value="44">Spring 2015</option>
+                <option value="77">Spring 2016</option>
+                <option value="107">Spring 2017</option>
+                <option value="132">Spring 2018</option>
+                <option value="157">Spring 2019</option>
+                <option value="173">Spring 2020</option>
+                <option value="19">Summer 2013</option>
+                <option value="33">Summer 2014</option>
+                <option value="55">Summer 2015 Q1</option>
+                <option value="46">Summer 2015 Q2</option>
+                <option value="91">Summer 2016</option>
+                <option value="112">Summer 2017</option>
+                <option value="134">Summer 2018</option>
+                <option value="81">Summer lights 2016</option>
+                <option value="102">Summer lights 2017</option>
+                <option value="133">Summer lights 2018</option>
+                <option value="162">Summer lights 2019</option>
+                <option value="172">Summer lights 2020</option>
+                <option value="79">Textures and Handloom for Jan 16</option>
+                <option value="100">Textures and handloom for Jan 17</option>
+                <option value="130">Textures and Handloom Jan 18</option>
+                <option value="153">Textures and Handloom Jan 19</option>
+                <option value="2">THANDAI</option>
+                <option value="23">The Artist</option>
+                <option value="20">The Indigo Dairies</option>
+                <option value="18">The Maker</option>
+                <option value="159">Trishla Jain</option>
+                <option value="60">Tsarika</option>
+                <option value="9">UTSAV</option>
+                <option value="11">VINTAGE</option>
+                <option value="78">Wedding 2015</option>
+                <option value="96">Wedding 2016</option>
+                <option value="88">Western Promotion 2016</option>
+                <option value="15">Wet Canvas</option>
+                <option value="49">Whites 2015</option>
+                <option value="76">Whites 2016</option>
+                <option value="106">Whites 2017</option>
+                <option value="129">Whites 2018</option>
+                <option value="154">Whites 2019</option>
+                <option value="156">Winter Indigo</option>
+                <option value="69">Wool 2015</option>
+                <option value="85">Wool 2016</option>
+                <option value="119">Wool 2017</option>
+                <option value="143">Wool 2018</option>
+
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <TR> -->
+        <td vAlign="top" class="style1" style="width: 399px;
+        height: 406px; font-weight: bold">
+          <!-- For MR -->
+          <table>
+            <tr>
+              <td>
+                <div id="Panel1" style="height:240px;">
+
+                  <table class="headerlabel">
+                    <tr>
+                      <td>Market Region &nbsp; &nbsp;
+                        <input id="Dummychk" type="checkbox" name="Dummychk" /><label for="Dummychk">Include
+                          Dummy</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <select size="4" name="lstUnselectedMR" multiple="multiple" id="lstUnselectedMR"
+                          class="headerlabelHand" style="height:112px;width:240px;">
+
+                        </select>
+                      </td>
+                      <td>
+                        <table>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovRightMR" value=">" id="btnMovRightMR"
+                                style="width:50px;" />
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovLeftMR" value="&lt;" id="btnMovLeftMR"
+                                style="width:50px;" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovRightAllMR" value=">>" id="btnMovRightAllMR"
+                                style="width:50px;" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovLeftAllMR" value="&lt;&lt;" id="btnMovLeftAllMR"
+                                style="width:50px;" />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td>
+                        <select size="4" name="lstSelectedMR" multiple="multiple" id="lstSelectedMR"
+                          class="headerlabelHand" style="height:117px;width:240px;color: #993333;">
+                          <option value="MR01">MR01-- Radhika Diesh</option>
+                          <option value="MR02">MR02-- Aartee Roy</option>
+                          <option value="MR03">MR03-- Sujata Absar</option>
+                          <option value="MR04">MR04-- Amrita Wali</option>
+                          <option selected="selected" value="MR05">MR05-- Charu Belle</option>
+                          <option selected="selected" value="MR06">MR06-- Saveen Sharma</option>
+                          <option value="MR10">MR10-- Gujrat</option>
+                          <option value="MR11">MR11-- Arun Naikar</option>
+                          <option value="MR12">MR12-- Ruchi Chugh</option>
+                          <option value="MR14">MR14-- Sujith KV</option>
+                          <option value="MRCW">MRCW-- SUNIL Rautela</option>
+
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td CssClass="headerlabelHand">Stores</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <select size="4" name="lstUnselectedStore" multiple="multiple" id="lstUnselectedStore"
+                          class="headerlabelHand" style="height:207px;width:240px;">
+
+                        </select>
+                      </td>
+                      <td>
+                        <!-- For Store -->
+                        <table>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovRightStore" value=">" id="btnMovRightStore"
+                                style="width:50px;" />
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovLeftStore" value="&lt;" id="btnMovLeftStore"
+                                style="width:50px;" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovRightAllStore" value=">>" id="btnMovRightAllStore"
+                                style="width:50px;" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovLeftAllStore" value="&lt;&lt;" id="btnMovLeftAllStore"
+                                style="width:50px;" />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td>
+                        <select size="4" name="lstSelectedStore" multiple="multiple" id="lstSelectedStore"
+                          class="headerlabelHand" style="height:212px;width:240px;color: #993333;">
+                          <option value="$ADOFF">$ADOFF -- Fashion Factory, Adoor</option>
+                          <option value="$AGMPE">$AGMPE -- Pariyath Estates Pvt Ltd, Angamaly</option>
+                          <option value="$AJRBS">$AJRBS -- Brij Sales, Ajmer</option>
+                          <option value="$ALLPE">$ALLPE -- Allepy, Pariyath Estates Pvt. Ltd</option>
+                          <option value="$AMDTC">$AMDTC -- Trident Creation, Bopal, Ahmedabad</option>
+                          <option value="$ANAVN">$ANAVN -- Chitram</option>
+                          <option value="$ANDPS">$ANDPS -- M/S. P&amp;S Company</option>
+                          <option value="$ANGKE">$ANGKE -- Kalpattaru Enterprises India</option>
+                          <option value="$BBIJP">$BBIJP -- Panda Retail Pvt. Ltd. Janpath</option>
+                          <option value="$BBIPM">$BBIPM -- Panda Retail Pvt. Ltd.</option>
+                          <option value="$BHJSI">$BHJSI -- Sheek Innovations, Bhuj</option>
+                          <option value="$BLPMC">$BLPMC -- M/S Divine Silks</option>
+                          <option value="$BLRBT">$BLRBT -- Banyan Tree LLP, Bangalore</option>
+                          <option value="$BLRDC">$BLRDC -- DISHA CREATIVE, HSR Layout</option>
+                          <option value="$BLRFM">$BLRFM -- Bhawar Lifestyle, Bangalore Forum Mall</option>
+                          <option value="$BLRHL">$BLRHL -- Bhawar Lifestyle, HSR Layout</option>
+                          <option value="$BLRMT">$BLRMT -- DISHA CREATIVE, Manyata Tech Park</option>
+                          <option value="$BLROM">$BLROM -- Bhawar Lifestyle, Bangalore Orion Mall</option>
+                          <option value="$BLRRR">$BLRRR -- ASG Textiles Pvt Ltd, RR Nagar</option>
+                          <option value="$BLRSD">$BLRSD -- Sri Durga Associates, Bangalore</option>
+                          <option value="$BLRVM">$BLRVM -- Bhawar Lifestyle, Bangalore Vega Mall</option>
+                          <option value="$BLRYH">$BLRYH -- Bhawar Lifestyle, Yelahanka</option>
+                          <option value="$BLYCR">$BLYCR -- Nainakshi Trendz, Bareilly</option>
+                          <option value="$BOMKE">$BOMKE -- M/s Akshar Inc.</option>
+                          <option value="$BOMSR">$BOMSR -- Seara, Mumbai</option>
+                          <option value="$BSCVL">$BSCVL -- VLS Lifestyle, Bokaro Steel City</option>
+                          <option value="$BVCRS">$BVCRS -- Rehan Sales, Bhavnagar</option>
+                          <option value="$CCUDR">$CCUDR -- Delta Retail, Barasat</option>
+                          <option value="$CCUFE">$CCUFE -- Funtail Enterprise, Kolkata</option>
+                          <option value="$COKPE">$COKPE -- Pariyath Estates Pvt. Ltd, Kakkanad</option>
+                          <option value="$CTKAA">$CTKAA -- Aadhar Apparels Pvt Ltd, Cuttack</option>
+                          <option value="$CTKAE">$CTKAE -- Adarsh Enterprisers</option>
+                          <option value="$DELFY">$DELFY -- Forever Young Spa &amp; Salons, Janakpuri</option>
+                          <option value="$DELJP">$DELJP -- M/s Cosmetic Stores Private Limited</option>
+                          <option value="$DELPR">$DELPR -- Sam Retail, Preet Vihar</option>
+                          <option value="$DELSH">$DELSH -- Southy Hospitality &amp; Services Pvt Ltd</option>
+                          <option value="$DELSR">$DELSR -- M/s Sam Retail, Pitampura</option>
+                          <option value="$DIBMR">$DIBMR -- NE Realcon Pvt Ltd., Dibrugarh</option>
+                          <option value="$DVGRR">$DVGRR -- Raj Retail, Davangere</option>
+                          <option value="$GHZIR">$GHZIR -- M/s IndusRoot Retail LLP, Mahagun</option>
+                          <option value="$GHZRN">$GHZRN -- Just 4 Her</option>
+                          <option value="$GHZSH">$GHZSH -- Indus Root Retail LLP, Shipra Mall</option>
+                          <option value="$GNCTC">$GNCTC -- Trident Creation, Gandhinagar</option>
+                          <option value="$GTKFR">$GTKFR -- Friends, Gangtok</option>
+                          <option value="$GTKPI">$GTKPI -- Passion India</option>
+                          <option value="$GUWGS">$GUWGS -- N E Realcon Pvt Ltd</option>
+                          <option value="$HDWVN">$HDWVN -- Vaishali Links, Haldwani</option>
+                          <option value="$HWSGN">$HWSGN -- M/s Sri Guru Nanak Emporium, Haridwar</option>
+                          <option value="$HYDMT">$HYDMT -- Sri Mahalaxmi Textiles, Hyderabad</option>
+                          <option value="$HYDPL">$HYDPL -- Premium Lifestyle and Fashion India, Kukatpally</option>
+                          <option value="$HYDZV">$HYDZV -- Zevaa, Gachibowli</option>
+                          <option value="$IDRSJ">$IDRSJ -- M/s Shreejini, Indore</option>
+                          <option value="$IMFPB">$IMFPB -- M/S D.K. &amp; Sons</option>
+                          <option value="$ITATS">$ITATS -- Takam Sara, Itanagar</option>
+                          <option value="$IXASK">$IXASK -- Surjya Kumar Banik Agency Pvt Ltd, Agartala</option>
+                          <option value="$IXCS7">$IXCS7 -- J A Marketing, Chandigarh Sec 07</option>
+                          <option value="$JGAPE">$JGAPE -- Pari Enterprise</option>
+                          <option value="$JLRAR">$JLRAR -- Aakriti Retails, Jalandhar</option>
+                          <option value="$KANCB">$KANCB -- Karsandas Vasanji</option>
+                          <option value="$KARKE">$KARKE -- Kabir Enterprises, Karnal</option>
+                          <option value="$KTUMD">$KTUMD -- Mrig Designs, Kota</option>
+                          <option value="$LDHRT">$LDHRT -- Rajesh Traders, Ludhiana</option>
+                          <option value="$LKOTL">$LKOTL -- Tex Lifestyle Retail Pvt Ltd</option>
+                          <option value="$MAAEC">$MAAEC -- M/s. Exclusive Indian Wear</option>
+                          <option value="$MAASR">$MAASR -- Sanor Retail, Chennai</option>
+                          <option value="$MAAVR">$MAAVR -- Bhawar Lifestyle, Annanagar Chennai</option>
+                          <option value="$MADKK">$MADKK -- S G JAYARAJ NADAR &amp; SON</option>
+                          <option value="$MFPKC">$MFPKC -- M/S ADAA</option>
+                          <option value="$MOHHV">$MOHHV -- Hill View Holiday Inn Pvt. Ltd., Mohali</option>
+                          <option value="$MRBNT">$MRBNT -- Narayan Traders, Moradabad</option>
+                          <option value="$MSHTC">$MSHTC -- Trident Creation, Mehsana</option>
+                          <option value="$MUTJP">$MUTJP -- OM Lifestyle</option>
+                          <option value="$NOIJR">$NOIJR -- M/s Jaiansh Retail LLP, Greater Noida</option>
+                          <option value="$PALSA">$PALSA -- S. A Associates</option>
+                          <option value="$PATSG">$PATSG -- Sarita Garments, Patna</option>
+                          <option value="$PATVB">$PATVB -- Verna Business Venture LLP, Patna</option>
+                          <option value="$PNPMT">$PNPMT -- Star Fibers</option>
+                          <option value="$PNQBE">$PNQBE -- Bhumika Enterprises</option>
+                          <option value="$POYTE">$POYTE -- THADAM ENTERPRISES LLP, Pollachi</option>
+                          <option value="$PUTTY">$PUTTY -- TruYogi Wellness, Puttaparthi</option>
+                          <option value="$ROHMT">$ROHMT -- M/S Suhana Enterprises, Rohtak</option>
+                          <option value="$ROUIF">$ROUIF -- Indera Fashions, Rourkela</option>
+                          <option value="$ROUIT">$ROUIT -- Indera Textiles, Rourkela</option>
+                          <option value="$RRKRE">$RRKRE -- Rishaanjal Enterprises, Roorkee</option>
+                          <option value="$RSHRJ">$RSHRJ -- M/s Sam Retail Ram Jhula</option>
+                          <option value="$RSHSR">$RSHSR -- Sam Retail, Rishikesh Laxman Jhula</option>
+                          <option value="$SECZV">$SECZV -- Zevaa House Private Limited</option>
+                          <option value="$SLGCC">$SLGCC -- GoodLife Venture</option>
+                          <option value="$SLGDV">$SLGDV -- Dream Ventures</option>
+                          <option value="$SXRIB">$SXRIB -- Ibrah, Srinagar</option>
+                          <option value="$SXVSF">$SXVSF -- M/S. The Salem Fabriic</option>
+                          <option value="$TNMRT">$TNMRT -- Rainbow Trading, Tiruvannamalai</option>
+                          <option value="$TPZKA">$TPZKA -- M/s Kuruvithadam Agnecies Pvt. Ltd.</option>
+                          <option value="$TPZSF">$TPZSF -- SPJ Fashions, Thodupuzha</option>
+                          <option value="$TRVKV">$TRVKV -- Soma Smart</option>
+                          <option value="$TRZPM">$TRZPM -- Phoenix Modular, Trichy</option>
+                          <option value="$TVLPE">$TVLPE -- Pariyath Estates Pvt Ltd, Thiruvalla</option>
+                          <option value="$TZPSK">$TZPSK -- S.K Enterprise, Tezpur</option>
+                          <option value="$VELVG">$VELVG -- M/s Velan Gifts, Apparels and Furnishings</option>
+                          <option value="$VIJMP">$VIJMP -- Fusion Ventures</option>
+                          <option value="$VNSBD">$VNSBD -- Beige, Varanasi</option>
+                          <option value="$YAMFS">$YAMFS -- The Family Store, Yamunanagar</option>
+                          <option value="$ZIRJA">$ZIRJA -- J.A Marketing, Zirakpur, Punjab</option>
+                          <option value="AGRCR">AGRCR -- Agra, Church Road</option>
+                          <option value="AGRTAJ">AGRTAJ -- Agra, Taj Mahal</option>
+                          <option value="AGRTDI">AGRTDI -- Agra, TDI Mall</option>
+                          <option value="ALDMGM">ALDMGM -- Allahabad, MG Marg</option>
+                          <option value="AMDAM">AMDAM -- Ahmedabad, Alpha One Mall</option>
+                          <option value="AMDBDH">AMDBDH -- Ahmedabad, Bodakdev Home</option>
+                          <option value="AMDBDV">AMDBDV -- Ahmedabad, Bodakdev</option>
+                          <option value="AMDCGR">AMDCGR -- Ahmedabad, CG Road/Law Garden</option>
+                          <option value="AMDGPM">AMDGPM -- Ahmedabad,Gulmohar Park Mall/Prahladnagar</option>
+                          <option value="AMDSQM">AMDSQM -- Ahmedabad, 4D Square mall</option>
+                          <option value="ATQMOA">ATQMOA -- Amritsar, Mall of Amritsar</option>
+                          <option value="ATQRA">ATQRA -- Amritsar, Ranjit Avenue</option>
+                          <option value="AURPM">AURPM -- Aurangabad, Prozone Mall</option>
+                          <option value="BARAKT">BARAKT -- Baroda, Akota</option>
+                          <option value="BARRC">BARRC -- Baroda, Racecourse</option>
+                          <option value="BARSQM">BARSQM -- Baroda, Centre Square Mall</option>
+                          <option value="BBIRAJ">BBIRAJ -- Bhubaneshwar, Rajpath</option>
+                          <option value="BELGAM">BELGAM -- Belgaum, Tilakwadi</option>
+                          <option value="BHAMLR">BHAMLR -- Bhatinda,Mall Road</option>
+                          <option value="BHICM">BHICM -- Bhiwadi, Capital Mall</option>
+                          <option value="BHODB">BHODB -- Bhopal, DB Mall</option>
+                          <option value="BHOTTN">BHOTTN -- Bhopal, TT Nagar\Arera Colony</option>
+                          <option value="BKPBH">BKPBH -- Backup Banjara Hills</option>
+                          <option value="BKPCMH">BKPCMH -- Backup CMH</option>
+                          <option value="BKPHP">BKPHP -- Backup Hindustan Park</option>
+                          <option value="BKPJB">BKPJB -- Backup Jeroo</option>
+                          <option value="BKPKM">BKPKM -- Backup - Khan Market</option>
+                          <option value="BKPKM2">BKPKM2 -- Bangalore, Backup, Koramangala2</option>
+                          <option value="BKPNH">BKPNH -- Mumbai, Khar Godown</option>
+                          <option value="BKPPBV">BKPPBV -- Backup Upholstery, MR06</option>
+                          <option value="BKPPHX">BKPPHX -- Bangalore, Backup, Phoenix Market City</option>
+                          <option value="BKPTPY">BKPTPY -- Backup Thamarapally</option>
+                          <option value="BLRABO">BLRABO -- Bangalore, Aditya Birla Online Fashion</option>
+                          <option value="BLRAHT">BLRAHT -- Bangalore, AH Towers</option>
+                          <option value="BLRAMZ">BLRAMZ -- Bangalore, Amazon Online</option>
+                          <option value="BLRBFM">BLRBFM -- Bangalore,Brookfield Mall</option>
+                          <option value="BLRBKK">BLRBKK -- Bangalore, Big Kids Kemp</option>
+                          <option value="BLRBNK">BLRBNK -- Bangalore, Banashankari</option>
+                          <option value="BLRBR">BLRBR -- Bangalore, Bel Road</option>
+                          <option value="BLRBSN">BLRBSN -- Bangalore, Basaveshwara Nagar</option>
+                          <option value="BLRCM2">BLRCM2 -- Bangalore, CMH Road2</option>
+                          <option value="BLRCMH">BLRCMH -- Bangalore, CMH Road</option>
+                          <option value="BLRCR">BLRCR -- Bangalore, Coles Road</option>
+                          <option value="BLRCS">BLRCS -- Bangalore, Commercial Street</option>
+                          <option value="BLRDVG">BLRDVG -- Bangalore, DVG Road</option>
+                          <option value="BLREC">BLREC -- Bangalore, Electronic City</option>
+                          <option value="BLREKM">BLREKM -- Bangalore, East Koramangala</option>
+                          <option value="BLREM">BLREM -- Bangalore, Eva Mall</option>
+                          <option value="BLREST">BLREST -- Bangalore, Esteem Mall/Sahakarnagar</option>
+                          <option value="BLRFAS">BLRFAS -- bangalore, fashionara online</option>
+                          <option value="BLRGM">BLRGM -- Bangalore, Garuda Mall</option>
+                          <option value="BLRGMK">BLRGMK -- Bangalore, Garuda Kiosk</option>
+                          <option value="BLRIA">BLRIA -- Bangalore, BIAL</option>
+                          <option value="BLRINT">BLRINT -- Bangalore, International Airport</option>
+                          <option value="BLRJN">BLRJN -- Bangalore, Jayanagar</option>
+                          <option value="BLRJP">BLRJP -- Bangalore, JP Nagar</option>
+                          <option value="BLRKHL">BLRKHL -- Bangalore, Kamanahalli</option>
+                          <option value="BLRKM2">BLRKM2 -- Bangalore, Koramangala2</option>
+                          <option value="BLRKMG">BLRKMG -- Bangalore, Koramangala</option>
+                          <option value="BLRMGR">BLRMGR -- Bangalore, MG Road</option>
+                          <option value="BLRMM">BLRMM -- Bangalore, Meenakshi Mall</option>
+                          <option value="BLRMS">BLRMS -- Bangalore, Mantri Square</option>
+                          <option value="BLRMYN">BLRMYN -- Bangalore, Myntra Online</option>
+                          <option value="BLROEM">BLROEM -- Bangalore, Orion East Mall</option>
+                          <option value="BLRPHX">BLRPHX -- Bangalore, Phoenix Market City</option>
+                          <option value="BLRSPR">BLRSPR -- Bangalore, Sarjapur Road</option>
+                          <option value="BLRVM">BLRVM -- Bangalore, Vittal Mallya</option>
+                          <option value="BLRWF">BLRWF -- Bangalore, Whitefield</option>
+                          <option value="BLYCL">BLYCL -- Barielly, Civil Lines</option>
+                          <option value="BOMAW">BOMAW -- Mumbai,Andheri West</option>
+                          <option value="BOMEPH">BOMEPH -- Mumbai, East Pali Hill</option>
+                          <option value="BOMEXB">BOMEXB -- Mumbai, Exhibitions</option>
+                          <option value="BOMGT2">BOMGT2 -- Mumbai,Ghatkopar2</option>
+                          <option value="BOMGTK">BOMGTK -- Mumbai, Ghatkopar</option>
+                          <option value="BOMIA">BOMIA -- Mumbai, Domestic Airport</option>
+                          <option value="BOMIA2">BOMIA2 -- Mumbai, Domestic Airport 2</option>
+                          <option value="BOMIMM">BOMIMM -- Mumbai, Inorbit Mall</option>
+                          <option value="BOMIMV">BOMIMV -- Mumbai, Vashi</option>
+                          <option value="BOMINF">BOMINF -- Mumbai, Infiniti Mall</option>
+                          <option value="BOMINS">BOMINS -- Mumbai, Institutional Sales</option>
+                          <option value="BOMINT">BOMINT -- Mumbai, International Airport</option>
+                          <option value="BOMJB">BOMJB -- Mumbai, Jeroo</option>
+                          <option value="BOMJDB">BOMJDB -- Mumbai, Juhu DB Mall</option>
+                          <option value="BOMJUH">BOMJUH -- Mumbai, Juhu</option>
+                          <option value="BOMKAL">BOMKAL -- Mumbai, Kalyan</option>
+                          <option value="BOMKEM">BOMKEM -- Mumbai, Kemps Corner</option>
+                          <option value="BOMKM">BOMKM -- Mumbai, Korum Mall Thane</option>
+                          <option value="BOMKSM">BOMKSM -- Mumbai, K Star</option>
+                          <option value="BOMKW">BOMKW -- Mumbai, Kurla West</option>
+                          <option value="BOMLNK">BOMLNK -- Mumbai, Linking Road</option>
+                          <option value="BOMLNT">BOMLNT -- Mumbai, Seawoods</option>
+                          <option value="BOMMUL">BOMMUL -- Mumbai, Mulund</option>
+                          <option value="BOMNH">BOMNH -- Mumbai, Khar</option>
+                          <option value="BOMOM">BOMOM -- Mumbai, Goregaon</option>
+                          <option value="BOMPBV">BOMPBV -- Mumbai, Palm Beach Vashi</option>
+                          <option value="BOMPH">BOMPH -- Mumbai, Pali Hill</option>
+                          <option value="BOMPMC">BOMPMC -- Mumbai, Phoenix Mall</option>
+                          <option value="BOMRAM">BOMRAM -- Mumbai, Runwal Mulund</option>
+                          <option value="BOMSTZ">BOMSTZ -- Mumbai, Santa Cruz</option>
+                          <option value="BOMTOH">BOMTOH -- Mumbai, Tranceocean</option>
+                          <option value="BOMTRD">BOMTRD -- Mumbai,Turner Road</option>
+                          <option value="BOMVIV">BOMVIV -- Mumbai, Viviana Mall, Thane</option>
+                          <option value="CALPTU">CALPTU -- Calicut, PT Usha Road</option>
+                          <option value="CCUAM">CCUAM -- Kolkata, Acropolis Mall</option>
+                          <option value="CCUBR">CCUBR -- Kolkata, Barasat</option>
+                          <option value="CCUCC2">CCUCC2 -- Kolkata, City Centre2</option>
+                          <option value="CCUCCM">CCUCCM -- Kolkata, City Centre</option>
+                          <option value="CCUHP">CCUHP -- Kolkata, Hindustan Park</option>
+                          <option value="CCUHPH">CCUHPH -- Kolkata, Hindustan Park Home</option>
+                          <option value="CCUHPM">CCUHPM -- Kolkata, Hindustan Park Mens</option>
+                          <option value="CCUJR">CCUJR -- Kolkata, Jessore Road</option>
+                          <option value="CCUKR">CCUKR -- Kolkata, Kankurgachi</option>
+                          <option value="CCULS">CCULS -- Kolkata, Loudon Street</option>
+                          <option value="CCUMM">CCUMM -- Kolkata, Metropolis Mall</option>
+                          <option value="CCUMSM">CCUMSM -- Kolkata, Mani Square Mall</option>
+                          <option value="CCUQM">CCUQM -- Kolkata, Quest Mall</option>
+                          <option value="CCURAJ">CCURAJ -- Kolkata, Rajarhaat</option>
+                          <option value="CCUSC">CCUSC -- Kolkata, South City Mall</option>
+                          <option value="CCUWP">CCUWP -- Kolkata, Allenby Road</option>
+                          <option value="CJBRCR">CJBRCR -- Coimbatore, Race Course Road</option>
+                          <option value="CJBRSP">CJBRSP -- Coimbatore, RS Puram</option>
+                          <option value="COKALR">COKALR -- Kochi, Alliance Residency</option>
+                          <option value="COKBPM">COKBPM -- Kochi, Bay Pride Mall</option>
+                          <option value="COKEDA">COKEDA -- Kochi, Edapally</option>
+                          <option value="COKFC">COKFC -- Kochi, Fort Cochin</option>
+                          <option value="COKLUL">COKLUL -- Kochi, Lulu Mall</option>
+                          <option value="COKNM">COKNM -- Kochi, Nucleus Mall</option>
+                          <option value="COKOM">COKOM -- Kochi, Oberon Mall</option>
+                          <option value="COKTPY">COKTPY -- Kochi, Thamarapally</option>
+                          <option value="COKVYT">COKVYT -- Kochi, Vyttila</option>
+                          <option value="COOGRH">COOGRH -- Coonoor, Grays Hill</option>
+                          <option value="DC01">DC01 -- DC01</option>
+                          <option value="DC02">DC02 -- DC02</option>
+                          <option value="DC03">DC03 -- DC03</option>
+                          <option value="DC04">DC04 -- DC04</option>
+                          <option value="DC05">DC05 -- DC05</option>
+                          <option value="DC06">DC06 -- DC06</option>
+                          <option value="DC07">DC07 -- DC07</option>
+                          <option value="DC08">DC08 -- DC08</option>
+                          <option value="DC09">DC09 -- DC09</option>
+                          <option value="DC10">DC10 -- DC10</option>
+                          <option value="DEDCKR">DEDCKR -- Dehradun, Chakrata Road</option>
+                          <option value="DEDRR">DEDRR -- Dehradun, Rajpur Road</option>
+                          <option value="DELCNT">DELCNT -- New Delhi, Delhi Cantt</option>
+                          <option value="DELCP">DELCP -- New Delhi, Connaught Place</option>
+                          <option value="DELCP2">DELCP2 -- New Delhi, CP2</option>
+                          <option value="DELCTT">DELCTT -- New Delhi, Cantonment</option>
+                          <option value="DELCWH">DELCWH -- CWH Server</option>
+                          <option value="DELDW7">DELDW7 -- New Delhi, Dwarka Sec-7</option>
+                          <option value="DELDWK">DELDWK -- New Delhi, Dwarka</option>
+                          <option value="DELE1">DELE1 -- New Delhi, East GKN7</option>
+                          <option value="DELE2">DELE2 -- New Delhi, East Saket</option>
+                          <option value="DELEXB">DELEXB -- New Delhi, Exhibitions</option>
+                          <option value="DELFO">DELFO -- New Delhi, Sarita Vihar</option>
+                          <option value="DELG14">DELG14 -- New Delhi, GK1 N14</option>
+                          <option value="DELG5">DELG5 -- New Delhi, GK1 N5</option>
+                          <option value="DELG57">DELG57 -- New Delhi, GK1M57</option>
+                          <option value="DELG7">DELG7 -- New Delhi, GK1 N7</option>
+                          <option value="DELGPK">DELGPK -- New Delhi, Green Park</option>
+                          <option value="DELIA">DELIA -- New Delhi, DIAL</option>
+                          <option value="DELINT">DELINT -- New Delhi, IGIA TERMINAL 3</option>
+                          <option value="DELKB">DELKB -- New Delhi, Karol Bagh</option>
+                          <option value="DELKM">DELKM -- New Delhi, Khan Market</option>
+                          <option value="DELKN">DELKN -- New Delhi, North Campus</option>
+                          <option value="DELLN">DELLN -- New Delhi, Lajpat Nagar</option>
+                          <option value="DELMCM">DELMCM -- New Delhi, Meharchand Market</option>
+                          <option value="DELMKP">DELMKP -- New Delhi, Kapashera Warehouse</option>
+                          <option value="DELMKT">DELMKT -- New Delhi, DelWeb Markets Store</option>
+                          <option value="DELMT">DELMT -- New Delhi, Model Town</option>
+                          <option value="DELPB">DELPB -- New Delhi, Punjabi Bagh</option>
+                          <option value="DELPL">DELPL -- New Delhi, DLF Place VK</option>
+                          <option value="DELPV">DELPV -- New Delhi, Preet Vihar</option>
+                          <option value="DELRG">DELRG -- New Delhi, Rajouri Garden</option>
+                          <option value="DELSAN">DELSAN -- New Delhi, Santushti</option>
+                          <option value="DELSC">DELSC -- New Delhi, select Citywalk</option>
+                          <option value="DELSE">DELSE -- New Delhi, South Extention</option>
+                          <option value="DELSUV">DELSUV -- New Delhi, Sundar Vihar</option>
+                          <option value="DELVK">DELVK -- New Delhi, Vasant Kunj</option>
+                          <option value="DIBKLM">DIBKLM -- Dibrugarh, Khalihamari</option>
+                          <option value="DURCC">DURCC -- Durgapur, City Centre</option>
+                          <option value="FBDNIT">FBDNIT -- Faridabad, NIT</option>
+                          <option value="FBDS16">FBDS16 -- Faridabad, Sector 16</option>
+                          <option value="FFW01S">FFW01S -- FFW, Delhi</option>
+                          <option value="FFW03S">FFW03S -- FFW, Kolkata</option>
+                          <option value="FFW04S">FFW04S -- FFW, Bangalore</option>
+                          <option value="FFW05S">FFW05S -- FFW, Chennai</option>
+                          <option value="FFW06S">FFW06S -- FFW, Mumbai</option>
+                          <option value="FFW08S">FFW08S -- FFW, Hyderabad</option>
+                          <option value="FFW09S">FFW09S -- FFW, Kerala</option>
+                          <option value="GBRGH">GBRGH -- Gulbarga, Gold Hub</option>
+                          <option value="GGNAIM">GGNAIM -- Gurgaon, Ambi Mall</option>
+                          <option value="GGNDTM">GGNDTM -- Gurgaon, DT Mall</option>
+                          <option value="GGNGAL">GGNGAL -- Gurgaon, Galleria</option>
+                          <option value="GGNGE">GGNGE -- Gurgaon, Good Earth Centre</option>
+                          <option value="GGNMGF">GGNMGF -- Gurgaon, MGF Mall</option>
+                          <option value="GGNMM">GGNMM -- Gurgaon, MGF Metropolitan</option>
+                          <option value="GGNPV">GGNPV -- Gurgaon, Palam Vihar</option>
+                          <option value="GGNS15">GGNS15 -- Gurgaon, Sector 15</option>
+                          <option value="GGNS29">GGNS29 -- Gurgaon, Sector 29</option>
+                          <option value="GGNSPM">GGNSPM -- Gurgaon, South Point Mall</option>
+                          <option value="GHZMAH">GHZMAH -- Ghaziabad, Mahagun Metro Mall</option>
+                          <option value="GHZPAC">GHZPAC -- Ghaziabad, Pacific Mall</option>
+                          <option value="GHZSM">GHZSM -- Ghaziabad, Shipra Mall</option>
+                          <option value="GOIASG">GOIASG -- Goa, Assagao</option>
+                          <option value="GOIBAG">GOIBAG -- Goa, Baga</option>
+                          <option value="GOICAN">GOICAN -- Goa, Candolim</option>
+                          <option value="GOIEXB">GOIEXB -- Goa, Exhibitions</option>
+                          <option value="GOIMAL">GOIMAL -- Goa, Mall De Goa</option>
+                          <option value="GOIMDG">GOIMDG -- Goa, Madgao</option>
+                          <option value="GOIMPC">GOIMPC -- Goa, Mapuca</option>
+                          <option value="GOIPAL">GOIPAL -- Goa, Palolem</option>
+                          <option value="GOIPJM">GOIPJM -- Goa, Panjim</option>
+                          <option value="GOIVAS">GOIVAS -- Goa, Vasco</option>
+                          <option value="GOIZUR">GOIZUR -- Goa, Zuri</option>
+                          <option value="GUWMGR">GUWMGR -- Guwahati, MG Road</option>
+                          <option value="GUWSPG">GUWSPG -- Guwahati, Spanish Garden</option>
+                          <option value="GWLCC">GWLCC -- Gwalior, City Centre</option>
+                          <option value="HDWNR">HDWNR -- Haldwani, Nainital Road</option>
+                          <option value="HOWAVM">HOWAVM -- Howrah, Avni Mall</option>
+                          <option value="HUBKR">HUBKR -- Hubli, Koppikar Road</option>
+                          <option value="HUBUOM">HUBUOM -- Hubli, Urban Oasis Mall</option>
+                          <option value="HYDBB">HYDBB -- Hyderabad,BasheerBagh/Himayat Nagar</option>
+                          <option value="HYDBH">HYDBH -- Hyderabad, Banjara Hills</option>
+                          <option value="HYDBP">HYDBP -- Hyderabad, Begumpet</option>
+                          <option value="HYDFM">HYDFM -- Hyderabad, Forum Mall</option>
+                          <option value="HYDGBL">HYDGBL -- Hyderabad, Gachibowli</option>
+                          <option value="HYDGMR">HYDGMR -- Hyderabad, International Airport</option>
+                          <option value="HYDGVK">HYDGVK -- Hyderabad, GVK</option>
+                          <option value="HYDHN">HYDHN -- Hyderabad, Himayath Nagar</option>
+                          <option value="HYDIM">HYDIM -- Hyderabad, Inorbit Mall</option>
+                          <option value="HYDINT">HYDINT -- Hyderabad, International Airport</option>
+                          <option value="HYDJH">HYDJH -- Hyderabad, Jubilee Hills</option>
+                          <option value="HYDSC">HYDSC -- Hyderabad, Sarath City Capital Mall</option>
+                          <option value="HYDSOM">HYDSOM -- Hyderabad, Somajiguda</option>
+                          <option value="IDRMGR">IDRMGR -- Indore, AB Road</option>
+                          <option value="IDRTIM">IDRTIM -- Indore, Treasure Island Mall</option>
+                          <option value="ISKCC">ISKCC -- Nashik, City Centre</option>
+                          <option value="ISKCR">ISKCR -- Nashik, College Road</option>
+                          <option value="ISKNCZ">ISKNCZ -- Nashik, Neelkamal Comm Zone</option>
+                          <option value="IXCEM">IXCEM -- Chandigarh, Elante Mall</option>
+                          <option value="IXCS9C">IXCS9C -- Chandigarh, Sector 17-A</option>
+                          <option value="IXEEM">IXEEM -- Mangalore, Empire Mall</option>
+                          <option value="IXWHST">IXWHST -- Jamshedpur, HS Tower/Virdi Niwas</option>
+                          <option value="IXYMM">IXYMM -- Gandhidham, Main Market</option>
+                          <option value="JABLJK">JABLJK -- Jabalpur, Lajpat Kunj</option>
+                          <option value="JAIEXB">JAIEXB -- Jaipur, Exhibitions</option>
+                          <option value="JAIMGF">JAIMGF -- Jaipur, MGF Mall</option>
+                          <option value="JAIPRR">JAIPRR -- Jaipur, Prithviraj Road</option>
+                          <option value="JAISM">JAISM -- Jaipur, Sarojini Marg</option>
+                          <option value="JAIVN">JAIVN -- Jaipur, Vaishali Nagar</option>
+                          <option value="JAMGN">JAMGN -- Jammu, Gandhi Nagar</option>
+                          <option value="JDHPCH">JDHPCH -- Jodhpur,Panchbatti/Circuit House Rd</option>
+                          <option value="JDHSCR">JDHSCR -- Jodhpur, Sardarpura C Road</option>
+                          <option value="JLRUE">JLRUE -- Jalandhar, Urban Estate/Model Town</option>
+                          <option value="KARJC">KARJC -- Karnal, Jarnali Colony</option>
+                          <option value="KNUCL">KNUCL -- Kanpur, Civil Lines/Z Square Mall</option>
+                          <option value="KOHTP">KOHTP -- Kolhapur, Tarabai Park</option>
+                          <option value="KOLKM">KOLKM -- Kollam, K Mall</option>
+                          <option value="KOLQP">KOLQP -- Kollam, Quilon Plaza</option>
+                          <option value="KOTKKR">KOTKKR -- Kottayam, Kerala</option>
+                          <option value="KURUK">KURUK -- Kurukshetra, .</option>
+                          <option value="LDHMR">LDHMR -- Ludhiana, Mall Road</option>
+                          <option value="LKOAC">LKOAC -- Lucknow, One Awadh Center</option>
+                          <option value="LKOAG">LKOAG -- Lucknow, Aliganj</option>
+                          <option value="LKOGN">LKOGN -- Lucknow, Gomti Nagar</option>
+                          <option value="LKOHJ">LKOHJ -- Lucknow, Hazratganj</option>
+                          <option value="LKOWEM">LKOWEM -- Lucknow, West End</option>
+                          <option value="MAAAN">MAAAN -- Chennai, Annanagar</option>
+                          <option value="MAABN">MAABN -- Chennai, Besantnagar</option>
+                          <option value="MAABN2">MAABN2 -- Chennai, Besant Nagar2</option>
+                          <option value="MAACPT">MAACPT -- Chennai, Chrompet</option>
+                          <option value="MAAECR">MAAECR -- Chennai, East Coast Road</option>
+                          <option value="MAAEM">MAAEM -- Chennai, Express Mall</option>
+                          <option value="MAAEXB">MAAEXB -- Chennai, Exhibitions</option>
+                          <option value="MAAFVM">MAAFVM -- Chennai, Forum Mall</option>
+                          <option value="MAAIH">MAAIH -- Chennai, Ilford House</option>
+                          <option value="MAAKD">MAAKD -- Chennai, Kodambakkam</option>
+                          <option value="MAAKK">MAAKK -- Chennai, KK Nagar/Ashok Nagar</option>
+                          <option value="MAARKS">MAARKS -- Chennai, R.K. Salai/TTK Road</option>
+                          <option value="MAASP">MAASP -- Chennai, Spencer Plaza/KNK Road</option>
+                          <option value="MAATN">MAATN -- Chennai, T Nagar</option>
+                          <option value="MAAVEL">MAAVEL -- Chennai, Velachery</option>
+                          <option value="MNPLGV">MNPLGV -- Manipal, Green View</option>
+                          <option value="MOHP5">MOHP5 -- Mohali, Phase 5</option>
+                          <option value="MRW01S">MRW01S -- MRW01 Storage</option>
+                          <option value="MRW02S">MRW02S -- MRW02 Storage</option>
+                          <option value="MRW03S">MRW03S -- MRW03 Storage</option>
+                          <option value="MRW04S">MRW04S -- MRW04 Storage</option>
+                          <option value="MRW05S">MRW05S -- MRW05 Storage</option>
+                          <option value="MRW06S">MRW06S -- MRW06 Storage</option>
+                          <option value="MRW07S">MRW07S -- MRW07 Storage</option>
+                          <option value="MRW08S">MRW08S -- MRW08 Storage</option>
+                          <option value="MRW09S">MRW09S -- MRW09 Storage</option>
+                          <option value="MRW10S">MRW10S -- MRW10 Storage</option>
+                          <option value="MRW11S">MRW11S -- MRW11 Storage</option>
+                          <option value="MYSJLB">MYSJLB -- Mysore, JLB Road</option>
+                          <option value="NAGEM">NAGEM -- Nagpur, Empress Mall</option>
+                          <option value="NAGLCS">NAGLCS -- Nagpur, Law College Square</option>
+                          <option value="NELJNR">NELJNR -- Nellore, JN Road</option>
+                          <option value="NOIGGM">NOIGGM -- Noida, Gardens Galleria Mall</option>
+                          <option value="NOIGIP">NOIGIP -- Noida, Great India Place</option>
+                          <option value="NOILCC">NOILCC -- Noida, Logix City Centre- Home Store</option>
+                          <option value="NOIMOI">NOIMOI -- Noida, Mall of India</option>
+                          <option value="NOISTR">NOISTR -- Noida, Starling</option>
+                          <option value="NOISW">NOISW -- Noida, Spice/Logix City Centre-Garments</option>
+                          <option value="PATFR">PATFR -- Patna, Fraser Road/Budha Marg</option>
+                          <option value="PATPTP">PATPTP -- Patna, Patliputra</option>
+                          <option value="PCW01">PCW01 -- PCW, Rudrapur, Uttarakhand</option>
+                          <option value="PCW01A">PCW01A -- PCW, Noida, UP</option>
+                          <option value="PCW01B">PCW01B -- PCW, Gurgaon, HR</option>
+                          <option value="PCW01C">PCW01C -- PCW, Haridwar, UL</option>
+                          <option value="PCW01D">PCW01D -- PCW, Jammu, JK</option>
+                          <option value="PCW02">PCW02 -- PCW, Ghaziabad, Uttarpradesh</option>
+                          <option value="PCW03">PCW03 -- PCW, Bhubaneshwar, Orissa</option>
+                          <option value="PCW03B">PCW03B -- PCW, Patna</option>
+                          <option value="PCW03C">PCW03C -- PCW, Raipur, Chhattisgarh</option>
+                          <option value="PCW08">PCW08 -- PCW,Vijayawada, AP</option>
+                          <option value="PCW10">PCW10 -- PCW, Ahmedabad, Gujrat</option>
+                          <option value="PKLS9">PKLS9 -- Panchkula, Sector 9</option>
+                          <option value="PNQA2">PNQA2 -- Pune, Arcade 02</option>
+                          <option value="PNQAMN">PNQAMN -- Pune, Amanora</option>
+                          <option value="PNQAND">PNQAND -- Pune, Aundh</option>
+                          <option value="PNQCWD">PNQCWD -- Pune, Chinchwad</option>
+                          <option value="PNQIM">PNQIM -- Pune, Inorbit Mall</option>
+                          <option value="PNQKP">PNQKP -- Pune, Koregaon Park</option>
+                          <option value="PNQPMC">PNQPMC -- Pune, Phoenix Market City</option>
+                          <option value="PNQRDM">PNQRDM -- Pune, R Mall Deccan/ JM Road</option>
+                          <option value="PNQSR">PNQSR -- Pune, Sassoon Road</option>
+                          <option value="PONRS">PONRS -- Pondicherry, Rue Suffren/Mission Street</option>
+                          <option value="PSCSAM">PSCSAM -- PSC, Samplestore</option>
+                          <option value="PTHKT">PTHKT -- Pathankot</option>
+                          <option value="PTLNLB">PTLNLB -- Patiala, New Leela</option>
+                          <option value="RAJCRM">RAJCRM -- Rajkot, Crystal Mall</option>
+                          <option value="RAJTGR">RAJTGR -- Rajkot, Tagore Road</option>
+                          <option value="RANEM">RANEM -- Ranchi, Dangra Toli Chowk</option>
+                          <option value="RANKR">RANKR -- Ranchi, Kanke Road</option>
+                          <option value="RISHI">RISHI -- Rishikesh, Laxman Jhula</option>
+                          <option value="RPRAM">RPRAM -- Raipur, Ambuja Mall</option>
+                          <option value="RPRCM">RPRCM -- Raipur, City Mall</option>
+                          <option value="RPRMM">RPRMM -- Raipur, Magneto Mall</option>
+                          <option value="RPRPND">RPRPND -- Raipur, City Central Mall Pandri</option>
+                          <option value="RRKCL">RRKCL -- Roorkee, Civil Lines</option>
+                          <option value="SANMM">SANMM -- Sangli, SFC Megaa Mall</option>
+                          <option value="SECRM">SECRM -- Secunderabad, Rainbow Mall</option>
+                          <option value="SLGCM">SLGCM -- Siliguri, Cosmos Mall</option>
+                          <option value="STVIM">STVIM -- Surat, Iscon Mall</option>
+                          <option value="STVVRM">STVVRM -- Surat, Virtuous Mall</option>
+                          <option value="THRFN">THRFN -- Thrissur, Fathima Nagar</option>
+                          <option value="THRSC">THRSC -- Thrissur, Sobha City</option>
+                          <option value="TRVANP">TRVANP -- Trivandrum, Anupama</option>
+                          <option value="TRVPAT">TRVPAT -- Trivandrum, Pattom Road</option>
+                          <option value="TRZTN">TRZTN -- Trichy,Thillai Nagar</option>
+                          <option value="UDRRKM">UDRRKM -- Udaipur, RKAY Mall</option>
+                          <option value="UPEXB">UPEXB -- UP, Exhibitions</option>
+                          <option value="VAPCR">VAPCR -- Vapi, Chala Road</option>
+                          <option value="VELKN">VELKN -- Vellore, Krishna Nagar</option>
+                          <option value="VIJRPL">VIJRPL -- Vijayawada, Ripple Mall</option>
+                          <option value="VNSSN">VNSSN -- Varanasi, Shastri Nagar</option>
+                          <option value="VTZSRI">VTZSRI -- Vizag, Siripuram</option>
+                          <option value="YAMGOB">YAMGOB -- Yamunagar, Gobindpuriroad</option>
+
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <TD vAlign="top" class="style2" style="width: 399px;
+        height: 406px;">
+          <table>
+            <tr>
+              <td>
+                <div id="Panel2" style="height:240px;">
+
+                  <table>
+
+                    <tr>
+                      <td class="headerlabel">PH</td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <select size="4" name="lstUnselectedSRC" multiple="multiple" id="lstUnselectedSRC"
+                          class="headerlabel" style="height:358px;width:90px;color: #993333;">
+                          <option value="B2CPH">Web.PH</option>
+                          <option value="QCPH">QC.SamplePH</option>
+                          <option value="QCDL11">QC.DL11PH</option>
+                          <option value="PSCPH">PSC.SamplePH</option>
+                          <option value="KL05">ph.kolkata</option>
+                          <option value="JD03">ph.jodhpur</option>
+                          <option value="JA02">ph.jaipur</option>
+                          <option value="CH07">ph.indore</option>
+                          <option value="AP14">ph.hyderabad</option>
+                          <option value="DMPH">ph.dummy</option>
+                          <option value="DL16">ph.delhi-b</option>
+                          <option value="DL11">ph.delhi-a</option>
+                          <option value="CN15">ph.chennai</option>
+                          <option value="BJ10">ph.bijnor</option>
+                          <option value="BA13">ph.bangalore</option>
+                          <option value="AM09">ph.amroha</option>
+                          <option value="AH08">ph.ahmedabad</option>
+                          <option value="NWHSTR">nwh.store</option>
+                          <option value="NWH">NWH</option>
+                          <option value="BM12">mum.mvk</option>
+
+                        </select>
+                      </td>
+                      <td>
+                        <table>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovRightSRC" value=">" id="btnMovRightSRC"
+                                style="width:50px;" />
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovLeftSRC" value="&lt;" id="btnMovLeftSRC"
+                                style="width:50px;" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovRightAllSRC" value=">>" id="btnMovRightAllSRC"
+                                style="width:50px;" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="submit" name="btnMovLeftAllSRC" value="&lt;&lt;" id="btnMovLeftAllSRC"
+                                style="width:50px;" />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td>
+                        <select size="4" name="lstSelectedSRC" multiple="multiple" id="lstSelectedSRC"
+                          class="headerlabel" style="height:358px;width:90px;">
+
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+
+                </div>
+              </td>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="Panel1" style="height:240px;">
+                        <!-- For Vendor -->
+                        <table>
+
+                          <tbody>
+                            <tr>
+                              <td class="headerlabel">Vendor</td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <select size="4" name="lstUnselectedVendor" multiple="multiple" id="lstUnselectedVendor"
+                                  class="headerlabel" style="height:358px;width:174px; color:#993333">
+                                  <option value="JPH">J P Handicrafts</option>
+                                  <option value="KVAR">Khatri Vasif Abdul Rahim</option>
+                                  <option value="RS">Radhika Singh</option>
+
+                                </select>
+                              </td>
+                              <td>
+                                <table>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <input type="submit" name="btnMovRightVendor" value=">" id="btnMovRightVendor"
+                                          style="width:50px;">
+
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <input type="submit" name="btnMovLeftVendor" value="<" id="btnMovLeftVendor"
+                                          style="width:50px;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <input type="submit" name="btnMovRightAllVendor" value=">>"
+                                          id="btnMovRightAllVendor" style="width:50px;">
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <input type="submit" name="btnMovLeftAllVendor" value="<<"
+                                          id="btnMovLeftAllVendor" style="width:50px;">
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                              <td>
+                                <select size="4" name="lstSelectedVendor" multiple="multiple" id="lstSelectedVendor"
+                                  class="headerlabel" style="height:358px;width:174px; color: #993333">
+                                  <option value="0">-</option>
+                                  <option value="2SC">2 S Collection</option>
+                                  <option value="2626CS">2626 Creative Studio Private Limited</option>
+                                  <option value="5EL">5 ELEMENTS</option>
+                                  <option value="ADTRDW">A &amp; D Tradewall</option>
+                                  <option value="ABAE">A B Art Export</option>
+                                  <option value="ABTU">A B Tent Udhyog</option>
+                                  <option value="ALINE">A LINE</option>
+                                  <option value="ARINT">A R International</option>
+                                  <option value="ASP">A V Art Service</option>
+                                  <option value="ADT">A.D Textiles</option>
+                                  <option value="AAMRA">Aamra</option>
+                                  <option value="ALKOLI">AANANDI LAL KOLI</option>
+                                  <option value="AARGEE">Aar Gee Enterprises</option>
+                                  <option value="AROHI">AAROHI</option>
+                                  <option value="AARART">Aarti Arts</option>
+                                  <option value="ASWRI">AASAWARI</option>
+                                  <option value="AVRN">AAVARAN</option>
+                                  <option value="AAVHS">Aavran Handloom Society</option>
+                                  <option value="ABHDLM">AB HANDLOOM</option>
+                                  <option value="ABHAF">ABDUL HAFIZ ANSARI</option>
+                                  <option value="KUDDUS">Abdul Kuddus</option>
+                                  <option value="Razaqu">Abdul Razaque A khatri</option>
+                                  <option value="AIK">Abdullah Iliyash Khati</option>
+                                  <option value="ABVAH">ABDULVAHAB A KHATRI</option>
+                                  <option value="ABCRFT">Abhinav Craft</option>
+                                  <option value="ABHPUB">Abhinav Publications</option>
+                                  <option value="ABHISH">Abhishek Enterprises</option>
+                                  <option value="ABHI">ABHIVYAKTI</option>
+                                  <option value="ABP">ABPLAIDS</option>
+                                  <option value="ADAPT">AD-APT</option>
+                                  <option value="ADARSH">Adarsh Handloom Fabrics</option>
+                                  <option value="ADHYA">Adhya Design Pvt Ltd</option>
+                                  <option value="ADMK">Adil M. Khatri</option>
+                                  <option value="AF">ADITI FASHION</option>
+                                  <option value="ADIT">ADITYA APPARELS</option>
+                                  <option value="DISHAA">Advaith Agencies (Previously Disha Agencies)</option>
+                                  <option value="AKHORE">Adwytta Handloom</option>
+                                  <option value="AITEX">AESHA TEXTILE</option>
+                                  <option value="AESH">Aeshaane</option>
+                                  <option value="AFYA">AFIYA HANDLOOM</option>
+                                  <option value="AFHL">Afreen Handloom</option>
+                                  <option value="AFTHL">Aftab Handloom</option>
+                                  <option value="AGNI">AGNI</option>
+                                  <option value="AGRC">AGRAWAL &amp; CO.</option>
+                                  <option value="AHARAM">Aharam TCPCL Weavers</option>
+                                  <option value="AHM">AHM Advertising Pvt Ltd</option>
+                                  <option value="AIRPL">Airtech Pvt Ltd</option>
+                                  <option value="AJADBR">Ajad Enterprises - Bihar</option>
+                                  <option value="AJADEN">AJAD ENTERPRISES - Delhi</option>
+                                  <option value="AKFSHN">AK FASHIONS</option>
+                                  <option value="AKHL">AK HANDLOOM</option>
+                                  <option value="AHF">AKASH HANDLOOM FACTORY</option>
+                                  <option value="AAMS">Akbar Ali Mohd. Suleman</option>
+                                  <option value="ARF">Akhil Overseas Private Limited</option>
+                                  <option value="AKTAH">Akhtar A Khatri</option>
+                                  <option value="MIG110">Akhtar A. Khatri-OLD</option>
+                                  <option value="AHP">Akola Hand Prints</option>
+                                  <option value="AKRAPP">AKR Apparels</option>
+                                  <option value="AKHF">AKRAM HANDLOOM FABRICS</option>
+                                  <option value="AKMD">AKRAM MOHD ANSARI</option>
+                                  <option value="AKSTEX">AKS Textiles</option>
+                                  <option value="AKPR">AKSHYA PARISHTHAN</option>
+                                  <option value="AKSOBA">Aksobha</option>
+                                  <option value="ALFA">AL-FA CREATION</option>
+                                  <option value="ALUMER">AL-UMER HANDLOOM</option>
+                                  <option value="ALAEXP">Alankrit</option>
+                                  <option value="ALC">ALCHA</option>
+                                  <option value="APCD">ALCOME PERFUMES &amp; COSTMETIC PVT LTD</option>
+                                  <option value="ALMERS">Ali Metal Traders</option>
+                                  <option value="ADPL">ALINE DESIGN PVT LTD</option>
+                                  <option value="AIHL">ALL INDIA HANDLOOMS</option>
+                                  <option value="ALCON">ALLIANZ CONTRACTOR</option>
+                                  <option value="ALLURE">Allure</option>
+                                  <option value="ALWE">ALLWAR ENTERPRISES</option>
+                                  <option value="Alok">Alok Fashions</option>
+                                  <option value="ALOR">ALOR DISHARI SAYAMBHAR DAL</option>
+                                  <option value="ALTH">Altaf Handloom Fabrics</option>
+                                  <option value="AMA">Ama Industries</option>
+                                  <option value="AMANHL">AMAN HANDLOOM</option>
+                                  <option value="AMHF">AMAN HANDLOOM FACTORY</option>
+                                  <option value="AMANIA">AMANIA</option>
+                                  <option value="AMIH">AMAR INDIA HANDICRAFTS CO</option>
+                                  <option value="AMRNT">Amarant Design LLP</option>
+                                  <option value="ADIPL">Amardeep Designs India P Ltd.</option>
+                                  <option value="AMEEN">Ameen D. Handicrafts</option>
+                                  <option value="AMHL">AMEER HANDLOOM</option>
+                                  <option value="AMIN">AMINUDDAN ANSARI</option>
+                                  <option value="AMPRNT">AMIT PRINTER</option>
+                                  <option value="AMT">Amita Bhatnagar</option>
+                                  <option value="ANLPUP">AN. LEATHER PUPPETS</option>
+                                  <option value="ARBIND">ANANDARAM BHOBARIA INDUSTRIES</option>
+                                  <option value="ANANT">ANANT TRADING CORPORATION</option>
+                                  <option value="ANMS">ANAVOOR MAHILA SAMAJAM</option>
+                                  <option value="ANGA">Angaresham</option>
+                                  <option value="Angika">Angika Hathkaragha Vikas Udyog Sahakari Samiti Ltd</option>
+                                  <option value="ANJAN">Anjan Biswas</option>
+                                  <option value="ABATRA">Anjana Batra</option>
+                                  <option value="ANKUR">ANKUR</option>
+                                  <option value="ANMGMT">ANMOL GARMENTS</option>
+                                  <option value="ANNUR">Annur Design</option>
+                                  <option value="ANSENT">Ansari Enterprises</option>
+                                  <option value="ANTAKA">Antak Agencies International</option>
+                                  <option value="ANSE">Anu Seth</option>
+                                  <option value="ANUPMA">ANUPAMA JALAN</option>
+                                  <option value="ANUBAR">Anuradha Baraya</option>
+                                  <option value="ANUDAS">ANUSKA DAS</option>
+                                  <option value="ANVEXP">ANV Exports (India)</option>
+                                  <option value="APDSGN">Apen Designs</option>
+                                  <option value="ALCPL">Apsus Lights And Crafts Pvt. Ltd.</option>
+                                  <option value="APUORG">APURVA ORGANICS LTD</option>
+                                  <option value="ARN">Aranya Earthcraft</option>
+                                  <option value="ILCA">Archisha</option>
+                                  <option value="AEC">arham expo crafts</option>
+                                  <option value="ARIFHL">ARIF HANDLOOM</option>
+                                  <option value="ARHNT">Arihant Enterprises</option>
+                                  <option value="ARPAUL">ARIJIT PAUL</option>
+                                  <option value="ARJHC">Arjun Handicrafts</option>
+                                  <option value="ARKAY">ARKAY ENTERPRISES</option>
+                                  <option value="ARTBUN">Art Bunker</option>
+                                  <option value="ATDSN">Art Design</option>
+                                  <option value="ARTA">Arta Broch Ceramics Pvt Ltd</option>
+                                  <option value="JAWAJA">ARTISANS ALLIANCE JAWAJA WEAVERS DIVISSION</option>
+                                  <option value="AI">Artistic Indians</option>
+                                  <option value="ARCH">ARUN CHANDA</option>
+                                  <option value="ARNEXP">Arun Exports</option>
+                                  <option value="ARBS">ARUP BISWAS</option>
+                                  <option value="ARVIND">Arvind Limited</option>
+                                  <option value="ARV">ARVINO</option>
+                                  <option value="ASHL">AS HANDLOOM</option>
+                                  <option value="ASADHL">ASAD HANDLOOM FACTORY</option>
+                                  <option value="ASRAM">ASHA RAM AHIRWAR</option>
+                                  <option value="AFHN">Asha Fashion</option>
+                                  <option value="ASHALF">ASHA HANDLOOM FABRICS</option>
+                                  <option value="ASHI">Ashi Exports</option>
+                                  <option value="ASHDAS">Ashok Das</option>
+                                  <option value="ASHOKA">ASHOKA AGENCIES</option>
+                                  <option value="ASHWIP">Ashoka Tessile</option>
+                                  <option value="ASHUEN">ASHU ENTERPRISES</option>
+                                  <option value="ASHWL">ASHU SHAWL WEAVERS</option>
+                                  <option value="AFAB">Asia Fab</option>
+                                  <option value="APE">ASIA PACIFIC</option>
+                                  <option value="ASIFAB">ASIF FABRICS</option>
+                                  <option value="ASRAR">ASRAR HANDLOOM</option>
+                                  <option value="ASCC">ASSOCIATED CLOTHINGS COMPANY</option>
+                                  <option value="ASG">Aster Garments</option>
+                                  <option value="ASTRA">Astra Sign India</option>
+                                  <option value="ATTIC">Attic Products</option>
+                                  <option value="OARK">AURANGJAB ABDUL RAZAQUE KHATRI</option>
+                                  <option value="AUROBC">Auro Bala Crafts</option>
+                                  <option value="APP">Auro Power Papers</option>
+                                  <option value="ATUVTL">Auro textile (A unit of vardhman textiles ltd)</option>
+                                  <option value="AUROF">Aurofeel</option>
+                                  <option value="AVPP">AUROVILLE PAPERS</option>
+                                  <option value="AVIND">AV Industri</option>
+                                  <option value="NISHA">Avani Designs (Previosuly Nisha Handicarfts)</option>
+                                  <option value="AVANTI">AVANTI APPARELS PRIVATE LIMITED</option>
+                                  <option value="ACPL">Avitron Components Pvt Ltd</option>
+                                  <option value="AVNID">AVNI DESIGNS</option>
+                                  <option value="AVNS">Avnis Lifestyle Private Limited</option>
+                                  <option value="AYNTX">AYAN TEXTILE</option>
+                                  <option value="AYRA">AYRA Textile</option>
+                                  <option value="AYNAT">AYURSENS NATURALS</option>
+                                  <option value="AZTEX">AZAM TEXTILES</option>
+                                  <option value="AZHR">AZHAR TEXTILES</option>
+                                  <option value="BABYHL">BABY HANDLOOM FACTORY</option>
+                                  <option value="BAAGRO">Balaji Agro Industries</option>
+                                  <option value="BVWM">Balavigna Wvg Mills Pvt. Ltd.</option>
+                                  <option value="BPLKL">Bandana Putalunda (Curves)</option>
+                                  <option value="BANDNI">Bandhni</option>
+                                  <option value="BANHFT">BANSAL HANDICRAFT</option>
+                                  <option value="BANSHI">Banshi Handlooms</option>
+                                  <option value="BNSHL">BANSHI SILK</option>
+                                  <option value="BRHMSI">Barahmasi</option>
+                                  <option value="BHPRNT">Bargad Hand Print</option>
+                                  <option value="BRQE">BAROQUE</option>
+                                  <option value="BASANT">BASANT</option>
+                                  <option value="BASIC">Basic Concept Advertising &amp; Marketing</option>
+                                  <option value="BFKTRI">Basir F Khatri</option>
+                                  <option value="PATNKL">BBPWCS (Patna)</option>
+                                  <option value="BHCDS">Begampur Handloom Cluster Development Society</option>
+                                  <option value="BELLA">Bella Designs</option>
+                                  <option value="BEROZ">BEROJGAAR MAHILA KALYAN SANSTHA</option>
+                                  <option value="BOPT">BHAGAT OVERSEAS</option>
+                                  <option value="BHGRTH">Bhagirath Enterprises</option>
+                                  <option value="BWPS">BHAGWAN PRASAD</option>
+                                  <option value="BRPL">Bhagwandas Retail Pvt Ltd</option>
+                                  <option value="BIL">Bhansali Impex Limited</option>
+                                  <option value="BHARAT">BHARAT EXIM INTERNATIONAL</option>
+                                  <option value="BSDC">Bharati Sharma Design Consultants</option>
+                                  <option value="BHHLH">BHARTI HANDLOOM HOUSE</option>
+                                  <option value="BHIMJK">Bhimji Kanji Vankar</option>
+                                  <option value="BHRIGU">BHRIGU INTERNATIONAL</option>
+                                  <option value="BHUIRA">Bhuira Jams</option>
+                                  <option value="BYeldi">Bhumayya Gangaram Yeldi</option>
+                                  <option value="Bikash">Bikash Basak</option>
+                                  <option value="BMFPL">BIMLA MARU FASHIONS PVT. LTD.</option>
+                                  <option value="BB">BIREN KUMAR BASAK</option>
+                                  <option value="Babu">Biswanath Basak</option>
+                                  <option value="BLISS">BLISS DESIGNS PVT. LTD.</option>
+                                  <option value="BPHK">Block Printing &amp; Handwork</option>
+                                  <option value="BLOOMC">Bloomcraft Apparels Pvt Ltd</option>
+                                  <option value="BHDL">Blossoms Of The Heaven</option>
+                                  <option value="BCD">Blue City Designs LLP</option>
+                                  <option value="BNTCIL">BNT Connections Impex Ltd</option>
+                                  <option value="BODHSW">BODH SHAWLS WEAVERS</option>
+                                  <option value="BRFL">BOMBAY RAYON FASHIONS LTD</option>
+                                  <option value="BRT">BR Textiles</option>
+                                  <option value="BKSADH">BRAJESH KUMAR SADH</option>
+                                  <option value="BRBMB">Breathing Bamboos</option>
+                                  <option value="BREEZE">BREEZE COLLECTION</option>
+                                  <option value="BRIC">BRIC A BRAC</option>
+                                  <option value="KL05-DP">BRINDABAN RANOO</option>
+                                  <option value="BUNKAR">BUNKAR JANTA HANDLOOM</option>
+                                  <option value="BTKL05">Bunon Textiles &amp; Co</option>
+                                  <option value="BUSHHF">BUSHRA HANDLOOM FABRICS</option>
+                                  <option value="BUSHRA">BUSHRA NAAZ</option>
+                                  <option value="BUSHU">BUSHU ACCESSORIES</option>
+                                  <option value="CSEXP">C.S.Exports</option>
+                                  <option value="CCPL">Cabochon Creations Pvt. Ltd.</option>
+                                  <option value="CALY">Calypso</option>
+                                  <option value="CANCON">CANE CONCEPT</option>
+                                  <option value="CSAFNA">CASAFINA INDIA PRIVATE LIMITED</option>
+                                  <option value="CEEDAA">CEEDAA ORGANIC FOODS</option>
+                                  <option value="CI">Central Impex</option>
+                                  <option value="CNTUHL">CENTURY HANDLOOM</option>
+                                  <option value="CHAKRA">Chakra Exports</option>
+                                  <option value="CHAMAN">Chaman Lal</option>
+                                  <option value="CHMNTX">CHAMAN TEXTILES</option>
+                                  <option value="CHAMKI">CHAMKI</option>
+                                  <option value="CHAMPA">Champa Lal Ahirwar</option>
+                                  <option value="CGH">Chandra Glass House</option>
+                                  <option value="CHRSKH">Chandra Sekhar Handlooms</option>
+                                  <option value="CSPLBR">Chandra Silk Pvt. Ltd. - BR</option>
+                                  <option value="CSPLTN">Chandra Silk Pvt. Ltd. - TN</option>
+                                  <option value="CSPL">Chandra Silk Pvt. Ltd. - UP</option>
+                                  <option value="CSPTLT">CHANDRA SILKS PVT. LTD. - Delhi</option>
+                                  <option value="CHRCOL">Charcoal</option>
+                                  <option value="CHRKHI">Charkhi</option>
+                                  <option value="CHKHL">CHARKOHL</option>
+                                  <option value="CHBNDI">CHAUBUNDI</option>
+                                  <option value="CHAPAN">Chauhan Pankajkumar Amrutlal</option>
+                                  <option value="CHRCHN">Cheer Chayan</option>
+                                  <option value="CHCOW">CHENETHA COLOUR WEAVES PVT LTD</option>
+                                  <option value="CYS">Chhipa Yasin Shahbuddin</option>
+                                  <option value="CHYY">Chhipa Yousuf Yaseen</option>
+                                  <option value="CSWS">Child &amp; Social Welfare Society</option>
+                                  <option value="CC">Chitraang Creations</option>
+                                  <option value="CHROME">CHROME YELLOW</option>
+                                  <option value="CHUI">CHUIKHADAN BUNKAR SAHKARI SAMITI MARYADIT</option>
+                                  <option value="CITY">City Neon Solutions</option>
+                                  <option value="CCF">Classic Coir Factory</option>
+                                  <option value="CSTH">CLOSE STITCH</option>
+                                  <option value="COCO">COCONESS</option>
+                                  <option value="CODINC">Code INC</option>
+                                  <option value="CCCD">Coimbatore Cotton Concepts &amp; Designs Co Pvt Ltd</option>
+                                  <option value="COLADV">Colours Advertising</option>
+                                  <option value="COLSET">Colours Offset</option>
+                                  <option value="COMBII">COMBII ORGANOCHEM PVTLTD</option>
+                                  <option value="COMPJW">COMPTOIR JEWELS COMPANY PVT LTD</option>
+                                  <option value="CHI">Concept Home Inc</option>
+                                  <option value="Cnftti">Confetti Exports Private Limited</option>
+                                  <option value="CONFOD">CONSCIOUS FOOD PRIVATE LIMITED</option>
+                                  <option value="CHRP">Conserve HRP</option>
+                                  <option value="COTLER">Cotler Creations</option>
+                                  <option value="CNC">Cotton and Cotton</option>
+                                  <option value="COTNHL">COTTON HANDLOOM</option>
+                                  <option value="CRFTIN">Craft India</option>
+                                  <option value="CRFTLP">CRAFTLIPI</option>
+                                  <option value="CRS">Creations</option>
+                                  <option value="CCRAFT">Creative Crafts</option>
+                                  <option value="CURIO">Curio 38</option>
+                                  <option value="CWTE">CURIOSITY WORKSHOP</option>
+                                  <option value="DKAI">D K Apprel India</option>
+                                  <option value="DAMODE">DA-Mode</option>
+                                  <option value="DABU">Dabudera</option>
+                                  <option value="DAKSA">Daksa Export (Previously Daksa Creations)</option>
+                                  <option value="DART">DAMINI ARTS</option>
+                                  <option value="DAT">Daniya Traders</option>
+                                  <option value="DNTALA">Dantala Block Print</option>
+                                  <option value="DOTEA">DARJEELING ORGANIC TEA ESTATES PVT LTD</option>
+                                  <option value="DAE">Darshan Art Exports</option>
+                                  <option value="DRSHN">Darshan Crafts</option>
+                                  <option value="DAMA">DASTAKAR ANDHRA MARKETING ASSOCIATION</option>
+                                  <option value="DATA">DATA STORES</option>
+                                  <option value="DAYABD">Dayaben B. Dohat</option>
+                                  <option value="DDME">DDM Enterprises</option>
+                                  <option value="DECBRN">December Born</option>
+                                  <option value="DECON">Decon Lighting Pvt Ltd.</option>
+                                  <option value="DECO">Decoware India</option>
+                                  <option value="DD">DEEPA AND DEVIKA</option>
+                                  <option value="DSS">Deepa Sethi Studio</option>
+                                  <option value="DKC">Deepak Kapoor &amp; Co.</option>
+                                  <option value="DEEPNC">DEEPNARAIN NAGU COMPANY</option>
+                                  <option value="DEI">Delta Exports International</option>
+                                  <option value="DENIMK">Denim Kingdom</option>
+                                  <option value="DEORIA">Deoria Design</option>
+                                  <option value="DRWJIL">Derewala Jewellery Industries Ltd.</option>
+                                  <option value="DESI">DESI ARTS</option>
+                                  <option value="DRPN2">Design Darpan Pvt Ltd - HR</option>
+                                  <option value="DARPAN">DESIGN DARPAN PVT. LTD</option>
+                                  <option value="DESELE">DESIGN ELEMENTS</option>
+                                  <option value="DEHOME">DESIGNER HOME</option>
+                                  <option value="DBPUB">DESIGNS BY PUJA BHARGAVA</option>
+                                  <option value="DCINC">Designs Craft INC</option>
+                                  <option value="Deva">Deva Enterprises</option>
+                                  <option value="DBHUMI">DEVBHUMI NATURAL PRODUCTS PRODUCERS CO LTD</option>
+                                  <option value="DEVEN">DEVENDRA GULABCHAND DHAKLE</option>
+                                  <option value="DEVI">Devi</option>
+                                  <option value="DEVIS">DEVI SAREES</option>
+                                  <option value="DKE">Devick &amp; Khandelwal Exports LLP</option>
+                                  <option value="DAPL">Dexter Apparels Private Limited</option>
+                                  <option value="DHANLX">DHAN LAXMI INDUSTRIES</option>
+                                  <option value="DTL">Dhanluxmi Textiles Ltd</option>
+                                  <option value="DHANOP">Dhanopia Crafts</option>
+                                  <option value="DHIFAB">Dhinesh Fabrics</option>
+                                  <option value="DSCS">Diamond Silk Co-op.Society Ltd</option>
+                                  <option value="DT">Dileep Exports Pvt Ltd</option>
+                                  <option value="DTC">Dileep Trading Corporation</option>
+                                  <option value="DIMDE">Dimensions Overseas Pvt Ltd.</option>
+                                  <option value="DBKL05">Dipankar Biswas</option>
+                                  <option value="DWGDI">Disha Women and Girls Development Institute</option>
+                                  <option value="DVNCMN">Divine Communication</option>
+                                  <option value="DIVDGN">Divine Design</option>
+                                  <option value="VGDL">Divine Fashions</option>
+                                  <option value="DVYA">DIVYA</option>
+                                  <option value="MTEX">Dixit Enterprises</option>
+                                  <option value="DIDE">DIYA DESIGN</option>
+                                  <option value="DKHL">DKHANDLOOM</option>
+                                  <option value="DREART">Dream Arts</option>
+                                  <option value="DF">Duksha Fabrics</option>
+                                  <option value="DURHL">DURGA HANDLOOMS</option>
+                                  <option value="DWK">DWARAKA</option>
+                                  <option value="DWJW">DWARKA JEWEL</option>
+                                  <option value="DWS">DWS JEWELLERY Private Limited</option>
+                                  <option value="DSJ">Dynamic Silver Jewellery</option>
+                                  <option value="ELAND">E-Land Apparel Ltd</option>
+                                  <option value="EART">EARTH ART</option>
+                                  <option value="SEET">EAST (PREVIOUSY SEET KAMAL INT)</option>
+                                  <option value="ENRS">EASTERN ROOTS</option>
+                                  <option value="ECO">Eco Kargha Handicrafts Marketing Pvt. Ltd</option>
+                                  <option value="ECOTSR">ECO TASAR SILK(P) LTD</option>
+                                  <option value="ECOBUD">ECOBUDDY EXPORTS</option>
+                                  <option value="ECOLNE">Ecoline</option>
+                                  <option value="EEPL">Ecomart Exports Pvt. Ltd</option>
+                                  <option value="DARB">EDCONS FASHIONS PRIVATE LIMITED</option>
+                                  <option value="Eden">Eden Textiles Pvt.Ltd</option>
+                                  <option value="EIH">EIH LIMITED UNIT PRINTING PRESS</option>
+                                  <option value="EKTAFB">Ekta Fabs</option>
+                                  <option value="EDSPL">Ektara Design Studio (OPC) Pvt Ltd</option>
+                                  <option value="ELN">ELAN</option>
+                                  <option value="ELIXIR">Elixir Retail</option>
+                                  <option value="ETPL">Emperor Textiles Private Limited</option>
+                                  <option value="ESSMA">ESSMA FELTS PVT LTD</option>
+                                  <option value="DIMPLE">Estcorp (India) Pvt. Ltd.</option>
+                                  <option value="ESWARK">Eswarudu Kalamkari</option>
+                                  <option value="ESWAR">Eswarudu Kalamkari Production Centre</option>
+                                  <option value="KMSD">Ethinic Art Overseas Pvt Ltd</option>
+                                  <option value="ELXFPL">Eurolux Fragrances Pvt. Ltd.</option>
+                                  <option value="CHBEN">Eva Creations</option>
+                                  <option value="FACC">F A CHIKAN CREATION</option>
+                                  <option value="ASHTEX">F.Ashrafi Textiles</option>
+                                  <option value="FABENT">Fab Enterprises</option>
+                                  <option value="FABSHG">FABCREATION S.H.G.</option>
+                                  <option value="FAHMHL">Faheem Handloom Kankheri</option>
+                                  <option value="FHHL">Faheem Handloom Kiwar</option>
+                                  <option value="FASL">FAISAL HANDLOOM</option>
+                                  <option value="FKHR">FAKHAR HANDLOOM</option>
+                                  <option value="FGPL">Fanusta Global Private Limited</option>
+                                  <option value="FARNHL">FAREEN HANDLOOM</option>
+                                  <option value="FRDB">FARIDA BANO</option>
+                                  <option value="FKSK">Farukh Suleman Khatri</option>
+                                  <option value="FSNWR">Fashion Wear</option>
+                                  <option value="FCI">Fashions Club International</option>
+                                  <option value="FYZ">Fayaz Ahmad Beigh</option>
+                                  <option value="FEMPRI">Femina Prints</option>
+                                  <option value="FerroL">Ferro Linkers</option>
+                                  <option value="FNWVS">Fine Weaves</option>
+                                  <option value="FIROJA">FIROJ ANSARI</option>
+                                  <option value="FIVEHL">Five Star Handloom</option>
+                                  <option value="FIVESS">Fivestrands</option>
+                                  <option value="FLAME">FLAME HAND MADE POTTERY</option>
+                                  <option value="FLORA">FLORA EXPORTS</option>
+                                  <option value="FOREVR">FOREVER BODY CARE INDUSTRIES</option>
+                                  <option value="FORTEX">Fortune Exports</option>
+                                  <option value="FRAGWD">FRAGRANCE WORLD (INDIA)</option>
+                                  <option value="FSTEX">Frangipani Studio Textiles</option>
+                                  <option value="FRSTKL">Freeset Bags &amp; Apparel Private Ltd.</option>
+                                  <option value="FRODGN">Frogg Designs</option>
+                                  <option value="FEPLTD">FROLIC EXPORTS PVT. LTD</option>
+                                  <option value="FURKAN">FURKAN HANDLOOM</option>
+                                  <option value="FRQHL">FURQAN HANDLOOM FACTORY</option>
+                                  <option value="GKEXP">G.K. Exports</option>
+                                  <option value="GMS">G.M.Syntex Pvt.Ltd.</option>
+                                  <option value="GNZAK">G.N.ZAK DESIGNS</option>
+                                  <option value="GAGLH">Gagan Leather House</option>
+                                  <option value="SGHDKL">Gautam Handloom</option>
+                                  <option value="GYHL">GAYATHRI HANDLOOM HOUSE</option>
+                                  <option value="PC">Geet Art Export</option>
+                                  <option value="GKK">GEETA KALA KENDRA</option>
+                                  <option value="OMPRK">Gehlot Juti Store</option>
+                                  <option value="GEMIXX">Gemixx Designs</option>
+                                  <option value="GEMS">GEMSTONE PRODUCTS PVT LTD</option>
+                                  <option value="GMP">Ghulam Mohammad Pattoo</option>
+                                  <option value="GJKSHE">GJK Shellex(I) Pvt Ltd</option>
+                                  <option value="GKINT">GK International</option>
+                                  <option value="GLIMPS">GLIMPSE</option>
+                                  <option value="GAE">Global Art Exports</option>
+                                  <option value="GFFPL">Global Fibres &amp; Fabrics Pvt Ltd</option>
+                                  <option value="GGLORY">GLOBAL GLORY (INDIA)</option>
+                                  <option value="GTC">Glotex Trading Co.</option>
+                                  <option value="GWWSPC">Godavari Women Weavers Services Producer Co. Ltd</option>
+                                  <option value="GAPL">Goel Associates Pvt. Ltd.</option>
+                                  <option value="GLHND">Goel Handicrafts</option>
+                                  <option value="GTKL05">Gokul Texprints Pvt Ltd</option>
+                                  <option value="GOLCAR">Golden Carpets</option>
+                                  <option value="GolFib">Golden Fibre</option>
+                                  <option value="GOLDHL">GOLDEN HANDLOOM</option>
+                                  <option value="GWE">Goodwill Enterprises</option>
+                                  <option value="GOPSAN">Gopilal &amp; Sons</option>
+                                  <option value="GGKL">Gorachand Guin</option>
+                                  <option value="GHPL">GOVARDHAN HOLDINGS (P) LIMITED</option>
+                                  <option value="GOVOPL">Govardhan Overseas Pvt. Ltd.</option>
+                                  <option value="GRAMYA">GRAMYA TS PVT LTD</option>
+                                  <option value="JST">Grasim Industries Ltd-Jaya Shree Textiles, Rishra</option>
+                                  <option value="GREATX">Great SBTextile</option>
+                                  <option value="GRNETH">GREEN EARTH</option>
+                                  <option value="GRNERA">GREENEERA</option>
+                                  <option value="HWHICS">Gulab Shawl Industry</option>
+                                  <option value="GPTEX">GURU PRASAD TEXTILE</option>
+                                  <option value="GVFAB">GV Fabrics</option>
+                                  <option value="GVSARI">GV SAREES</option>
+                                  <option value="HMTTEX">H &amp; M Textiles</option>
+                                  <option value="HBENTP">H.B.enterprises</option>
+                                  <option value="HLDS">H.L.Dawar &amp; Sons</option>
+                                  <option value="HAATHI">Haathi Chaap C/o Fibres</option>
+                                  <option value="HABIB">Habib Idrish Khatri</option>
+                                  <option value="HFIZHL">HAFIZ HANDLOOM</option>
+                                  <option value="HFIZKM">HAFIZ KAMRUDDIN</option>
+                                  <option value="HAJIEB">HAJI EBRAHIM HAJI JUMMAJI KHATRI</option>
+                                  <option value="HMC">Haji Munna Creation</option>
+                                  <option value="HILAL">Hakeem Hilal Ahmad Shah</option>
+                                  <option value="HMZAHL">HAMZA HANDLOOM FABRICS</option>
+                                  <option value="HFI">Handfab India</option>
+                                  <option value="HNDCRT">Handicraft Creation</option>
+                                  <option value="HANMAN">HANDICRAFTS MAN</option>
+                                  <option value="HNDFBR">Handloom Fabrics</option>
+                                  <option value="HWVIND">Handweave India</option>
+                                  <option value="HCS">Hao Crafts Society</option>
+                                  <option value="HHOME">Happy Home</option>
+                                  <option value="HAPPYT">Happy Tree</option>
+                                  <option value="HARKOL">HARGOVIND KOLI</option>
+                                  <option value="HARGKB">HARGOVIND KOLI BUNKAR</option>
+                                  <option value="Haridb">Hari Devji Bagda</option>
+                                  <option value="HARIOM">HARI OM BIOFOOD PRODUCTS INDIA PVT LTD</option>
+                                  <option value="HARI">Hariharan</option>
+                                  <option value="HRJCRF">Harji Handicrafts</option>
+                                  <option value="HARMNY">HARMONY MERCHANDISING SERVICES</option>
+                                  <option value="HARSHG">Harsh G Dave</option>
+                                  <option value="HRTEX">HARYANA TEXPRINTS (OVERSEAS) LTD.</option>
+                                  <option value="HHSENH">Haseen Handloom</option>
+                                  <option value="HASHL">HASHMI HANDLOOM</option>
+                                  <option value="HEIAGA">Heirloom Naga</option>
+                                  <option value="HEMKL">HEMALATHA KALAMKARI FABRICS</option>
+                                  <option value="HMNT">Hemant Prajapati</option>
+                                  <option value="HEMRAJ">Hemraj Jewelery Craft</option>
+                                  <option value="HPF">HERITAGE PRIME FURNITURE PRIVATE LIMITED</option>
+                                  <option value="HTC">Heritage Trading Company</option>
+                                  <option value="HFPL">HeroS Fashion Pvt. Ltd.</option>
+                                  <option value="HIMART">HIMALAYAN ARTEFACTS</option>
+                                  <option value="HBS">Hina Bangle Store</option>
+                                  <option value="HINA">HINA TEXTILES</option>
+                                  <option value="HINDAE">HINDUSTAN ART EXPORT</option>
+                                  <option value="HMTHAL">HMT HANDLOOM</option>
+                                  <option value="HOMACC">Home Accents</option>
+                                  <option value="HBYS">Home by Shekhavati</option>
+                                  <option value="HDL">HOME D`LUXE</option>
+                                  <option value="HOMEDG">Home Edge</option>
+                                  <option value="ILIYAS">Home Fashion</option>
+                                  <option value="HOT">HOUSE OF TUHINA</option>
+                                  <option value="HVB">House of Vrajbhoomi</option>
+                                  <option value="HSPS">HSPS TEXTILE PVT LTD</option>
+                                  <option value="HUNAR">HUNAR</option>
+                                  <option value="HYMNS">HYMNS</option>
+                                  <option value="ICON">Icon International</option>
+                                  <option value="IM">Illuminati Merchandise</option>
+                                  <option value="Ilyaas">ILYAS</option>
+                                  <option value="IMPRES">Impressions</option>
+                                  <option value="IMRHLF">IMRAN HANDLOOM FABRICS</option>
+                                  <option value="INTRAD">IN TRADING PVT LTD</option>
+                                  <option value="IHM">Incredible Handicrafts and Minerals</option>
+                                  <option value="INDSN">INDESIGN</option>
+                                  <option value="INDEX">INDIA EXPORST TODAY</option>
+                                  <option value="INDPR">India Prints</option>
+                                  <option value="IAC">Indian Art &amp; Craft - Delhi</option>
+                                  <option value="IAWC">Indian Artwares Corporation</option>
+                                  <option value="INCRFT">Indian Crafts</option>
+                                  <option value="INDCRT">Indian Creations</option>
+                                  <option value="INCOOP">INDIAN HANDLOOM COOPERATIVE SOCIETY LTD</option>
+                                  <option value="INDOCN">Indian Ocean</option>
+                                  <option value="ITH">Indian Tassar Handicraft</option>
+                                  <option value="INDTEX">INDIAN TEXTILES</option>
+                                  <option value="INDWVE">INDIAN WEAVE</option>
+                                  <option value="INDICR">INDIGENE CRAFT</option>
+                                  <option value="ICPL">Indigo Clothing Pvt. Ltd. - HR</option>
+                                  <option value="INDGCL">INDIGO CLOTHING PVT LTD</option>
+                                  <option value="IDS">Indigo Design Studio</option>
+                                  <option value="INDGHF">INDIGO HOME FASHIONS</option>
+                                  <option value="IEPL">Indmoda Exports Pvt Ltd</option>
+                                  <option value="INDSPR">INDSPIRE</option>
+                                  <option value="INDUS">INDUS HANDICRAFT (PREVIOUSLY PIONEER TRADING)</option>
+                                  <option value="ITPL">Industree Producer Transform Pvt Ltd</option>
+                                  <option value="INFRA">Infra Inc.</option>
+                                  <option value="INHERE">INHERE AAJIVIKA UTTHAN SAMITI</option>
+                                  <option value="INHRT">INHERITANCE INDIA</option>
+                                  <option value="INKAHO">Inka Homecrafts</option>
+                                  <option value="INKA">INKA HOMECRAFTS PVT LTD</option>
+                                  <option value="IeN">Insha-e-Noor</option>
+                                  <option value="INTWVE">INTER WEAVE</option>
+                                  <option value="INTERS">INTERNATIONAL TRADE LINKERS</option>
+                                  <option value="IQBLHL">IQBAL HANDLOOM</option>
+                                  <option value="IRFNHL">IRFAN HANDLOOM ENTERPRISES</option>
+                                  <option value="IRSD">IRSHAD HANDLOOM FEBRICS</option>
+                                  <option value="IRVANA">Irvana Ventures Inc</option>
+                                  <option value="ISS">Islam Silk &amp; Sarees</option>
+                                  <option value="IMK">Ismail mohd Khatri</option>
+                                  <option value="ISMILE">ISMILE HANDLOOM</option>
+                                  <option value="ISRRHL">Israr Handloom</option>
+                                  <option value="PIGMNT">Itara Prints Pvt. Ltd.</option>
+                                  <option value="IML">ITS MY LIFE</option>
+                                  <option value="JASONS">J. A &amp; SONS</option>
+                                  <option value="JBT">J.B. Textile</option>
+                                  <option value="JREPL">J.R.Exports Pvt Ltd</option>
+                                  <option value="JABBAR">JABBAR HANDLOOM</option>
+                                  <option value="JGDHN">Jagdhan Impex</option>
+                                  <option value="JAG">Jagdish Prasad</option>
+                                  <option value="JSBI">JAI SHREE BALAJI INDUSTRIES</option>
+                                  <option value="JFAB">JAIN FAB</option>
+                                  <option value="JNC">JAINCO</option>
+                                  <option value="JPRWVN">Jaipur Woven</option>
+                                  <option value="Jamal">Jamal Abdul Nasir</option>
+                                  <option value="AHMAD">Jamal Ahmad</option>
+                                  <option value="JANHTH">Janta Hathkargha</option>
+                                  <option value="JATAN">Jatan Arts</option>
+                                  <option value="JSE">Javed Silk Emporium</option>
+                                  <option value="JLA">Jawaja Leather Association</option>
+                                  <option value="JCP">Jay Ceramic Pottery</option>
+                                  <option value="JSTEX">JAYA SHREE TEXTILES</option>
+                                  <option value="JAYIN">Jayshree International</option>
+                                  <option value="JEWELK">Jewel Krafts</option>
+                                  <option value="JBJ">Jewels by Jasmine</option>
+                                  <option value="JTBKL">Jhantu Basak</option>
+                                  <option value="JKE">JK Exports - DELHI</option>
+                                  <option value="JKHL">JK HANDLOOM FACTORY</option>
+                                  <option value="JDP">Jumbo Digital Prints Pvt. Ltd.</option>
+                                  <option value="JUNAKH">Juned A Khatri</option>
+                                  <option value="JUNO">JUNO IMPEX</option>
+                                  <option value="JIT">JUST INTERESTING THINGS</option>
+                                  <option value="JDEXPL">Jyamiti Designs And Exports Private Limited</option>
+                                  <option value="JTHL">Jyoti Handloom</option>
+                                  <option value="JTP">Jyoti Textile Printer</option>
+                                  <option value="KBC">K B Creation</option>
+                                  <option value="KKFAB">K K FABRICS</option>
+                                  <option value="KSAHL">K S A HANDLOOM FABRICS</option>
+                                  <option value="KAINTL">K.A.INTERNATIONAL</option>
+                                  <option value="KSAHLF">K.S.A. HANDLOOM FABRICS</option>
+                                  <option value="KAINT">KA International</option>
+                                  <option value="KDMHT">KADAM HAAT</option>
+                                  <option value="KSS">Kadeem Sufi Shawls</option>
+                                  <option value="KAGACR">KAGA HANDICRAFTS</option>
+                                  <option value="KRI">Kailash Rug Industries</option>
+                                  <option value="KALABH">KALA BHARATHI HANDLOOMS</option>
+                                  <option value="KDHLUG">KALADHARI HANDLOOM UDYOG</option>
+                                  <option value="KALORG">KALADHARI ORGANICS</option>
+                                  <option value="KRTC">Kalamkari Research and Training Centre</option>
+                                  <option value="KALANI">KALANI INDUSTRIES</option>
+                                  <option value="KHPL">Kalavilasa Handmade Pvt. Ltd.</option>
+                                  <option value="KLYNHL">KALYANI HANDLOOM SAMITI</option>
+                                  <option value="KAMHL">KAMAR HANDLOOM FABRICS</option>
+                                  <option value="KANA">Kana Creations</option>
+                                  <option value="KHKL">KANIKA HANDLOOM</option>
+                                  <option value="KEPL">Kanvick Exports (P) Ltd</option>
+                                  <option value="KARTRA">KAR TRADING</option>
+                                  <option value="KARWEV">KARIGAR WEAVES PVT LTD</option>
+                                  <option value="KARGRI">KARIGARI</option>
+                                  <option value="KARFAS">KARISHMA FASHION - Delhi</option>
+                                  <option value="KRFSUP">Karishma Fashions - UP</option>
+                                  <option value="KRMOVS">KARMA OVERSEAS</option>
+                                  <option value="KKGSS">Karnataka Khadi Gramodyoga Samyukta Sangha (F)</option>
+                                  <option value="KAROMI">Karomi</option>
+                                  <option value="KAJA">Kartar Associates</option>
+                                  <option value="Kartar">Kartar Khorwal</option>
+                                  <option value="KBKL05">Kartick Badyakar</option>
+                                  <option value="Kashif">Kashif Handloom</option>
+                                  <option value="KD">KashishDesignz</option>
+                                  <option value="KSHYPS">Kashyaps</option>
+                                  <option value="KASMHL">KASIM HANDLOOM</option>
+                                  <option value="SSIND">Katna Kantha Trading Pvt. Ltd.</option>
+                                  <option value="KAVYAC">Kavya Creations</option>
+                                  <option value="KAYSON">Kaysons Handicrafts</option>
+                                  <option value="kazage">kazage lifestyle</option>
+                                  <option value="KBHAND">KB Handicraft</option>
+                                  <option value="KDHAPL">KD Home Arts Pvt. Ltd.</option>
+                                  <option value="KNRN">Kedar Nath Ram Nath &amp; Co.</option>
+                                  <option value="KTPL">Khaas Textiles Pvt Ltd</option>
+                                  <option value="KHLQ">KHALIQUE HANDLOOM</option>
+                                  <option value="KCS">Khamir Craft Society</option>
+                                  <option value="KHATI">KHATI DESIGN PVT LTD</option>
+                                  <option value="HAJI">Khatri A Jabbar Haji Zakariya</option>
+                                  <option value="KAKY">Khatri Abdul Kader Yakub</option>
+                                  <option value="KARARA">Khatri Abdul Raheem Abdulrazzaque khatri</option>
+                                  <option value="KARA">KHATRI ABDUL RAHIM ANWAR</option>
+                                  <option value="ABDUL">Khatri Abduljabbar Mohdammed</option>
+                                  <option value="ADAMAJ">Khatri Adam Abdul Jabbar</option>
+                                  <option value="KAICOM">Khatri Anwar Isha &amp; Company</option>
+                                  <option value="KHJA">Khatri Hanjala Jakab</option>
+                                  <option value="IRFAN">KHATRI IRFAN ANWAR</option>
+                                  <option value="KKUSMA">Khatri Khalid Usman</option>
+                                  <option value="KMHU">Khatri Mamad Husen Umar</option>
+                                  <option value="KMHM">Khatri Mohd Hanif Abdul Mazid</option>
+                                  <option value="HANIF">KHATRI MOHD. HANIF AYUB</option>
+                                  <option value="KMUSAT">Khatri Musa Tarmohmad</option>
+                                  <option value="KNAJ">Khatri Nauaman Abdul Jabbar</option>
+                                  <option value="KOMUSA">Khatri Ovesh Musabhai</option>
+                                  <option value="KSAS">Khatri Sajid Abdul Shakur</option>
+                                  <option value="KPP">Khavda Printed Pottery</option>
+                                  <option value="KHUR">KHURSHEED HANDLOOM</option>
+                                  <option value="KIKOMO">Kikomo</option>
+                                  <option value="KIMAAB">KIMKHWAAB</option>
+                                  <option value="KINFAB">KIN FABRICS</option>
+                                  <option value="KIRPER">Kirti Papers Pvt Ltd</option>
+                                  <option value="KLKOLI">KISHAN LAL KOLI</option>
+                                  <option value="KGPL">Kisneel Garments Pvt.Ltd.</option>
+                                  <option value="KNSENT">KNS Enterprises</option>
+                                  <option value="KOHMES">Kohana Homes</option>
+                                  <option value="KOHTEX">KOHINOOR TEXTILES</option>
+                                  <option value="KCM">Kohli Chikan Manufacturers</option>
+                                  <option value="KOLHLC">Kolhapuri handmade lether Chappal</option>
+                                  <option value="KOSHL">KOSA HANDLOOM</option>
+                                  <option value="KSK">Kota Saree Kendra</option>
+                                  <option value="KOTENT">Koteshwari Enterprises</option>
+                                  <option value="KRAFTP">KRAFT POST</option>
+                                  <option value="KRISTX">KRISHH TEX GLOBAL</option>
+                                  <option value="KC">KRISHNA CREATION</option>
+                                  <option value="KGP">Krishna Gold Print</option>
+                                  <option value="KRHL">KRISHNA HANDLOOM</option>
+                                  <option value="KWL">Krishna Weavers Ltd</option>
+                                  <option value="KRWFAC">KRISHNA WEAVING FACTORY</option>
+                                  <option value="KRIS">Krisons Enterprises</option>
+                                  <option value="KSL">Kriti Sustainable Livelihoods</option>
+                                  <option value="RKHL">KTM TEXTILES</option>
+                                  <option value="KAK">Kulsum A Khatri</option>
+                                  <option value="KUMSS">KUMAON EARTHCRAFT SWAYATT SAHAKARITA</option>
+                                  <option value="KUMAON">Kumaon Woollens</option>
+                                  <option value="KGU">KUMAUN GRAMEEN UDYOG</option>
+                                  <option value="AVAN">Label Avani</option>
+                                  <option value="LHRIYA">Lahariya Craft</option>
+                                  <option value="LAIBA">LAIBA HANDLOOM</option>
+                                  <option value="LAKRAO">LAKSHMAN RAO</option>
+                                  <option value="LCD">Lal Chand Derwawala</option>
+                                  <option value="LIPL">Lalbhai Industries Pvt Ltd.</option>
+                                  <option value="LKS">Lalit Kumar &amp; Sons</option>
+                                  <option value="LAMRIN">LAMRIN OVERSEAS</option>
+                                  <option value="LATUDE">Latitudes</option>
+                                  <option value="LAXINT">Laxmi Interiors</option>
+                                  <option value="LFPL">LEL Fashions Pvt. Ltd.</option>
+                                  <option value="LHL">Libas Handloom</option>
+                                  <option value="LBSIMP">LIBAS IMPEX</option>
+                                  <option value="LIBCR">LIBRA SALES</option>
+                                  <option value="LLA">LIFE LIKE ART</option>
+                                  <option value="LILAJI">Lilaji Export House</option>
+                                  <option value="LIMHL">LIMRA HANDLOOM</option>
+                                  <option value="LINENC">Linen Craft</option>
+                                  <option value="LIYQHL">LIYAQAT HANDLOOM FINISHING</option>
+                                  <option value="LMYA">LMYA</option>
+                                  <option value="LHC">LUCKNAVI HAND CRAFTS</option>
+                                  <option value="LCG">Lucknowi Chikan Ghar</option>
+                                  <option value="LUNKER">Lunker Exports</option>
+                                  <option value="LUKHL">LUXMI HANDLOOM</option>
+                                  <option value="LUXMI">LUXMI TEA CO. LTD.</option>
+                                  <option value="MJBROS">M J Bros</option>
+                                  <option value="MTSM">M T Silk Mills</option>
+                                  <option value="MVTHL">M V T HANDLOOMS</option>
+                                  <option value="MJABIR">M. JABIR HANDLOOM</option>
+                                  <option value="MKEOKH">M.K.ENTERPRISES</option>
+                                  <option value="MKTH">M.K.Tailoring House</option>
+                                  <option value="MMFAB">M.M FABRICS</option>
+                                  <option value="MPKVIB">M.P Khadi &amp; Village Industries Board</option>
+                                  <option value="MRAEPL">M.R.A. Enterprises Pvt. Ltd.</option>
+                                  <option value="MSTEX">M.S. Textiles</option>
+                                  <option value="AYC">M/S A.Y Collections</option>
+                                  <option value="AADIVA">M/S Aadiva</option>
+                                  <option value="ABHICR">M/s ABHI CREATIONS</option>
+                                  <option value="CECIL">M/S CECILIAS LEATHER ARTEFACTS</option>
+                                  <option value="DADOO">M/S Dadoo Industries</option>
+                                  <option value="DASMAT">M/S DAS MAT WEAVING</option>
+                                  <option value="FANKAR">M/S FANKAR</option>
+                                  <option value="FARHHL">M/S Farhan Handloom</option>
+                                  <option value="NANSRI">M/S Flue art Pottery (Previously Nasir Ansari)</option>
+                                  <option value="INDEVA">M/S INDEVA</option>
+                                  <option value="KKSH">M/s Kanish Koli Saree House</option>
+                                  <option value="KUMASS">M/s Kumass International</option>
+                                  <option value="MS">M/s Mahee Sarees</option>
+                                  <option value="NDS">M/S NAATA DESIGN STUDIO</option>
+                                  <option value="RWTCRT">M/s Rawat Creation</option>
+                                  <option value="RRAASA">M/S RRAASAA</option>
+                                  <option value="SFPL">M/S Sabeena Fabrics Pvt Ltd</option>
+                                  <option value="SLMHL">M/S SALIM HANDLOOM</option>
+                                  <option value="SAQBHL">M/S SAQIB HANDLOOM FABRICS</option>
+                                  <option value="SAURAB">M/s Saurabh Traders</option>
+                                  <option value="SHADHL">M/S Shad Handloom Factory</option>
+                                  <option value="SURAHI">M/S Surahi</option>
+                                  <option value="TSH">M/s Trivesh Saree House</option>
+                                  <option value="ZNW">M/S Zeba Needle Works</option>
+                                  <option value="JVDTEX">M/s. Javed Textiles</option>
+                                  <option value="RR">M/s. Ruchi Relan</option>
+                                  <option value="VSGFAB">M/S. VSG Fabrics Pvt Ltd</option>
+                                  <option value="FISCHR">M\S FISCHER MODULAR FIXTURES PVT LTD</option>
+                                  <option value="FRDSHL">MA FIRDOUS HANDLOOM FABRICS</option>
+                                  <option value="MAATIK">MAATIKAAR</option>
+                                  <option value="ANUR">Madanmohan Kishanlal</option>
+                                  <option value="MSB">Madhu Sudan Basak</option>
+                                  <option value="MDHPR">MADHURIMA PRINTS</option>
+                                  <option value="MADONA">Madona Enterprises</option>
+                                  <option value="MAHADV">Mahadev Art</option>
+                                  <option value="MHBB">MAHBOOB TEXTILE</option>
+                                  <option value="MHSBRO">Mahes Borse</option>
+                                  <option value="MUPC">Mahila Umang Producers Company Ltd.</option>
+                                  <option value="MAHIMA">Mahima Offset</option>
+                                  <option value="MAKAIB">MAKAIBARI TEA AND TRADING CO PVTLTD</option>
+                                  <option value="MALVKA">MALAVIKA</option>
+                                  <option value="Malik">Malik Qamar Umar</option>
+                                  <option value="MALKHA">MALKHA MARKETING TRUST</option>
+                                  <option value="MFPL">Mamta Fabrics Pvt Ltd</option>
+                                  <option value="MMTS">Mamta Sharma</option>
+                                  <option value="MNV">Manavi Impex</option>
+                                  <option value="MNGLM">Manglam Arts</option>
+                                  <option value="MANI">Mani Art</option>
+                                  <option value="MIG274">MANIK DUTTA-OLD</option>
+                                  <option value="MNSHIN">Manisha International</option>
+                                  <option value="MJBALA">Manni Enterprises</option>
+                                  <option value="MHPRNT">Manoj Hand Print</option>
+                                  <option value="KAM">MAPLE</option>
+                                  <option value="MARG">MARG</option>
+                                  <option value="Marka">MARKA</option>
+                                  <option value="MARUTI">MARUTHI HANDLOOMS</option>
+                                  <option value="MRVLEX">Marvel Exports</option>
+                                  <option value="MBPL">Masala Baby Private Limited</option>
+                                  <option value="MAULTX">MAULANA TEXTILES</option>
+                                  <option value="MAVIN">MAVIN HANDICRAFTS</option>
+                                  <option value="MAXIDE">Maximum Design</option>
+                                  <option value="MAYASS">MAYA ORGANIC SUPPORT SERVICE</option>
+                                  <option value="MAYBZR">MAYABAZAAR</option>
+                                  <option value="MAYOOR">MAYOORI HANDLOOMS</option>
+                                  <option value="MQB">MAYUR ARTS</option>
+                                  <option value="MYRART">MAYUR ARTS</option>
+                                  <option value="MAYUR">Mayur Home</option>
+                                  <option value="MDNA">MD Nasim Akhter</option>
+                                  <option value="MFDLPL">Meaningful Design Labs Pvt Ltd</option>
+                                  <option value="MEDSOR">Medieval Tresor</option>
+                                  <option value="MCPPL">Mehrotra Consumer Products Pvt. Ltd.</option>
+                                  <option value="MEREVL">Merevill Trust</option>
+                                  <option value="MERUDJ">Meru Devraj</option>
+                                  <option value="MESAGO">Mesago Exports</option>
+                                  <option value="MI">Mesmerize International</option>
+                                  <option value="MMM">Metal Ma Mode</option>
+                                  <option value="METICS">METRO CERAMICS</option>
+                                  <option value="MHRU">Miharu</option>
+                                  <option value="MILAN">Milan Adhikary</option>
+                                  <option value="MILNHL">MILANSAR HANDLOOM</option>
+                                  <option value="MIRSAG">MIRA SAGAR</option>
+                                  <option value="MKKL">Mita Khan</option>
+                                  <option value="MMHLMS">MM HANDLOOM SILK</option>
+                                  <option value="MNG">MN Garments</option>
+                                  <option value="MNMFAB">MNM Fabrics</option>
+                                  <option value="MOBEEN">Mobeen Sons</option>
+                                  <option value="MMKL">Modhumoy Mukherjee</option>
+                                  <option value="MHDAQ">Mohammad Ashique</option>
+                                  <option value="MRK">Mohammed Rafik Khatri</option>
+                                  <option value="MOHNKV">Mohan Kaya Vankar</option>
+                                  <option value="MLS">Mohan Solanki</option>
+                                  <option value="JAFAR">MOHD JAFAR ANSARI</option>
+                                  <option value="ISMAIL">MOHD SHARIF ISMAIL JI</option>
+                                  <option value="YUSUF">MOHD YUSUF</option>
+                                  <option value="AYAZ">Mohd. Ayaz Ansari</option>
+                                  <option value="MDNAEM">MOHD. Naeem</option>
+                                  <option value="MHRAIS">Mohd. Ramjan Ismail</option>
+                                  <option value="MILYAS">Mohd.ilyas Shahabuddin</option>
+                                  <option value="MWE">MONAL WEAVES EXPORTS</option>
+                                  <option value="MONAPA">MONAPPA TULJAPPA BASUDE</option>
+                                  <option value="MOONJ">Moonj Craft</option>
+                                  <option value="MOONY">MOONY TEXTILES</option>
+                                  <option value="MCH">Morchandrika Handicrafts</option>
+                                  <option value="MOTMAL">MOTAMAL HANDLOOMS</option>
+                                  <option value="MP">Motilal s/o Padmaram</option>
+                                  <option value="NSKOLI">Mr. Natraj Singh Koli</option>
+                                  <option value="MRID">MRID CERA</option>
+                                  <option value="MRIDRJ">MRID CERA - RJ</option>
+                                  <option value="MKE">Mrignayani Kosa Emporium</option>
+                                  <option value="MHC">Mrignayni Handloom Crafts</option>
+                                  <option value="ALS">Ms Aanandi Lal Saree</option>
+                                  <option value="MSK">Ms Sarswati Koli</option>
+                                  <option value="MSPENT">MSP Enterprises Pvt. Ltd.</option>
+                                  <option value="MPWKL">Mubarakpur Weaves</option>
+                                  <option value="MUKUL">Mukul Private Limited</option>
+                                  <option value="MUNNA">MUNNA TEXTILES</option>
+                                  <option value="MUNSHA">MUNSHA CREATIONS</option>
+                                  <option value="MURAC">Mura Collective</option>
+                                  <option value="MURALI">MURALI SAREE EMPORIUM</option>
+                                  <option value="MURSHF">Murshidabad Handloom Fabrics</option>
+                                  <option value="SHABIR">Musa Carpets</option>
+                                  <option value="Sonia">Muskan Creations</option>
+                                  <option value="MUSKAN">MUSKAN HANDLOOM FABRICS</option>
+                                  <option value="MUSTKM">MUSTAKIN ANSARI HANDLOOMS</option>
+                                  <option value="MVHL">MV HANDLOOMS</option>
+                                  <option value="MYYRA">MYYRA</option>
+                                  <option value="NAE">N A ENTERPRISES</option>
+                                  <option value="NMINT">N M INTERNATIONAL</option>
+                                  <option value="NSNDRM">N SUNDARAM</option>
+                                  <option value="NRRSPL">N. Ranga Rao &amp; Sons Private Limited</option>
+                                  <option value="NA">N.A.EXPORTS</option>
+                                  <option value="NBINT">N.B.International</option>
+                                  <option value="NAAZHL">NAAZ HANDLOOM</option>
+                                  <option value="NTTPL">Nabroco Tools &amp; Technologies Pvt. Ltd.</option>
+                                  <option value="NAFEES">Nafees Handloom</option>
+                                  <option value="Nagari">Nagari Handlooms</option>
+                                  <option value="NPRINT">Namrita Prints</option>
+                                  <option value="NANDES">NANDANVAN ESTATE</option>
+                                  <option value="NANDEE">NANDEETAS</option>
+                                  <option value="Nanni">Nanni creations</option>
+                                  <option value="NKB">Narayan Khadi Bhawan</option>
+                                  <option value="NH">Naresh Handicrafts</option>
+                                  <option value="NASEEM">NASEEM HANDLOOM</option>
+                                  <option value="NHENT">NATIONAL HANDICRAFT ENTERPRISES</option>
+                                  <option value="NBBPPL">NATURAL BATH &amp; BODY PRODUCTS PVT LTD</option>
+                                  <option value="NTFB">NATURAL FABRICS</option>
+                                  <option value="NWORLD">Natural World</option>
+                                  <option value="Nature">Naturealley</option>
+                                  <option value="NATURL">NATURELLEMENT</option>
+                                  <option value="NTS">NATWEAVE TEXTILE STUDIO</option>
+                                  <option value="NAVENG">Nav Engineers Pvt Ltd</option>
+                                  <option value="NCCREX">NCCR EXPORTS</option>
+                                  <option value="NCLAGR">NCL Agro Foods</option>
+                                  <option value="MLNGH">Needle ‘n Thread</option>
+                                  <option value="NIC">Neerja International Inc.</option>
+                                  <option value="NERAKU">Neeta Rajesh Kumat</option>
+                                  <option value="NEHFAB">Neha Fab</option>
+                                  <option value="NEHAFB">Neha Fabrics</option>
+                                  <option value="NWAH">New Asrar Handloom</option>
+                                  <option value="NDE">New Direction Exports</option>
+                                  <option value="NEIHL">NEW IQRA HANDLOOM</option>
+                                  <option value="NEWLKF">NEW LOOK FINISHING</option>
+                                  <option value="NIDAHL">NIDA HANDLOOM FACTORY</option>
+                                  <option value="NIDA">Nida Rugs</option>
+                                  <option value="NDDJ">NIDHI DUSAD JI</option>
+                                  <option value="NILAM">Nilambari Sarees Pvt Ltd</option>
+                                  <option value="NKKP">NILESH KUMAR KANTILAL PARMAR</option>
+                                  <option value="NW">Nimwara</option>
+                                  <option value="NINI">NINI</option>
+                                  <option value="NRMLCR">Nirmal Creation</option>
+                                  <option value="NIRMAL">Nirmal Handicrafts</option>
+                                  <option value="NISHCH">NISHCHIT</option>
+                                  <option value="NCDAS">Nitai Das</option>
+                                  <option value="NGE">Nitai Gaur Exim</option>
+                                  <option value="NTNSLK">Nitin Silks</option>
+                                  <option value="NMDL">Nitya Creations (Nisha Mital)</option>
+                                  <option value="NOBEL">NOBEL CRAFT</option>
+                                  <option value="NACH">Noble Art and Craft House</option>
+                                  <option value="NHJ">Nonas Handmade Jewelery</option>
+                                  <option value="NOORHL">Noor Handloom Fabrics</option>
+                                  <option value="NOORTR">Noor Tara</option>
+                                  <option value="NORTHL">NORTH INDIA HANDLOOM FACTORY</option>
+                                  <option value="NOURSH">NOURISH ORGANIC FOODS PVT LTD</option>
+                                  <option value="NOVAL">NOVAL Handicrafts</option>
+                                  <option value="NSTOYS">NS TOYS INDUSTRIES</option>
+                                  <option value="NSK">NSK HOME PRODUCTS PRIVATE LIMITED</option>
+                                  <option value="NFKL">NUTAN FULIA TANTUBAY SAMABAY SAMITY LIMITED</option>
+                                  <option value="OAKTC">Oak Tree Concepts</option>
+                                  <option value="OAK">OAK TREE DESIGNS</option>
+                                  <option value="OCHRE">OCHRE</option>
+                                  <option value="OJAS">OJJAS</option>
+                                  <option value="OLDCRA">OLD CRAFT</option>
+                                  <option value="OMARIH">OM ARIHANT JEWELLERS</option>
+                                  <option value="OHW">Om Handwork</option>
+                                  <option value="OORJAA">Oorjaadesign LLP</option>
+                                  <option value="OPUL">OPULENZ DESIGNS</option>
+                                  <option value="OT">Orange Tree</option>
+                                  <option value="ORCON">ORGANIC CONNECT</option>
+                                  <option value="OI">ORGANIC INDIA PVT LTD</option>
+                                  <option value="OIDEL">Organic India Pvt Ltd - DEL</option>
+                                  <option value="ORINBP">Orient Block Prints</option>
+                                  <option value="OTPPL">Oriental Talc Products Private Limited</option>
+                                  <option value="OR18">Orissa Artisans &amp; Weavers Ltd</option>
+                                  <option value="OSRJWL">OSR Jewellers</option>
+                                  <option value="OBA">Overseas Beauty Arts Furniture Exports Pvt Ltd.</option>
+                                  <option value="OVEREX">OVERSEAS EXPORTERS</option>
+                                  <option value="PNGHAL">P.N.G. HANDLOOM</option>
+                                  <option value="PALA">Pala Decor Pvt. Ltd.</option>
+                                  <option value="PALAHL">Palakurthy Handlooms</option>
+                                  <option value="PALNI">Palnis Chikan Garments</option>
+                                  <option value="PHPRNT">Panihari Hand Print</option>
+                                  <option value="PARAMI">PARAM INTERNATIONAL</option>
+                                  <option value="PARA">PARAMPARA</option>
+                                  <option value="OMPRKS">Parikshit Leather &amp; Craft</option>
+                                  <option value="PB">Parimal Biswas</option>
+                                  <option value="PBKB">Parimal Biswas &amp; Kamal Biswas</option>
+                                  <option value="PTKTRI">Parmanand Tanumal Khatri</option>
+                                  <option value="PATARA">Patara Collections Pvt. Ltd.</option>
+                                  <option value="PTRN">PATRENA</option>
+                                  <option value="PAULTX">PAUL TEXTILES</option>
+                                  <option value="PAWANI">PAWAN INTERNATIONAL</option>
+                                  <option value="PKK">Pawan Kumar Koli</option>
+                                  <option value="PAWANS">PAWAN SILK INDUSTRIES-BR</option>
+                                  <option value="PSIHR">PAWAN SILK INDUSTRIES-HR</option>
+                                  <option value="PGIL">Pearl Global Industries Ltd</option>
+                                  <option value="PHPL">Perfect Handicrafts Pvt Ltd</option>
+                                  <option value="PERFHF">PERFECT HANDLOOM</option>
+                                  <option value="PHALDA">PHALADA AGRO RESEARCH FOUNDATION PVT LTD</option>
+                                  <option value="PHILAN">Philangam Shangh</option>
+                                  <option value="PIONER">PIONEER NON-FRIED FOODS PVT LTD</option>
+                                  <option value="PDTL">Pitara Design &amp; Textiles Pvt. Ltd.</option>
+                                  <option value="PLUCHI">Pluchi World Private Limited</option>
+                                  <option value="POCHHL">POCHAMPALLY HANDLOOM PARK LTD</option>
+                                  <option value="POONAM">Poonam Braas</option>
+                                  <option value="PAA">Porgai Artisans Association</option>
+                                  <option value="POTLIS">POTLIS</option>
+                                  <option value="Prabha">Prabha Traders Silk Sarees Pvt.Ltd</option>
+                                  <option value="PRBHUD">PRABHUDAYAL KOLI</option>
+                                  <option value="PRACHN">PRACHEEN</option>
+                                  <option value="NSH">Prachi Art &amp; Craft</option>
+                                  <option value="PRCL">Prachi Leathers Pvt. Ltd.</option>
+                                  <option value="PMS1">Pradeep &amp; mala Sinha</option>
+                                  <option value="PBASAK">Pradip Basak</option>
+                                  <option value="ANNU">Pragati Shilp Kendra</option>
+                                  <option value="PRAKSH">Prakash Chikan Industries</option>
+                                  <option value="PSWAMI">Pramod Swami</option>
+                                  <option value="PRNSLK">PRANAV SILK CREATION</option>
+                                  <option value="PRANOF">PRANO FLAX (INDIA) PVT LTD</option>
+                                  <option value="PRNPUR">PRANPUR SAKHA SWAYATTA SAHKARITA</option>
+                                  <option value="PRAKAL">PRASAD KALAMKARI</option>
+                                  <option value="PRENT">Pratibha Enterprises</option>
+                                  <option value="PCNEW">Prem Crafts</option>
+                                  <option value="PRIJAT">Prijat Studio</option>
+                                  <option value="PRNTEX">PRINTEX INDIA</option>
+                                  <option value="PRITI">PRITI DESIGN</option>
+                                  <option value="PROON">PRODUCE TO PERFECTION</option>
+                                  <option value="PROMIL">PROMIL PANDE</option>
+                                  <option value="PROSPR">Prospper Exports</option>
+                                  <option value="PCPL">Pruha Clothing Pvt Ltd</option>
+                                  <option value="PSW">PS Weavers Private Limited</option>
+                                  <option value="PSRDL">PSR SILK SAREES INDIA PRIVATE LTD.</option>
+                                  <option value="PURFBR">PURE FIBRE</option>
+                                  <option value="PGD">Pure Ghee Designs</option>
+                                  <option value="PUREHN">PURE HANDS</option>
+                                  <option value="PL">Pure Living</option>
+                                  <option value="MIG329">Qadiriya Exports</option>
+                                  <option value="QDPRNT">QADIRIYA PRINTERS</option>
+                                  <option value="QGW">Qadri Glass Works</option>
+                                  <option value="QFPL">Qamash Fashion Private Limited</option>
+                                  <option value="QASAB">QASAB KUTCH CRAFTWOMEN</option>
+                                  <option value="QUANTM">QUANTUM</option>
+                                  <option value="QULTSN">QUILTESSENCE</option>
+                                  <option value="RADES">R &amp; A Design</option>
+                                  <option value="RCG">R C Global</option>
+                                  <option value="RKPOTR">R K Studio Potteries</option>
+                                  <option value="RKSP">R K Studio Potteries - HR</option>
+                                  <option value="RRDECR">R R DECOR PVT LTD</option>
+                                  <option value="RBENT">R.B.Enterprises International Pvt Ltd</option>
+                                  <option value="RBFAB">R.B.Fabrics</option>
+                                  <option value="RJC">R.J.CLOTHING</option>
+                                  <option value="RKD">R.K Designs</option>
+                                  <option value="RKMIPL">R.K Metal Industries Pvt Ltd</option>
+                                  <option value="RKTS">R.K. TAILORS</option>
+                                  <option value="RKAPP">RADHA KRISHNA APPARELS</option>
+                                  <option value="RADHAK">RADHAKRISHNA OVERSEAS CORPORATION</option>
+                                  <option value="RTC">Radhakrishna Trading Corporation</option>
+                                  <option value="RAP">Radhika Art &amp; Potteries</option>
+                                  <option value="RADINT">Radhika International</option>
+                                  <option value="RADTEX">RADHIKA TEXTILES</option>
+                                  <option value="RE">Radnik Exports</option>
+                                  <option value="RSH">Rafi Silk House</option>
+                                  <option value="RAGA">Raghu Arts (Surbhi metals (India) Pvt. Ltd.)</option>
+                                  <option value="RAHUL">RAHUL CREATIONS</option>
+                                  <option value="RAJTEX">Raja Textiles Fabrics</option>
+                                  <option value="RJMDL">RAJAMBAL COTTON SAREES</option>
+                                  <option value="RAJEAS">Rajan Overseas</option>
+                                  <option value="RACH">Rajasthan Arts &amp; Crafts House</option>
+                                  <option value="RCIJPR">RAJASTHAN CRAFTS INDUSTRIES</option>
+                                  <option value="RAJHAN">Rajasthan Handicraft</option>
+                                  <option value="RJSPR">RAJASTHAN PRINTERS</option>
+                                  <option value="RAJOVR">Rajdhani Overseas</option>
+                                  <option value="RSCOMP">Rajesh Suri &amp; Co</option>
+                                  <option value="RAJART">Rajeshwary Art</option>
+                                  <option value="Rajver">Rajinder Verma</option>
+                                  <option value="RKS">Rajkamal and Sons</option>
+                                  <option value="RKSONS">Rajkamal Sons</option>
+                                  <option value="RAJSUG">RAJSHREE SUGARS AND CHEMICALS LIMITED</option>
+                                  <option value="RHKB">Rajsoni Harish Kumar Beniram</option>
+                                  <option value="RJS">Rajsons</option>
+                                  <option value="RKH">Ram Kumar Haldar</option>
+                                  <option value="RMLPK">RAM LAL PREHLAD KUMAR</option>
+                                  <option value="RAMLIN">Ramalinga Creations</option>
+                                  <option value="RM">Ramchander Motilal Exports</option>
+                                  <option value="RAFLPL">Ramesh Flowers Private Limited</option>
+                                  <option value="RCIPL">Ramesh Flowers Private Limited</option>
+                                  <option value="RAMESH">Ramesh Printers</option>
+                                  <option value="RAMJAN">Ramjan Khan</option>
+                                  <option value="RAMJID">Ramji Devraj</option>
+                                  <option value="RAMZAN">RAMZAN KHAN</option>
+                                  <option value="RANTEX">Rana Textile</option>
+                                  <option value="SWJA">Rang</option>
+                                  <option value="RBRPL">RANG BANDHEJ RETAIL PVT LTD</option>
+                                  <option value="RCDL">Rangsutra Craft India Ltd (Delhi)</option>
+                                  <option value="RCILTD">Rangsutra Craft India Ltd (Rajasthan)</option>
+                                  <option value="RANIKA">RANIKA EXPORTS DESIGN PVT LTD</option>
+                                  <option value="RC">Ranit Collection</option>
+                                  <option value="RSHDHL">RASHID HANDLOOMS</option>
+                                  <option value="RKU">Rashtriya Khadi Udyog</option>
+                                  <option value="RPPL">Ratan Papers Pvt. Ltd.</option>
+                                  <option value="RTH">Rathi Silver</option>
+                                  <option value="RATNAM">RATNAMS DESIGNER BOUTIQUE</option>
+                                  <option value="RG">Ravi Garments</option>
+                                  <option value="RAVITR">RAVI TRADERS</option>
+                                  <option value="RAVHL">RAVINDRA HANDLOOM SAREES</option>
+                                  <option value="RAWMNG">RAW MANGO</option>
+                                  <option value="RLCL2">Raymond Luxury Cottons Limited - Amravati</option>
+                                  <option value="RLCL">Raymond Luxury Cottons Ltd - Kolhapur</option>
+                                  <option value="RUDPL">Raymond Uco Denim Pvt. Ltd.</option>
+                                  <option value="RAZIYA">Raziya Fab</option>
+                                  <option value="RLHND">Real Handicrafts</option>
+                                  <option value="REGIST">Registan Arts</option>
+                                  <option value="REHWA">REHWA SOCIETY</option>
+                                  <option value="RELIAN">RELIANCE HANDLOOM CRAFTS</option>
+                                  <option value="REMAX">REMAX</option>
+                                  <option value="Resham">Resham India</option>
+                                  <option value="REVA">Reva Inc</option>
+                                  <option value="RIDA">Rida Fashions</option>
+                                  <option value="RIDAHL">RIDA HANDLOOM</option>
+                                  <option value="RIDHAM">Ridham Synthetics Pvt. Ltd.</option>
+                                  <option value="RFPL">Ripple Fragrances Pvt.ltd</option>
+                                  <option value="RSHENT">Rishika Enterprises</option>
+                                  <option value="RIVETO">Riveters Overseas</option>
+                                  <option value="RIVERA">Riviera Home Furnishings Pvt Ltd</option>
+                                  <option value="RIYAFS">Riya Fashion</option>
+                                  <option value="RKDERA">RK DERAWALA</option>
+                                  <option value="RKM">RKM International</option>
+                                  <option value="RMC">RMC Collections</option>
+                                  <option value="RNG">RNG APPARELS</option>
+                                  <option value="ROEMLY">ROEMILY HOUSE</option>
+                                  <option value="ROOTS">ROOTS OVERSEAS</option>
+                                  <option value="ROPENT">Rope Enterprices Pvt Ltd</option>
+                                  <option value="ROSHHL">ROSHAN HANDLOOM</option>
+                                  <option value="WEAVKL">Rosy Mitra &amp; Pracheta Sur (Weavesin)</option>
+                                  <option value="ROUH">ROUH INDIA</option>
+                                  <option value="RKSC">Roy Kantha Stitch Centre</option>
+                                  <option value="ROYAL">ROYAL HATH KARGHA VIKAS SAMITI</option>
+                                  <option value="RPH">RP Handicrafts</option>
+                                  <option value="RSAPCL">Ruaab Sewa Artisan Producer Co. Ltd.</option>
+                                  <option value="SEWA">Ruaab Sewa Artisans Producer Company</option>
+                                  <option value="RSP">Rubeena Screen Print</option>
+                                  <option value="RUDOVS">Rudrani Overseas</option>
+                                  <option value="rumm">Rummis</option>
+                                  <option value="RUQYHL">RUQAIYYA HANDLOOM</option>
+                                  <option value="RUSTAM">Rustam Ali</option>
+                                  <option value="SLC">S L Creations</option>
+                                  <option value="SNEBD">S N Hand Embroidery</option>
+                                  <option value="SRHLOM">S R Handloom</option>
+                                  <option value="SSBENT">S S B Enterprises</option>
+                                  <option value="MUDL">S. RAJAMANICKA MUDALIAR COMPANY</option>
+                                  <option value="SBT">S.B.Traders</option>
+                                  <option value="SKTRMA">S.K.TRADE MART</option>
+                                  <option value="SAADH">SAADH ENTERPRISES</option>
+                                  <option value="SABALA">SABALA</option>
+                                  <option value="SFW">Sachdeva Fabric World Pvt Ltd</option>
+                                  <option value="SADAB">SADAAB TEXTILES</option>
+                                  <option value="SBP">Sadab Block Print</option>
+                                  <option value="SADHNA">Sadhna</option>
+                                  <option value="SDILLP">Sadhvi Incorporated LLP</option>
+                                  <option value="SAFURA">SAFURA CLOTHING</option>
+                                  <option value="SAHAJ">Sahaj Crafts</option>
+                                  <option value="SAHARA">SAHARA INDIA JUTE PROJECT AND R &amp; D CENTRE</option>
+                                  <option value="SAHIL">Sahil Enterprises</option>
+                                  <option value="SAHNI">SAHNI FABS</option>
+                                  <option value="SAHFAB">SAHNI FASHIONS PVT LTD</option>
+                                  <option value="SACRFT">Sai Anvesh Craft</option>
+                                  <option value="SAIHL">SAI HANDLOOM</option>
+                                  <option value="SAINIT">SAI KNITFAB (P) LTD</option>
+                                  <option value="SAIKRS">SAI KRISHNA HANDLOOM FABRICS</option>
+                                  <option value="SRC">Sai Ram Creations</option>
+                                  <option value="SAIF">SAIF CREATION</option>
+                                  <option value="SAJWAT">Sajawat Handicraft</option>
+                                  <option value="SALART">SALAWAS ART CRAFT</option>
+                                  <option value="SHLMTX">SALEEM TEXTILES</option>
+                                  <option value="SALMAN">SALMAN TEXTILE</option>
+                                  <option value="SCI">Sam Cottage Industries</option>
+                                  <option value="SFF">Samara Flooring &amp; Fabrics Pvt. Ltd.</option>
+                                  <option value="SAMEER">Sameer Handloom Fabrics</option>
+                                  <option value="SAMOOL">Samoolam Crafts</option>
+                                  <option value="SANAFN">Sana Fashion</option>
+                                  <option value="SANDUR">SANDUR KUSHALA KALA KENDRA</option>
+                                  <option value="SANFAN">Sangeeta Fashion</option>
+                                  <option value="SATE">SANJAY TEXTILES</option>
+                                  <option value="SNJIT">Sanjit Karmakar</option>
+                                  <option value="SANS">Sanskariti Handicrafts</option>
+                                  <option value="SANTHI">SANTHI TEXTILES</option>
+                                  <option value="SAPPHL">SAPPHIRE HANDLOOM</option>
+                                  <option value="SNF">Saps Kniit Fabs</option>
+                                  <option value="SARFAS">Sarah Fashion</option>
+                                  <option value="SARG">SARG DESIGNS PVT LTD</option>
+                                  <option value="SARKHL">SARKAR HANDLOOM FABRICS</option>
+                                  <option value="SBKOLI">Sarswati Bai Koli</option>
+                                  <option value="SARWAN">Sarwan Silk</option>
+                                  <option value="SATORG">Satnam Organics</option>
+                                  <option value="SAGTF">SATORI GARMENTS &amp; FABRICS PRIVATE LTD</option>
+                                  <option value="SATENT">SATYAMEV ENTERPRISES</option>
+                                  <option value="STM">SATYAMEV TEXTILE MILL</option>
+                                  <option value="SAUEXP">Saurashtra Exports</option>
+                                  <option value="SOA">Saurashtra Oriental Arts</option>
+                                  <option value="SAEXPL">SAVANA EXPORTS (P) LTD</option>
+                                  <option value="SBENT">SB Enterprises</option>
+                                  <option value="SCHABL">Schablona India Limited</option>
+                                  <option value="SSS">Search &amp; Service Society</option>
+                                  <option value="SEEMA">Seema Arts</option>
+                                  <option value="SERICR">SERICARE DIVN OF HEALTHLINE PVT LTD</option>
+                                  <option value="SERICN">SERICON ENTERPRISES</option>
+                                  <option value="SEWALK">SEWA Lucknow</option>
+                                  <option value="SEWTRD">SEWA TRADE FACILITATION CENTER</option>
+                                  <option value="SGS">SGS &amp; SONS</option>
+                                  <option value="SGSENG">SGSENGINEERING WORKS</option>
+                                  <option value="SHBNHL">SHABANA HANDLOOM FACTORY</option>
+                                  <option value="SHBNM">Shabanam Printer</option>
+                                  <option value="SHBIR">Shabir Carpets</option>
+                                  <option value="SND">Shah Narayan Das &amp; Co.</option>
+                                  <option value="SHAHBZ">SHAHBAZ HANDLOOM FABRICS</option>
+                                  <option value="SFC">Shakeel Fab Creation</option>
+                                  <option value="SKRH">SHAKIR HANDLOOM</option>
+                                  <option value="SHKTEX">Shakti Exports</option>
+                                  <option value="NHSC">Shakun Advertisers (Previously Nehas Creation)</option>
+                                  <option value="SHALMR">SHALIMAR HANDLOOM FABRICS</option>
+                                  <option value="MDFRKN">Shama Textiles</option>
+                                  <option value="SHAMIM">SHAMIM AKHTAR</option>
+                                  <option value="SMPBKL">Shampas Collection</option>
+                                  <option value="Shamsu">Shamsuddin</option>
+                                  <option value="SHARFT">SHARAFAT ALI HANDLOOM</option>
+                                  <option value="SHARIF">SHARIF ANSARI</option>
+                                  <option value="siplca">Sharma Industris PLC</option>
+                                  <option value="SHARSN">Sharmila Sengupta</option>
+                                  <option value="SHEEMA">SHEEMA HANDLOOM FABRICS</option>
+                                  <option value="SHILPI">SHILPI</option>
+                                  <option value="SH">Shilpi Handicraft</option>
+                                  <option value="SGI">Ship Gift International</option>
+                                  <option value="SHVAGN">Shiv Agencey</option>
+                                  <option value="SVINTL">Shiv International</option>
+                                  <option value="SSF">Shiv Shakti Fashion</option>
+                                  <option value="SHVAHL">Shiva Handloom</option>
+                                  <option value="SHIVAM">SHIVAM APPAREL</option>
+                                  <option value="SVMCL">SHIVAM CLOTHING CO</option>
+                                  <option value="SRDCH">Shraddha Handloom</option>
+                                  <option value="SHRJL">SHRADHANJALI</option>
+                                  <option value="SHRAVN">SHRAVAN HANDLOOM</option>
+                                  <option value="SHRHLM">Shravanekar Handloom</option>
+                                  <option value="SHRBEN">SHREE BALAJEE ENTERPRISES</option>
+                                  <option value="CHWCSK">Shree Chamundeshwari Hand-loom Weavers</option>
+                                  <option value="SHRCRN">Shree Creations</option>
+                                  <option value="SHRISH">Shree Devi &amp; Co(Previously Shrishti)</option>
+                                  <option value="SHRENT">SHREE ENTERPRISES</option>
+                                  <option value="SHRFAS">SHREE FASHION</option>
+                                  <option value="SKI">Shree Krishna International</option>
+                                  <option value="SMU">Shree Metal Udhyog</option>
+                                  <option value="SRSART">Shree Roop Shree Art Exports</option>
+                                  <option value="SSH">Shree Sumitra Handicarfts</option>
+                                  <option value="SVC">Shree Vinayak Corporation</option>
+                                  <option value="SVSPL">Shree Vishwanath Sarees Pvt Ltd</option>
+                                  <option value="SBHU">SHRI BALAJI HOSIERY UDYOG</option>
+                                  <option value="GOVIND">SHRI GOVIND ARTS</option>
+                                  <option value="SKCA">Shri Kamla Creative Arts</option>
+                                  <option value="SHKMS">SHRI KRISHNA MEGALIVING STORE</option>
+                                  <option value="DIPESH">SHRI RAM HOME DECOR</option>
+                                  <option value="SHRIAN">Shrianand Exports (Previously Shrianand Creations)</option>
+                                  <option value="SHRIHP">Shrinath Hand Print</option>
+                                  <option value="SHUBHM">Shubham Industries</option>
+                                  <option value="SHUNYA">SHUNAYA</option>
+                                  <option value="SHYAMA">SHYAMA GUPTA</option>
+                                  <option value="SHYIMP">SHYAMJI IMPEX</option>
+                                  <option value="SIGJEW">SIGNATUTRE JEWELRY</option>
+                                  <option value="SLNCE">Silence</option>
+                                  <option value="SNT">Silk N Touch</option>
+                                  <option value="SWC">Silk Weavers Colony Co-operative Society Ltd.</option>
+                                  <option value="SLLLP">Sillage Living LLP</option>
+                                  <option value="STEX">SilTex</option>
+                                  <option value="SLTXIN">Siltex India</option>
+                                  <option value="SIVRCR">SILVER CENTRRE</option>
+                                  <option value="SLVRDF">Silver Doff</option>
+                                  <option value="SIMFAB">Simran Fabric</option>
+                                  <option value="SMRNSK">Simran Silk</option>
+                                  <option value="SIRTEX">SIR TEXTILE</option>
+                                  <option value="SHC">Sita Handicraft</option>
+                                  <option value="STI">Sita Industries</option>
+                                  <option value="SVAPHL">SIVA PARVATHI HANDLOOMS</option>
+                                  <option value="SKIEI">SK International Export Import</option>
+                                  <option value="SKEMA">Skema International Pvt. Ltd.</option>
+                                  <option value="SKTGR">SKT GARMENTS</option>
+                                  <option value="SKU">SKU UNLIMITED</option>
+                                  <option value="SKFS">SKY COLOUR FASHION</option>
+                                  <option value="ACNEX">Skyla Exim Private Ltd.</option>
+                                  <option value="SMHRUG">SM Haneef Rugs</option>
+                                  <option value="MIDAS">SMITA CREATIONS</option>
+                                  <option value="SMR">Smriti Gupta</option>
+                                  <option value="SOVI">SOCIAL VIVE</option>
+                                  <option value="SHARE">Society for health Awareness Research &amp; Education</option>
+                                  <option value="SURE">Society to Uplift Rural Economy</option>
+                                  <option value="SOFFIS">Soffis India Exports Pvt.Ltd.</option>
+                                  <option value="SFA">Solitaire Fashion Accessories</option>
+                                  <option value="SFH">Some Fine Handicrafts</option>
+                                  <option value="SOMTEX">Somendra Textiles</option>
+                                  <option value="SONIFN">SONI FINE JEWELRY INDIA PVT LTD</option>
+                                  <option value="SOHL">Sony Handloom</option>
+                                  <option value="SOS">SOPRA OVERSEAS</option>
+                                  <option value="SRJA">Soul Roots</option>
+                                  <option value="SOUMEN">SOUMEN BASAK</option>
+                                  <option value="SHNHND">Southern Handloom</option>
+                                  <option value="SEILLP">SPAI ENTERPRISES</option>
+                                  <option value="SPRTAN">SPARTAN TRENDS INC</option>
+                                  <option value="SPHERI">SPHERICAL DESIGNS</option>
+                                  <option value="SPRYDR">Sprydrams Creations</option>
+                                  <option value="SQUR">SQUARE 1</option>
+                                  <option value="SRPP">SR Printo Pack</option>
+                                  <option value="SRCCR">SRC CREATIONS</option>
+                                  <option value="SREEEV">Sree Eashwara Vastralayam</option>
+                                  <option value="SRGTEX">SRGTEXTILES</option>
+                                  <option value="SRHL">SRHANDLOOM</option>
+                                  <option value="SRIHMT">Sri H. M. Textiles (P) Ltd</option>
+                                  <option value="SKF">Sri Krishna Fabrics</option>
+                                  <option value="SRIMAH">SRI MAHESHWARA HANDLOOM</option>
+                                  <option value="SRIRAM">SRI RAMA HANDLOOM</option>
+                                  <option value="SRSHLM">Sri Sai Handlooms</option>
+                                  <option value="SSTM">Sri Sudharsana Textile Mills</option>
+                                  <option value="SUCMSL">Sri Umachandrasekhara Chenetha MAC Society Ltd</option>
+                                  <option value="SRJN">SRIJANI</option>
+                                  <option value="KANDAN">SRIKANDAN TEXTILES</option>
+                                  <option value="SRINAT">Srinath Fabrics</option>
+                                  <option value="BDKL">SRISTI</option>
+                                  <option value="SSFAB">SS Fabrics</option>
+                                  <option value="SWE">Stallion Worldwide Exports</option>
+                                  <option value="STRCND">Star Candles</option>
+                                  <option value="STRCRF">STAR CRAFT INTERNATIONAL</option>
+                                  <option value="STRHLF">STAR HANDLOOM FABRICS</option>
+                                  <option value="SCIPL">STUDIO CERAMIC INDIA PVT.LTD</option>
+                                  <option value="COPPRE">Studio Coppre Pvt Ltd</option>
+                                  <option value="SUBAL">Subal Biswas</option>
+                                  <option value="SUBHO">Subho Print</option>
+                                  <option value="SURESH">Suchanda Basak</option>
+                                  <option value="SUHGTX">Suhag Textiles</option>
+                                  <option value="SUHAIL">SUHAIL TEXTILES</option>
+                                  <option value="SUJATA">Sujata Weaves And Prints</option>
+                                  <option value="SMKL">Sukhomoy Mukherjee</option>
+                                  <option value="SJPL">Sukhraj Jewells Pvt. Ltd.</option>
+                                  <option value="SKRDL">Sukriti</option>
+                                  <option value="SUBRKL">Suman Chattopadhyay (Sanchari)</option>
+                                  <option value="SUMRTX">SUMAR TEXTILE</option>
+                                  <option value="SUMRTA">SUMRITA</option>
+                                  <option value="RUI">Sunanda Dawar Design Studio</option>
+                                  <option value="SUND">Sundarban Khadi &amp; Village Industrial Society</option>
+                                  <option value="SUNIL">SUNIL TEXTILES</option>
+                                  <option value="NRENDR">Sunita Karna</option>
+                                  <option value="SUNRPR">SUNRISE PRINTERS</option>
+                                  <option value="SUPFSN">Super Fashion</option>
+                                  <option value="SUPRNT">Suprint Sales</option>
+                                  <option value="SRKL">Supriti Ranu</option>
+                                  <option value="SMPL">Surbhi Multi Tex Prints P.Ltd</option>
+                                  <option value="SDGNPL">SURENDRI DESIGN PVT LTD</option>
+                                  <option value="SHPRNT">Suresh Hand Print</option>
+                                  <option value="SURFAB">Surian Fab Maestro</option>
+                                  <option value="SSM">Suruchi Saree Mandir</option>
+                                  <option value="SURYA">SURYA JOTHI ART POTTERY</option>
+                                  <option value="SUVARN">Suvarnagouri Yadappanavar</option>
+                                  <option value="SWAMI">Swami Handicrafts</option>
+                                  <option value="SCKL05">Swasa Creation</option>
+                                  <option value="SWASTK">SWASTIK HATHKARGHA</option>
+                                  <option value="SBB">Swati Bhakta Basak</option>
+                                  <option value="SWEX">Swati Exim Pvt. Ltd</option>
+                                  <option value="SKK">SYNDICATE KNIT KRAFT</option>
+                                  <option value="SYU">SYU Textile And Studio LLP</option>
+                                  <option value="TPALIM">T PALIRAM MARKETING</option>
+                                  <option value="TDSINC">TADS INC</option>
+                                  <option value="TAJHDL">Taj Handloom Vastra Udyog</option>
+                                  <option value="TAJHL">Taj Handlooms</option>
+                                  <option value="TAKAHM">Takmeel Ahmad</option>
+                                  <option value="TABA">Tana Bana</option>
+                                  <option value="TBC">Tana Bana Crafts</option>
+                                  <option value="MIG412">TANA BANA MARKETING PVT LTD-OLD</option>
+                                  <option value="TNGHAH">Tangaliya Hastkala Association</option>
+                                  <option value="TANG">Tangibles Neemuch</option>
+                                  <option value="TANV">Tanvi Collection</option>
+                                  <option value="TNVDS">Tanvi Design Studio</option>
+                                  <option value="TAPP">TAPPS FASHIONS</option>
+                                  <option value="TARAEI">Tara Exports Inc.</option>
+                                  <option value="TARAMI">Taramira</option>
+                                  <option value="TIPL">Tarini India Pvt Ltd</option>
+                                  <option value="TRNCRT">Tarun Creations</option>
+                                  <option value="TARION">Tarun Thakur</option>
+                                  <option value="TSNMTX">TASNEEM TEXTILE</option>
+                                  <option value="TAS">Tawfeeq Ahmad Sheikh</option>
+                                  <option value="TWA">Team Work Associates</option>
+                                  <option value="TEJA">TEJAL DESIGN STUDIO</option>
+                                  <option value="TELE">Telecommunication Paper Industries</option>
+                                  <option value="TELIC">Telic Solutions</option>
+                                  <option value="TMCPL">TEXMART CREATIONS PVT LTD</option>
+                                  <option value="TEXINT">Texpo International</option>
+                                  <option value="THRYML">THAHRYAMAL BALCHAND</option>
+                                  <option value="Thanor">Thanor Pottery</option>
+                                  <option value="ANTSCR">The Ants Crafts Pvt Ltd</option>
+                                  <option value="TBP">The Bagru Print</option>
+                                  <option value="THECAR">The Carpenters</option>
+                                  <option value="TCFPL">The Choice Fashions Pvt. Ltd.</option>
+                                  <option value="CRAFTS">THE CRAFTS</option>
+                                  <option value="CTEXT">The Creative Texture</option>
+                                  <option value="ESTIND">THE EAST INDIA NATURAL GOODS CO.</option>
+                                  <option value="THEEMP">The Empyrean Inc.</option>
+                                  <option value="TERI">THE ENERGY AND RESOURCES INSTITUTE ( TERI)</option>
+                                  <option value="TFT">The Faraway Tree</option>
+                                  <option value="MOKSHA">THE FIRST LEAF CREATIVE COLLECTION</option>
+                                  <option value="THD">The Home Dekor</option>
+                                  <option value="TIAICO">The India Art Investment Company Private Limited</option>
+                                  <option value="ICWC">The Indian Craft &amp; Weaves Company</option>
+                                  <option value="LUXCRF">The Luxecrafts</option>
+                                  <option value="TPC">The Pure Concept</option>
+                                  <option value="TSF">The Silk Factory</option>
+                                  <option value="TSN">The Silver Needle</option>
+                                  <option value="TSK">The Sohail Khan</option>
+                                  <option value="THEERS">THE TURNERS</option>
+                                  <option value="VLPL">The V Collection Pvt. Ltd</option>
+                                  <option value="TEPL">Theme Export Pvt Ltd</option>
+                                  <option value="TS">Think Stitch</option>
+                                  <option value="TNT">THIS &amp; THAT</option>
+                                  <option value="THKB">Tholias Kuber</option>
+                                  <option value="TCI">Thread Craft India</option>
+                                  <option value="TIRGAD">TIRUMALA GADWAL SAREE HOUSE</option>
+                                  <option value="TTM">Tirumala Textile Mill - MH</option>
+                                  <option value="TTMTN">Tirumala Textile Mill - TN</option>
+                                  <option value="TCN">TIRUPATI CREATION</option>
+                                  <option value="TRPINT">Tirupati International</option>
+                                  <option value="TORACR">Tora Creations</option>
+                                  <option value="TOYJOY">TOY &amp; JOY SINGH</option>
+                                  <option value="TOL">Tree Of Life</option>
+                                  <option value="TRENDS">TRENDS</option>
+                                  <option value="TFPL">Trinity Furniture Pvt. Ltd.</option>
+                                  <option value="TRISTO">TRISTON HOME</option>
+                                  <option value="TUFAIL">TUFAIL HADLOOM</option>
+                                  <option value="TULI">Tuli</option>
+                                  <option value="TULSIR">TULSIRAM DANIA BUNKAR</option>
+                                  <option value="TUPT">TWO UP TWO DOWN</option>
+                                  <option value="UUMPCL">UDAIPURIA UNITED MOZARI PRODUCER COMPANY LTD</option>
+                                  <option value="UJJAL">Ujjal Kumar Pal</option>
+                                  <option value="ULLASD">Ullaskar De</option>
+                                  <option value="UTMT">Under The Mango Tree Natural &amp; Organic Pvt Ltd</option>
+                                  <option value="UNICFT">UNICRAFT INDIA</option>
+                                  <option value="UNNITI">Unniti</option>
+                                  <option value="UPASLT">UP Artisans Sutradhar Limited</option>
+                                  <option value="UPASDS">UPASANA DESIGN STUDIO</option>
+                                  <option value="URBANF">Urban Fashion</option>
+                                  <option value="USHADY">USHA DYING WORKS</option>
+                                  <option value="USHTEX">USHA TEXTILES-AM09</option>
+                                  <option value="USHATX">USHA TEXTILES-JA02</option>
+                                  <option value="UVESHL">UVESH HANDLOOM</option>
+                                  <option value="VCEXP">V C EXPORTS ING</option>
+                                  <option value="VAKIL">Vakil Art Prints</option>
+                                  <option value="VWPC">Vamshadhara Weavers Producer Company</option>
+                                  <option value="VCLSAM">Vankar Chhaganlal Samat</option>
+                                  <option value="VDNJI">Vankar Dhanji hirji</option>
+                                  <option value="VGBJAK">Vankar Gabhu Bhai Jakhu Bhai</option>
+                                  <option value="VKLS">VANKAR KANTI LAL SAMAT</option>
+                                  <option value="MAVJI">VANKAR MAVJI NARAN</option>
+                                  <option value="MURJI">VANKAR MURJI HAMIR</option>
+                                  <option value="NANJI">VANKAR NANJI BHIMJI</option>
+                                  <option value="NITESH">VANKAR NITESH NAMORI</option>
+                                  <option value="PARBAT">VANKAR PARBAT KANJI</option>
+                                  <option value="PURSHO">Vankar Purshotam Premji</option>
+                                  <option value="SHAMJI">VANKAR VISHRAM VALJI</option>
+                                  <option value="VARMOH">Varis Mohd</option>
+                                  <option value="VARNLI">VARNALI</option>
+                                  <option value="VARSHA">VARSHA HANDLOOM</option>
+                                  <option value="Vedic">VEDIC</option>
+                                  <option value="VRHNLM">Veera Handloom</option>
+                                  <option value="VCPL">Venaesthetic Creations</option>
+                                  <option value="VENENT">Venika Enterprises</option>
+                                  <option value="VEROVR">Verma Overseas</option>
+                                  <option value="VGMCRF">VGM HANDICRAFTS</option>
+                                  <option value="Vidha">Vidha</option>
+                                  <option value="VIDHYA">Vidhya A-one Universal Emporium</option>
+                                  <option value="VIKENT">VIKAS ENTERPRISES</option>
+                                  <option value="VIMLA">Vimla Bai Ahirwar</option>
+                                  <option value="VIHAPR">Vinay Handprints</option>
+                                  <option value="VAE">Vinayak Arts and Exports</option>
+                                  <option value="VNYK">Vinayak Textiles</option>
+                                  <option value="VTK">Vinnakota Traditional Kalamkari</option>
+                                  <option value="VINNER">VINNER INTERNATIONAL</option>
+                                  <option value="VINOD">VINOD TEXTILES</option>
+                                  <option value="VIRKJU">Vira Khaju</option>
+                                  <option value="VIE">Virat Enterprises</option>
+                                  <option value="VISHAL">VISHAL WOOD CRAFTS</option>
+                                  <option value="VISHAZ">Vishaz Export</option>
+                                  <option value="VISHNU">Vishnu Enterprises</option>
+                                  <option value="VISHTX">Vishwas Textiles</option>
+                                  <option value="VI">Vision India</option>
+                                  <option value="VISVA">Visvanath Traders</option>
+                                  <option value="VIVALD">VIVALDI LEATHER PVT LTD</option>
+                                  <option value="VIVID">VIVID WORLD</option>
+                                  <option value="VKTEX">VK TEXTILES</option>
+                                  <option value="VKHL">VKHANDLOOM</option>
+                                  <option value="VOILA">Voila Inc.</option>
+                                  <option value="VOYLLA">Voylla Fashions Private Limited</option>
+                                  <option value="VRAJBH">Vrajbhoomi</option>
+                                  <option value="VNFF">Vrijesh Natural Fibre &amp; Fabrics(I)Pvt.Ltd</option>
+                                  <option value="WASEEM">WASEEM HANDLOOM</option>
+                                  <option value="WEHAND">We Handicrafts</option>
+                                  <option value="WnC">Weave n Craft</option>
+                                  <option value="WVTXSF">Weavetexstyle Fashions Private Limited</option>
+                                  <option value="WPAPER">WELL PAPER</option>
+                                  <option value="WELBRN">Wellburn Candles Pvt Ltd</option>
+                                  <option value="WESTRN">WESTERN TEXTILES</option>
+                                  <option value="WWPL">Westweaves Pvt. Ltd.</option>
+                                  <option value="WFBC">WFB BAIRD &amp; COMPANY (INDIA) PVT. LTD.(Cochin)</option>
+                                  <option value="WGLAZE">WINDGLAZE</option>
+                                  <option value="WINGRN">Wingreens Farms Pvt Ltd</option>
+                                  <option value="WINGOA">Wingreens Farms Pvt Ltd-GOA</option>
+                                  <option value="WINKRN">Wingreens Farms Pvt Ltd-KRN</option>
+                                  <option value="WINMAH">Wingreens Farms Pvt Ltd-MAH</option>
+                                  <option value="WINNCR">Wingreens Farms Pvt Ltd-NCR</option>
+                                  <option value="WINPUJ">Wingreens Farms Pvt Ltd-PUJ</option>
+                                  <option value="WINTEL">Wingreens Farms Pvt Ltd-TEL</option>
+                                  <option value="WINTN">Wingreens Farms Pvt Ltd-TN</option>
+                                  <option value="WINWB">Wingreens Farms Pvt Ltd-WB</option>
+                                  <option value="WIFPL">Wings ( India ) Fashions Pvt. Ltd.</option>
+                                  <option value="WWCT">Women Weave Charitable Trust</option>
+                                  <option value="WONCFT">Wonder Crafts</option>
+                                  <option value="WIPL">Woodson Impex Pvt Ltd</option>
+                                  <option value="WWEC">World Wide Export Centre</option>
+                                  <option value="YSHTEX">Yashoda Textiles</option>
+                                  <option value="YASMHL">YASMEEN HANDLOOM</option>
+                                  <option value="YAYAVR">Yayavar LLP</option>
+                                  <option value="YBR">Yellow Brick Road</option>
+                                  <option value="OCT">Yellow Leaf Designs LLP</option>
+                                  <option value="YOGITA">YOGITA KOSA HANDLOOM</option>
+                                  <option value="YIK">Yusuf Ibrahim Khatri</option>
+                                  <option value="ZAIDHL">ZAID HANDLOOM FACTORY</option>
+                                  <option value="zam">ZAM ZAM Printers</option>
+                                  <option value="ZEPL">Zaza Ecommerce Private Limited</option>
+                                  <option value="ZOA">Zoa Fashions Private Limited</option>
+                                  <option value="ZUBAIR">ZUBAIR HANDLOOM</option>
+                                  <option value="ZUBTEX">Zubair Textile</option>
+
+                                </select>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </tr>
+          </table>
+
+        </TD>
+      <!-- </TR> -->
+      <tr>
+        <td colspan=2 style="text-align: center"><input type="submit" name="btnSubmit" value="Save" id="btnSubmit"
+            style="color:#993333;background-color:#F0D9D9;font-family:Verdana;font-weight:bold;width:152px;margin-top: 0px;
+            margin-bottom: 12px;font-size: 13px;" />
+          <INPUT id="btnClose" type="button" onclick="window.close();" value="Close"
+            style="background-color: #F0D9D9; font-family: Verdana; color: #993333; font-weight: bold; width: 127px;font-size: 13px;" />
+
+          <input type="submit" name="Button1" value="Reset All" id="Button1"
+            style="color:#993333;background-color:#F0D9D9;font-family:Verdana;font-weight:bold;width:152px;font-size: 13px;" />
+
+        </td>
+      </tr>
+    </table>
+    <p>
+      <span id="Label1" style="color:Blue;width:100%;">* A blank selection box means that <B>nothing</B> has been
+        selected. It does not mean that "all" locations have been selected.</span>
+    </p>
+  </form>
+</body>
+
+</HTML>
