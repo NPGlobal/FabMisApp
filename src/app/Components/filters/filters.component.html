@@ -1,398 +1,542 @@
-<div class="AllFilters" *ngIf="HideAndShowFilters && HideAndShowFilters.length > 0">
+<form [formGroup]="FilterForm" (ngSubmit)="SearchRecords()" novalidate>
+  <!-- <div class="AllFilters" *ngIf="HideAndShowFilters && HideAndShowFilters.length > 0"> -->
+  <div class="AllFilters">
 
-  <div class="Calendars">
-    <label>From
-      <input class="menuFormat" type="date">
-    </label>
+    <!-- <div class="Calendars">
+      <div class="form-group" *ngIf="HideAndShowFilters[0].From">
+        <label for="FromDate">From
+          <input formControlName="FromDate" class="menuFormat" type="date">
+        </label>
+      </div>
 
-    <label>To
-      <input class="menuFormat" type="date">
-    </label>
+      <div class="form-group" *ngIf="HideAndShowFilters[0].To">
+        <label for="ToDate">To
+          <input formControlName="ToDate" class="menuFormat" type="date">
+        </label>
+      </div>
 
-    <label>Date
-      <input class="menuFormat" type="date">
-    </label>
+      <div class="form-group" *ngIf="HideAndShowFilters[0].Date">
+        <label for="Date">Date
+          <input formControlName="Date" class="menuFormat" type="date">
+        </label>
+      </div>
 
-    <label>Upto
-      <input class="menuFormat" type="date">
-    </label>
+      <div class="form-group" *ngIf="HideAndShowFilters[0].Upto">
+        <label for="UptoDate">Upto
+          <input formControlName="UptoDate" class="menuFormat" type="date">
+        </label>
+      </div>
+    </div> -->
+
+    <div class="Dropdowns">
+      <div>
+        <label>Seasonality
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Status
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div *ngIf="HideAndShowFilters[0].Division">
+        <label>Division
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div *ngIf="HideAndShowFilters[0].Dept">
+        <label>Dept
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Subdept
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Category
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Compn
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Subcompn
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Aspect1
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Aspect2
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Aspect3
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Aspect4
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Color
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Size
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>State Name
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>From Month-Year
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>To Month-Year
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Search on
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>EDA - Month
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>EDA - Year
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Target - Month
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Target - Year
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>DL Type
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>DL Format
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>SKU Master Name
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Below %
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Above %
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Month
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Year
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Type
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Value or %
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Status Selection
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Employee Name
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Report View
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>PO Status
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Shipped Status
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Report Type
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Promotions
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label>Source Type
+          <select class="menuFormat">
+            <option>Select</option>
+          </select>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="Popups">
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Promo/PH/Vendor Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">PH Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Store/PH Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">MR/Store/PH Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Store Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Promo Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">MR Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">From Store/ DC/ MRW/ PH
+        Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">To Store/ DC/ MRW/ PH
+        Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">From PH Filter</button>
+      <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Store Filter (POS Sale
+        Only)</button>
+    </div>
+
+    <div class="Textboxes">
+      <div class="form-group">
+        <label>Long Description
+          <input class="menuFormat input-sm" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>SKUID/ SKU Description
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>SKU Description
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>DL No/ PromoName/ Long Description
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>DL No
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Search
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Till No.
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Short TONo
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Short TINo
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Short SANO
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>SKU ID/Desc And Customer Search
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Free Search TONo
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Short Inv. No.
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Exchange Long RRNO.
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>FabConnect ID
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Gv No.
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Short PO No.
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>SKU Name
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Short GRN No.
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Short GR No.
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>PPINO
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>SI OrderNO
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>PO No.
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Short TR No.
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Short Source ID
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+      <div>
+        <label>Free Search On SKU
+          <input class="menuFormat" type="text">
+        </label>
+      </div>
+
+    </div>
+
+    <div class="Submit">
+      <label class="menuFormat">Export/ Print/ Screen</label>
+      <div class="form-group">
+        <label style="margin-left:10px; width:80px"><input name="exportAs" formControlName="exportAs" type="radio">Screen</label>
+        <label style="width:80px"><input name="exportAs" formControlName="exportAs" type="radio">Print</label>
+        <label style="margin-left:10px; width:80px"><input name="exportAs" formControlName="exportAs" type="radio">Excel</label>
+        <label style="width:80px"><input name="exportAs" formControlName="exportAs" type="radio">CSV</label>
+      </div>
+      <input style="color:#993333;background-color:#F0D9D9;font-family:Verdana;font-weight:bold;width:170px;"
+        type="submit" value="Submit">
+    </div>
+
   </div>
-
-  <div class="Dropdowns">
-    <label>Seasonality
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Status
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Division
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Dept
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Subdept
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Category
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Compn
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Subcompn
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Aspect1
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Aspect2
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Aspect3
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Aspect4
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Color
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Size
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>State Name
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>From Month-Year
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>To Month-Year
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Search on
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>EDA - Month
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>EDA - Year
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Target - Month
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Target - Year
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>DL Type
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>DL Format
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>SKU Master Name
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Below %
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Above %
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Month
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Year
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Type
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Value or %
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Status Selection
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Employee Name
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Report View
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>PO Status
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Shipped Status
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Report Type
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Promotions
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-    <label>Source Type
-      <select class="menuFormat">
-        <option>Select</option>
-      </select>
-    </label>
-
-  </div>
-
-  <div class="Popups">
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Promo/PH/Vendor Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">PH Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Store/PH Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">MR/Store/PH Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Store Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Promo Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">MR Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">From Store/ DC/ MRW/ PH
-      Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">To Store/ DC/ MRW/ PH Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">From PH Filter</button>
-    <button class="popup" type="button" data-toggle="modal" data-target="#myModal">Store Filter (POS Sale Only)</button>
-  </div>
-
-  <div class="Textboxes">
-    <label>Long Description
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>SKUID/ SKU Description
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>SKU Description
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>DL No/ PromoName/ Long Description
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>DL No
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Search
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Till No.
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Short TONo
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Short TINo
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Short SANO
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>SKU ID/Desc And Customer Search
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Free Search TONo
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Short Inv. No.
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Exchange Long RRNO.
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>FabConnect ID
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Gv No.
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Short PO No.
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>SKU Name
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Short GRN No.
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Short GR No.
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>PPINO
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>SI OrderNO
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>PO No.
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Short TR No.
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Short Source ID
-      <input class="menuFormat" type="text">
-    </label>
-
-    <label>Free Search On SKU
-      <input class="menuFormat" type="text">
-    </label>
-
-  </div>
-
-  <div class="Submit">
-    <label class="menuFormat">Export/ Print/ Screen</label>
-    <label style="margin-left:10px; width:80px"><input name="exportAs" type="radio">Screen</label>
-    <label style="width:80px"><input name="exportAs" type="radio">Print</label>
-    <label style="margin-left:10px; width:80px"><input name="exportAs" type="radio">Excel</label>
-    <label style="width:80px"><input name="exportAs" type="radio">CSV</label>
-    <input style="color:#993333;background-color:#F0D9D9;font-family:Verdana;font-weight:bold;width:170px;"
-      type="submit" value="Submit">
-  </div>
-
-</div>
-
+</form>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -400,10 +544,733 @@
         <h4 class="modal-title"></h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+        <!-- Start -->
+
+        <table style="WIDTH: 850px; HEIGHT: 431px" cellSpacing="0" border="0" class="ewrew">
+          <tr>
+            <td colspan="2" align="center">
+              <span id="lblCaption"
+                style="font-weight:bold;font-family:Verdana; font-size:14px;text-decoration:underline; text-align:center;">Please
+                Select - Store / PH Filter</span>
+            </td>
+          </tr>
+          <TR>
+            <TD vAlign="top" class="style1">
+              <table>
+                <tr>
+                  <td>
+                    <div id="Panel1" style="height:240px;">
+
+                      <table class="headerlabel">
+                        <tr>
+                          <td>Market Region &nbsp; &nbsp;
+                            <input id="Dummychk" type="checkbox" name="Dummychk" /><label for="Dummychk">Include
+                              Dummy</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <select size="4" name="lstUnselectedMR" multiple="multiple" id="lstUnselectedMR"
+                              class="headerlabelHand" style="height:112px;width:240px;">
+
+                            </select>
+                          </td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovRightMR" value=">" id="btnMovRightMR"
+                                    style="width:50px;" />
+
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovLeftMR" value="&lt;" id="btnMovLeftMR"
+                                    style="width:50px;" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovRightAllMR" value=">>" id="btnMovRightAllMR"
+                                    style="width:50px;" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovLeftAllMR" value="&lt;&lt;" id="btnMovLeftAllMR"
+                                    style="width:50px;" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td>
+                            <select size="4" name="lstSelectedMR" multiple="multiple" id="lstSelectedMR"
+                              class="headerlabelHand" style="height:117px;width:240px;">
+                              <option value="MR01">MR01-- Radhika Diesh</option>
+                              <option value="MR02">MR02-- Aartee Roy</option>
+                              <option value="MR03">MR03-- Sujata Absar</option>
+                              <option value="MR04">MR04-- Amrita Wali</option>
+                              <option value="MR05">MR05-- Charu Belle</option>
+                              <option value="MR06">MR06-- Saveen Sharma</option>
+                              <option value="MR10">MR10-- Gujrat</option>
+                              <option value="MR11">MR11-- Arun Naikar</option>
+                              <option value="MR12">MR12-- Ruchi Chugh</option>
+                              <option value="MR14">MR14-- Sujith KV</option>
+                              <option value="MRCW">MRCW-- SUNIL Rautela</option>
+
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td CssClass="headerlabelHand">Stores</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <select size="4" name="lstUnselectedStore" multiple="multiple" id="lstUnselectedStore"
+                              class="headerlabelHand" style="height:207px;width:240px;">
+                              <option value="ABUMM">ABUMM -- Abu Dhabi, Mushrif Mall</option>
+                              <option value="BHUTHM">BHUTHM -- Bhutan,Thimpu</option>
+                              <option value="DCEXP">DCEXP -- DCEXP</option>
+                              <option value="DXBBJM">DXBBJM -- Dubai, Burjman</option>
+                              <option value="DXBBUR">DXBBUR -- Dubai, Bur Dubai</option>
+                              <option value="DXBJUM">DXBJUM -- Dubai, Jumeirah</option>
+                              <option value="DXBMM">DXBMM -- Dubai, Madina Mall</option>
+                              <option value="EAST">EAST -- London,East Limited</option>
+                              <option value="MALKJT">MALKJT -- Malaysia, Jalan Towers</option>
+                              <option value="MAUTSP">MAUTSP -- Mauritius, TrianonSP</option>
+                              <option value="MEXFC">MEXFC -- Mexico, Fortin Chimalistac</option>
+                              <option value="NEPKMD">NEPKMD -- Nepal, Kathmandu</option>
+                              <option value="SHARCC">SHARCC -- Sharjah, City Centre</option>
+                              <option value="SINGPR">SINGPR -- Singapore</option>
+                              <option value="SINVC">SINVC -- Singapore, Vivo City</option>
+
+                            </select>
+                          </td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovRightStore" value=">" id="btnMovRightStore"
+                                    style="width:50px;" />
+
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovLeftStore" value="&lt;" id="btnMovLeftStore"
+                                    style="width:50px;" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovRightAllStore" value=">>" id="btnMovRightAllStore"
+                                    style="width:50px;" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovLeftAllStore" value="&lt;&lt;"
+                                    id="btnMovLeftAllStore" style="width:50px;" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td>
+                            <select size="4" name="lstSelectedStore" multiple="multiple" id="lstSelectedStore"
+                              class="headerlabelHand" style="height:212px;width:240px;">
+                              <option value="$ADOFF">$ADOFF -- Fashion Factory, Adoor</option>
+                              <option value="$AGMPE">$AGMPE -- Pariyath Estates Pvt Ltd, Angamaly</option>
+                              <option value="$AJRBS">$AJRBS -- Brij Sales, Ajmer</option>
+                              <option value="$ALLPE">$ALLPE -- Allepy, Pariyath Estates Pvt. Ltd</option>
+                              <option value="$AMDTC">$AMDTC -- Trident Creation, Bopal, Ahmedabad</option>
+                              <option value="$ANAVN">$ANAVN -- Chitram</option>
+                              <option value="$ANDPS">$ANDPS -- M/S. P&amp;S Company</option>
+                              <option value="$ANGKE">$ANGKE -- Kalpattaru Enterprises India</option>
+                              <option value="$BBIJP">$BBIJP -- Panda Retail Pvt. Ltd. Janpath</option>
+                              <option value="$BBIPM">$BBIPM -- Panda Retail Pvt. Ltd.</option>
+                              <option value="$BHJSI">$BHJSI -- Sheek Innovations, Bhuj</option>
+                              <option value="$BLPMC">$BLPMC -- M/S Divine Silks</option>
+                              <option value="$BLRBT">$BLRBT -- Banyan Tree LLP, Bangalore</option>
+                              <option value="$BLRDC">$BLRDC -- DISHA CREATIVE, HSR Layout</option>
+                              <option value="$BLRFM">$BLRFM -- Bhawar Lifestyle, Bangalore Forum Mall</option>
+                              <option value="$BLRHL">$BLRHL -- Bhawar Lifestyle, HSR Layout</option>
+                              <option value="$BLRMT">$BLRMT -- DISHA CREATIVE, Manyata Tech Park</option>
+                              <option value="$BLROM">$BLROM -- Bhawar Lifestyle, Bangalore Orion Mall</option>
+                              <option value="$BLRRR">$BLRRR -- ASG Textiles Pvt Ltd, RR Nagar</option>
+                              <option value="$BLRSD">$BLRSD -- Sri Durga Associates, Bangalore</option>
+                              <option value="$BLRVM">$BLRVM -- Bhawar Lifestyle, Bangalore Vega Mall</option>
+                              <option value="$BLRYH">$BLRYH -- Bhawar Lifestyle, Yelahanka</option>
+                              <option value="$BLYCR">$BLYCR -- Nainakshi Trendz, Bareilly</option>
+                              <option value="$BOMKE">$BOMKE -- M/s Akshar Inc.</option>
+                              <option value="$BOMSR">$BOMSR -- Seara, Mumbai</option>
+                              <option value="$BSCVL">$BSCVL -- VLS Lifestyle, Bokaro Steel City</option>
+                              <option value="$BVCRS">$BVCRS -- Rehan Sales, Bhavnagar</option>
+                              <option value="$CCUDR">$CCUDR -- Delta Retail, Barasat</option>
+                              <option value="$CCUFE">$CCUFE -- Funtail Enterprise, Kolkata</option>
+                              <option value="$COKPE">$COKPE -- Pariyath Estates Pvt. Ltd, Kakkanad</option>
+                              <option value="$CTKAA">$CTKAA -- Aadhar Apparels Pvt Ltd, Cuttack</option>
+                              <option value="$CTKAE">$CTKAE -- Adarsh Enterprisers</option>
+                              <option value="$DELFY">$DELFY -- Forever Young Spa &amp; Salons, Janakpuri</option>
+                              <option value="$DELJP">$DELJP -- M/s Cosmetic Stores Private Limited</option>
+                              <option value="$DELPR">$DELPR -- Sam Retail, Preet Vihar</option>
+                              <option value="$DELSH">$DELSH -- Southy Hospitality &amp; Services Pvt Ltd</option>
+                              <option value="$DELSR">$DELSR -- M/s Sam Retail, Pitampura</option>
+                              <option value="$DIBMR">$DIBMR -- NE Realcon Pvt Ltd., Dibrugarh</option>
+                              <option value="$DVGRR">$DVGRR -- Raj Retail, Davangere</option>
+                              <option value="$GHZIR">$GHZIR -- M/s IndusRoot Retail LLP, Mahagun</option>
+                              <option value="$GHZRN">$GHZRN -- Just 4 Her</option>
+                              <option value="$GHZSH">$GHZSH -- Indus Root Retail LLP, Shipra Mall</option>
+                              <option value="$GNCTC">$GNCTC -- Trident Creation, Gandhinagar</option>
+                              <option value="$GTKFR">$GTKFR -- Friends, Gangtok</option>
+                              <option value="$GTKPI">$GTKPI -- Passion India</option>
+                              <option value="$GUWGS">$GUWGS -- N E Realcon Pvt Ltd</option>
+                              <option value="$HDWVN">$HDWVN -- Vaishali Links, Haldwani</option>
+                              <option value="$HWSGN">$HWSGN -- M/s Sri Guru Nanak Emporium, Haridwar</option>
+                              <option value="$HYDMT">$HYDMT -- Sri Mahalaxmi Textiles, Hyderabad</option>
+                              <option value="$HYDPL">$HYDPL -- Premium Lifestyle and Fashion India, Kukatpally</option>
+                              <option value="$HYDZV">$HYDZV -- Zevaa, Gachibowli</option>
+                              <option value="$IDRSJ">$IDRSJ -- M/s Shreejini, Indore</option>
+                              <option value="$IMFPB">$IMFPB -- M/S D.K. &amp; Sons</option>
+                              <option value="$ITATS">$ITATS -- Takam Sara, Itanagar</option>
+                              <option value="$IXASK">$IXASK -- Surjya Kumar Banik Agency Pvt Ltd, Agartala</option>
+                              <option value="$IXCS7">$IXCS7 -- J A Marketing, Chandigarh Sec 07</option>
+                              <option value="$JGAPE">$JGAPE -- Pari Enterprise</option>
+                              <option value="$JLRAR">$JLRAR -- Aakriti Retails, Jalandhar</option>
+                              <option value="$KANCB">$KANCB -- Karsandas Vasanji</option>
+                              <option value="$KARKE">$KARKE -- Kabir Enterprises, Karnal</option>
+                              <option value="$KTUMD">$KTUMD -- Mrig Designs, Kota</option>
+                              <option value="$LDHRT">$LDHRT -- Rajesh Traders, Ludhiana</option>
+                              <option value="$LKOTL">$LKOTL -- Tex Lifestyle Retail Pvt Ltd</option>
+                              <option value="$MAAEC">$MAAEC -- M/s. Exclusive Indian Wear</option>
+                              <option value="$MAASR">$MAASR -- Sanor Retail, Chennai</option>
+                              <option value="$MAAVR">$MAAVR -- Bhawar Lifestyle, Annanagar Chennai</option>
+                              <option value="$MADKK">$MADKK -- S G JAYARAJ NADAR &amp; SON</option>
+                              <option value="$MFPKC">$MFPKC -- M/S ADAA</option>
+                              <option value="$MOHHV">$MOHHV -- Hill View Holiday Inn Pvt. Ltd., Mohali</option>
+                              <option value="$MRBNT">$MRBNT -- Narayan Traders, Moradabad</option>
+                              <option value="$MSHTC">$MSHTC -- Trident Creation, Mehsana</option>
+                              <option value="$MUTJP">$MUTJP -- OM Lifestyle</option>
+                              <option value="$NOIJR">$NOIJR -- M/s Jaiansh Retail LLP, Greater Noida</option>
+                              <option value="$PALSA">$PALSA -- S. A Associates</option>
+                              <option value="$PATSG">$PATSG -- Sarita Garments, Patna</option>
+                              <option value="$PATVB">$PATVB -- Verna Business Venture LLP, Patna</option>
+                              <option value="$PNPMT">$PNPMT -- Star Fibers</option>
+                              <option value="$PNQBE">$PNQBE -- Bhumika Enterprises</option>
+                              <option value="$POYTE">$POYTE -- THADAM ENTERPRISES LLP, Pollachi</option>
+                              <option value="$PUTTY">$PUTTY -- TruYogi Wellness, Puttaparthi</option>
+                              <option value="$ROHMT">$ROHMT -- M/S Suhana Enterprises, Rohtak</option>
+                              <option value="$ROUIF">$ROUIF -- Indera Fashions, Rourkela</option>
+                              <option value="$ROUIT">$ROUIT -- Indera Textiles, Rourkela</option>
+                              <option value="$RRKRE">$RRKRE -- Rishaanjal Enterprises, Roorkee</option>
+                              <option value="$RSHRJ">$RSHRJ -- M/s Sam Retail Ram Jhula</option>
+                              <option value="$RSHSR">$RSHSR -- Sam Retail, Rishikesh Laxman Jhula</option>
+                              <option value="$SECZV">$SECZV -- Zevaa House Private Limited</option>
+                              <option value="$SLGCC">$SLGCC -- GoodLife Venture</option>
+                              <option value="$SLGDV">$SLGDV -- Dream Ventures</option>
+                              <option value="$SXRIB">$SXRIB -- Ibrah, Srinagar</option>
+                              <option value="$SXVSF">$SXVSF -- M/S. The Salem Fabriic</option>
+                              <option value="$TNMRT">$TNMRT -- Rainbow Trading, Tiruvannamalai</option>
+                              <option value="$TPZKA">$TPZKA -- M/s Kuruvithadam Agnecies Pvt. Ltd.</option>
+                              <option value="$TPZSF">$TPZSF -- SPJ Fashions, Thodupuzha</option>
+                              <option value="$TRVKV">$TRVKV -- Soma Smart</option>
+                              <option value="$TRZPM">$TRZPM -- Phoenix Modular, Trichy</option>
+                              <option value="$TVLPE">$TVLPE -- Pariyath Estates Pvt Ltd, Thiruvalla</option>
+                              <option value="$TZPSK">$TZPSK -- S.K Enterprise, Tezpur</option>
+                              <option value="$VELVG">$VELVG -- M/s Velan Gifts, Apparels and Furnishings</option>
+                              <option value="$VIJMP">$VIJMP -- Fusion Ventures</option>
+                              <option value="$VNSBD">$VNSBD -- Beige, Varanasi</option>
+                              <option value="$YAMFS">$YAMFS -- The Family Store, Yamunanagar</option>
+                              <option value="$ZIRJA">$ZIRJA -- J.A Marketing, Zirakpur, Punjab</option>
+                              <option value="AGRCR">AGRCR -- Agra, Church Road</option>
+                              <option value="AGRTAJ">AGRTAJ -- Agra, Taj Mahal</option>
+                              <option value="AGRTDI">AGRTDI -- Agra, TDI Mall</option>
+                              <option value="ALDMGM">ALDMGM -- Allahabad, MG Marg</option>
+                              <option value="AMDAM">AMDAM -- Ahmedabad, Alpha One Mall</option>
+                              <option value="AMDBDH">AMDBDH -- Ahmedabad, Bodakdev Home</option>
+                              <option value="AMDBDV">AMDBDV -- Ahmedabad, Bodakdev</option>
+                              <option value="AMDCGR">AMDCGR -- Ahmedabad, CG Road/Law Garden</option>
+                              <option value="AMDGPM">AMDGPM -- Ahmedabad,Gulmohar Park Mall/Prahladnagar</option>
+                              <option value="AMDSQM">AMDSQM -- Ahmedabad, 4D Square mall</option>
+                              <option value="ATQMOA">ATQMOA -- Amritsar, Mall of Amritsar</option>
+                              <option value="ATQRA">ATQRA -- Amritsar, Ranjit Avenue</option>
+                              <option value="AURPM">AURPM -- Aurangabad, Prozone Mall</option>
+                              <option value="BARAKT">BARAKT -- Baroda, Akota</option>
+                              <option value="BARRC">BARRC -- Baroda, Racecourse</option>
+                              <option value="BARSQM">BARSQM -- Baroda, Centre Square Mall</option>
+                              <option value="BBIRAJ">BBIRAJ -- Bhubaneshwar, Rajpath</option>
+                              <option value="BELGAM">BELGAM -- Belgaum, Tilakwadi</option>
+                              <option value="BHAMLR">BHAMLR -- Bhatinda,Mall Road</option>
+                              <option value="BHICM">BHICM -- Bhiwadi, Capital Mall</option>
+                              <option value="BHODB">BHODB -- Bhopal, DB Mall</option>
+                              <option value="BHOTTN">BHOTTN -- Bhopal, TT Nagar\Arera Colony</option>
+                              <option value="BKPBH">BKPBH -- Backup Banjara Hills</option>
+                              <option value="BKPCMH">BKPCMH -- Backup CMH</option>
+                              <option value="BKPHP">BKPHP -- Backup Hindustan Park</option>
+                              <option value="BKPJB">BKPJB -- Backup Jeroo</option>
+                              <option value="BKPKM">BKPKM -- Backup - Khan Market</option>
+                              <option value="BKPKM2">BKPKM2 -- Bangalore, Backup, Koramangala2</option>
+                              <option value="BKPNH">BKPNH -- Mumbai, Khar Godown</option>
+                              <option value="BKPPBV">BKPPBV -- Backup Upholstery, MR06</option>
+                              <option value="BKPPHX">BKPPHX -- Bangalore, Backup, Phoenix Market City</option>
+                              <option value="BKPTPY">BKPTPY -- Backup Thamarapally</option>
+                              <option value="BLRABO">BLRABO -- Bangalore, Aditya Birla Online Fashion</option>
+                              <option value="BLRAHT">BLRAHT -- Bangalore, AH Towers</option>
+                              <option value="BLRAMZ">BLRAMZ -- Bangalore, Amazon Online</option>
+                              <option value="BLRBFM">BLRBFM -- Bangalore,Brookfield Mall</option>
+                              <option value="BLRBKK">BLRBKK -- Bangalore, Big Kids Kemp</option>
+                              <option value="BLRBNK">BLRBNK -- Bangalore, Banashankari</option>
+                              <option value="BLRBR">BLRBR -- Bangalore, Bel Road</option>
+                              <option value="BLRBSN">BLRBSN -- Bangalore, Basaveshwara Nagar</option>
+                              <option value="BLRCM2">BLRCM2 -- Bangalore, CMH Road2</option>
+                              <option value="BLRCMH">BLRCMH -- Bangalore, CMH Road</option>
+                              <option value="BLRCR">BLRCR -- Bangalore, Coles Road</option>
+                              <option value="BLRCS">BLRCS -- Bangalore, Commercial Street</option>
+                              <option value="BLRDVG">BLRDVG -- Bangalore, DVG Road</option>
+                              <option value="BLREC">BLREC -- Bangalore, Electronic City</option>
+                              <option value="BLREKM">BLREKM -- Bangalore, East Koramangala</option>
+                              <option value="BLREM">BLREM -- Bangalore, Eva Mall</option>
+                              <option value="BLREST">BLREST -- Bangalore, Esteem Mall/Sahakarnagar</option>
+                              <option value="BLRFAS">BLRFAS -- bangalore, fashionara online</option>
+                              <option value="BLRGM">BLRGM -- Bangalore, Garuda Mall</option>
+                              <option value="BLRGMK">BLRGMK -- Bangalore, Garuda Kiosk</option>
+                              <option value="BLRIA">BLRIA -- Bangalore, BIAL</option>
+                              <option value="BLRINT">BLRINT -- Bangalore, International Airport</option>
+                              <option value="BLRJN">BLRJN -- Bangalore, Jayanagar</option>
+                              <option value="BLRJP">BLRJP -- Bangalore, JP Nagar</option>
+                              <option value="BLRKHL">BLRKHL -- Bangalore, Kamanahalli</option>
+                              <option value="BLRKM2">BLRKM2 -- Bangalore, Koramangala2</option>
+                              <option value="BLRKMG">BLRKMG -- Bangalore, Koramangala</option>
+                              <option value="BLRMGR">BLRMGR -- Bangalore, MG Road</option>
+                              <option value="BLRMM">BLRMM -- Bangalore, Meenakshi Mall</option>
+                              <option value="BLRMS">BLRMS -- Bangalore, Mantri Square</option>
+                              <option value="BLRMYN">BLRMYN -- Bangalore, Myntra Online</option>
+                              <option value="BLROEM">BLROEM -- Bangalore, Orion East Mall</option>
+                              <option value="BLRPHX">BLRPHX -- Bangalore, Phoenix Market City</option>
+                              <option value="BLRSPR">BLRSPR -- Bangalore, Sarjapur Road</option>
+                              <option value="BLRVM">BLRVM -- Bangalore, Vittal Mallya</option>
+                              <option value="BLRWF">BLRWF -- Bangalore, Whitefield</option>
+                              <option value="BLYCL">BLYCL -- Barielly, Civil Lines</option>
+                              <option value="BOMAW">BOMAW -- Mumbai,Andheri West</option>
+                              <option value="BOMEPH">BOMEPH -- Mumbai, East Pali Hill</option>
+                              <option value="BOMEXB">BOMEXB -- Mumbai, Exhibitions</option>
+                              <option value="BOMGT2">BOMGT2 -- Mumbai,Ghatkopar2</option>
+                              <option value="BOMGTK">BOMGTK -- Mumbai, Ghatkopar</option>
+                              <option value="BOMIA">BOMIA -- Mumbai, Domestic Airport</option>
+                              <option value="BOMIA2">BOMIA2 -- Mumbai, Domestic Airport 2</option>
+                              <option value="BOMIMM">BOMIMM -- Mumbai, Inorbit Mall</option>
+                              <option value="BOMIMV">BOMIMV -- Mumbai, Vashi</option>
+                              <option value="BOMINF">BOMINF -- Mumbai, Infiniti Mall</option>
+                              <option value="BOMINS">BOMINS -- Mumbai, Institutional Sales</option>
+                              <option value="BOMINT">BOMINT -- Mumbai, International Airport</option>
+                              <option value="BOMJB">BOMJB -- Mumbai, Jeroo</option>
+                              <option value="BOMJDB">BOMJDB -- Mumbai, Juhu DB Mall</option>
+                              <option value="BOMJUH">BOMJUH -- Mumbai, Juhu</option>
+                              <option value="BOMKAL">BOMKAL -- Mumbai, Kalyan</option>
+                              <option value="BOMKEM">BOMKEM -- Mumbai, Kemps Corner</option>
+                              <option value="BOMKM">BOMKM -- Mumbai, Korum Mall Thane</option>
+                              <option value="BOMKSM">BOMKSM -- Mumbai, K Star</option>
+                              <option value="BOMKW">BOMKW -- Mumbai, Kurla West</option>
+                              <option value="BOMLNK">BOMLNK -- Mumbai, Linking Road</option>
+                              <option value="BOMLNT">BOMLNT -- Mumbai, Seawoods</option>
+                              <option value="BOMMUL">BOMMUL -- Mumbai, Mulund</option>
+                              <option value="BOMNH">BOMNH -- Mumbai, Khar</option>
+                              <option value="BOMOM">BOMOM -- Mumbai, Goregaon</option>
+                              <option value="BOMPBV">BOMPBV -- Mumbai, Palm Beach Vashi</option>
+                              <option value="BOMPH">BOMPH -- Mumbai, Pali Hill</option>
+                              <option value="BOMPMC">BOMPMC -- Mumbai, Phoenix Mall</option>
+                              <option value="BOMRAM">BOMRAM -- Mumbai, Runwal Mulund</option>
+                              <option value="BOMSTZ">BOMSTZ -- Mumbai, Santa Cruz</option>
+                              <option value="BOMTOH">BOMTOH -- Mumbai, Tranceocean</option>
+                              <option value="BOMTRD">BOMTRD -- Mumbai,Turner Road</option>
+                              <option value="BOMVIV">BOMVIV -- Mumbai, Viviana Mall, Thane</option>
+                              <option value="CALPTU">CALPTU -- Calicut, PT Usha Road</option>
+                              <option value="CCUAM">CCUAM -- Kolkata, Acropolis Mall</option>
+                              <option value="CCUBR">CCUBR -- Kolkata, Barasat</option>
+                              <option value="CCUCC2">CCUCC2 -- Kolkata, City Centre2</option>
+                              <option value="CCUCCM">CCUCCM -- Kolkata, City Centre</option>
+                              <option value="CCUHP">CCUHP -- Kolkata, Hindustan Park</option>
+                              <option value="CCUHPH">CCUHPH -- Kolkata, Hindustan Park Home</option>
+                              <option value="CCUHPM">CCUHPM -- Kolkata, Hindustan Park Mens</option>
+                              <option value="CCUJR">CCUJR -- Kolkata, Jessore Road</option>
+                              <option value="CCUKR">CCUKR -- Kolkata, Kankurgachi</option>
+                              <option value="CCULS">CCULS -- Kolkata, Loudon Street</option>
+                              <option value="CCUMM">CCUMM -- Kolkata, Metropolis Mall</option>
+                              <option value="CCUMSM">CCUMSM -- Kolkata, Mani Square Mall</option>
+                              <option value="CCUQM">CCUQM -- Kolkata, Quest Mall</option>
+                              <option value="CCURAJ">CCURAJ -- Kolkata, Rajarhaat</option>
+                              <option value="CCUSC">CCUSC -- Kolkata, South City Mall</option>
+                              <option value="CCUWP">CCUWP -- Kolkata, Allenby Road</option>
+                              <option value="CJBRCR">CJBRCR -- Coimbatore, Race Course Road</option>
+                              <option value="CJBRSP">CJBRSP -- Coimbatore, RS Puram</option>
+                              <option value="COKALR">COKALR -- Kochi, Alliance Residency</option>
+                              <option value="COKBPM">COKBPM -- Kochi, Bay Pride Mall</option>
+                              <option value="COKEDA">COKEDA -- Kochi, Edapally</option>
+                              <option value="COKFC">COKFC -- Kochi, Fort Cochin</option>
+                              <option value="COKLUL">COKLUL -- Kochi, Lulu Mall</option>
+                              <option value="COKNM">COKNM -- Kochi, Nucleus Mall</option>
+                              <option value="COKOM">COKOM -- Kochi, Oberon Mall</option>
+                              <option value="COKTPY">COKTPY -- Kochi, Thamarapally</option>
+                              <option value="COKVYT">COKVYT -- Kochi, Vyttila</option>
+                              <option value="COOGRH">COOGRH -- Coonoor, Grays Hill</option>
+                              <option value="DC01">DC01 -- DC01</option>
+                              <option value="DC02">DC02 -- DC02</option>
+                              <option value="DC03">DC03 -- DC03</option>
+                              <option value="DC04">DC04 -- DC04</option>
+                              <option value="DC05">DC05 -- DC05</option>
+                              <option value="DC06">DC06 -- DC06</option>
+                              <option value="DC07">DC07 -- DC07</option>
+                              <option value="DC08">DC08 -- DC08</option>
+                              <option value="DC09">DC09 -- DC09</option>
+                              <option value="DC10">DC10 -- DC10</option>
+                              <option value="DEDCKR">DEDCKR -- Dehradun, Chakrata Road</option>
+                              <option value="DEDRR">DEDRR -- Dehradun, Rajpur Road</option>
+                              <option value="DELCNT">DELCNT -- New Delhi, Delhi Cantt</option>
+                              <option value="DELCP">DELCP -- New Delhi, Connaught Place</option>
+                              <option value="DELCP2">DELCP2 -- New Delhi, CP2</option>
+                              <option value="DELCTT">DELCTT -- New Delhi, Cantonment</option>
+                              <option value="DELCWH">DELCWH -- CWH Server</option>
+                              <option value="DELDW7">DELDW7 -- New Delhi, Dwarka Sec-7</option>
+                              <option value="DELDWK">DELDWK -- New Delhi, Dwarka</option>
+                              <option value="DELE1">DELE1 -- New Delhi, East GKN7</option>
+                              <option value="DELE2">DELE2 -- New Delhi, East Saket</option>
+                              <option value="DELEXB">DELEXB -- New Delhi, Exhibitions</option>
+                              <option value="DELEXP">DELEXP -- Exports,Exports</option>
+                              <option value="DELFO">DELFO -- New Delhi, Sarita Vihar</option>
+                              <option value="DELG14">DELG14 -- New Delhi, GK1 N14</option>
+                              <option value="DELG5">DELG5 -- New Delhi, GK1 N5</option>
+                              <option value="DELG57">DELG57 -- New Delhi, GK1M57</option>
+                              <option value="DELG7">DELG7 -- New Delhi, GK1 N7</option>
+                              <option value="DELGPK">DELGPK -- New Delhi, Green Park</option>
+                              <option value="DELIA">DELIA -- New Delhi, DIAL</option>
+                              <option value="DELINT">DELINT -- New Delhi, IGIA TERMINAL 3</option>
+                              <option value="DELKB">DELKB -- New Delhi, Karol Bagh</option>
+                              <option value="DELKM">DELKM -- New Delhi, Khan Market</option>
+                              <option value="DELKN">DELKN -- New Delhi, North Campus</option>
+                              <option value="DELLN">DELLN -- New Delhi, Lajpat Nagar</option>
+                              <option value="DELMCM">DELMCM -- New Delhi, Meharchand Market</option>
+                              <option value="DELMKP">DELMKP -- New Delhi, Kapashera Warehouse</option>
+                              <option value="DELMKT">DELMKT -- New Delhi, DelWeb Markets Store</option>
+                              <option value="DELMT">DELMT -- New Delhi, Model Town</option>
+                              <option value="DELPB">DELPB -- New Delhi, Punjabi Bagh</option>
+                              <option value="DELPL">DELPL -- New Delhi, DLF Place VK</option>
+                              <option value="DELPV">DELPV -- New Delhi, Preet Vihar</option>
+                              <option value="DELRG">DELRG -- New Delhi, Rajouri Garden</option>
+                              <option value="DELSAN">DELSAN -- New Delhi, Santushti</option>
+                              <option value="DELSC">DELSC -- New Delhi, select Citywalk</option>
+                              <option value="DELSE">DELSE -- New Delhi, South Extention</option>
+                              <option value="DELSUV">DELSUV -- New Delhi, Sundar Vihar</option>
+                              <option value="DELVK">DELVK -- New Delhi, Vasant Kunj</option>
+                              <option value="DELWEB">DELWEB -- Webstore, Webstore</option>
+                              <option value="DIBKLM">DIBKLM -- Dibrugarh, Khalihamari</option>
+                              <option value="DURCC">DURCC -- Durgapur, City Centre</option>
+                              <option value="FBDNIT">FBDNIT -- Faridabad, NIT</option>
+                              <option value="FBDS16">FBDS16 -- Faridabad, Sector 16</option>
+                              <option value="FFW01S">FFW01S -- FFW, Delhi</option>
+                              <option value="FFW03S">FFW03S -- FFW, Kolkata</option>
+                              <option value="FFW04S">FFW04S -- FFW, Bangalore</option>
+                              <option value="FFW05S">FFW05S -- FFW, Chennai</option>
+                              <option value="FFW06S">FFW06S -- FFW, Mumbai</option>
+                              <option value="FFW08S">FFW08S -- FFW, Hyderabad</option>
+                              <option value="FFW09S">FFW09S -- FFW, Kerala</option>
+                              <option value="GBRGH">GBRGH -- Gulbarga, Gold Hub</option>
+                              <option value="GGNAIM">GGNAIM -- Gurgaon, Ambi Mall</option>
+                              <option value="GGNDTM">GGNDTM -- Gurgaon, DT Mall</option>
+                              <option value="GGNGAL">GGNGAL -- Gurgaon, Galleria</option>
+                              <option value="GGNGE">GGNGE -- Gurgaon, Good Earth Centre</option>
+                              <option value="GGNMGF">GGNMGF -- Gurgaon, MGF Mall</option>
+                              <option value="GGNMM">GGNMM -- Gurgaon, MGF Metropolitan</option>
+                              <option value="GGNPV">GGNPV -- Gurgaon, Palam Vihar</option>
+                              <option value="GGNS15">GGNS15 -- Gurgaon, Sector 15</option>
+                              <option value="GGNS29">GGNS29 -- Gurgaon, Sector 29</option>
+                              <option value="GGNSPM">GGNSPM -- Gurgaon, South Point Mall</option>
+                              <option value="GHZMAH">GHZMAH -- Ghaziabad, Mahagun Metro Mall</option>
+                              <option value="GHZPAC">GHZPAC -- Ghaziabad, Pacific Mall</option>
+                              <option value="GHZSM">GHZSM -- Ghaziabad, Shipra Mall</option>
+                              <option value="GOIASG">GOIASG -- Goa, Assagao</option>
+                              <option value="GOIBAG">GOIBAG -- Goa, Baga</option>
+                              <option value="GOICAN">GOICAN -- Goa, Candolim</option>
+                              <option value="GOIEXB">GOIEXB -- Goa, Exhibitions</option>
+                              <option value="GOIMAL">GOIMAL -- Goa, Mall De Goa</option>
+                              <option value="GOIMDG">GOIMDG -- Goa, Madgao</option>
+                              <option value="GOIMPC">GOIMPC -- Goa, Mapuca</option>
+                              <option value="GOIPAL">GOIPAL -- Goa, Palolem</option>
+                              <option value="GOIPJM">GOIPJM -- Goa, Panjim</option>
+                              <option value="GOIVAS">GOIVAS -- Goa, Vasco</option>
+                              <option value="GOIZUR">GOIZUR -- Goa, Zuri</option>
+                              <option value="GUWMGR">GUWMGR -- Guwahati, MG Road</option>
+                              <option value="GUWSPG">GUWSPG -- Guwahati, Spanish Garden</option>
+                              <option value="GWLCC">GWLCC -- Gwalior, City Centre</option>
+                              <option value="HDWNR">HDWNR -- Haldwani, Nainital Road</option>
+                              <option value="HOWAVM">HOWAVM -- Howrah, Avni Mall</option>
+                              <option value="HREXB">HREXB -- Haryana, Exhibition</option>
+                              <option value="HUBKR">HUBKR -- Hubli, Koppikar Road</option>
+                              <option value="HUBUOM">HUBUOM -- Hubli, Urban Oasis Mall</option>
+                              <option value="HYDBB">HYDBB -- Hyderabad,BasheerBagh/Himayat Nagar</option>
+                              <option value="HYDBH">HYDBH -- Hyderabad, Banjara Hills</option>
+                              <option value="HYDBP">HYDBP -- Hyderabad, Begumpet</option>
+                              <option value="HYDFM">HYDFM -- Hyderabad, Forum Mall</option>
+                              <option value="HYDGBL">HYDGBL -- Hyderabad, Gachibowli</option>
+                              <option value="HYDGMR">HYDGMR -- Hyderabad, International Airport</option>
+                              <option value="HYDGVK">HYDGVK -- Hyderabad, GVK</option>
+                              <option value="HYDHN">HYDHN -- Hyderabad, Himayath Nagar</option>
+                              <option value="HYDIM">HYDIM -- Hyderabad, Inorbit Mall</option>
+                              <option value="HYDINT">HYDINT -- Hyderabad, International Airport</option>
+                              <option value="HYDJH">HYDJH -- Hyderabad, Jubilee Hills</option>
+                              <option value="HYDSC">HYDSC -- Hyderabad, Sarath City Capital Mall</option>
+                              <option value="HYDSOM">HYDSOM -- Hyderabad, Somajiguda</option>
+                              <option value="IDRMGR">IDRMGR -- Indore, AB Road</option>
+                              <option value="IDRTIM">IDRTIM -- Indore, Treasure Island Mall</option>
+                              <option value="ISKCC">ISKCC -- Nashik, City Centre</option>
+                              <option value="ISKCR">ISKCR -- Nashik, College Road</option>
+                              <option value="ISKNCZ">ISKNCZ -- Nashik, Neelkamal Comm Zone</option>
+                              <option value="IXCEM">IXCEM -- Chandigarh, Elante Mall</option>
+                              <option value="IXCEXB">IXCEXB -- Chandigarh, Exhibition</option>
+                              <option value="IXCS9C">IXCS9C -- Chandigarh, Sector 17-A</option>
+                              <option value="IXEEM">IXEEM -- Mangalore, Empire Mall</option>
+                              <option value="IXWHST">IXWHST -- Jamshedpur, HS Tower/Virdi Niwas</option>
+                              <option value="IXYMM">IXYMM -- Gandhidham, Main Market</option>
+                              <option value="JABLJK">JABLJK -- Jabalpur, Lajpat Kunj</option>
+                              <option value="JAIEXB">JAIEXB -- Jaipur, Exhibitions</option>
+                              <option value="JAIMGF">JAIMGF -- Jaipur, MGF Mall</option>
+                              <option value="JAIPRR">JAIPRR -- Jaipur, Prithviraj Road</option>
+                              <option value="JAISM">JAISM -- Jaipur, Sarojini Marg</option>
+                              <option value="JAIVN">JAIVN -- Jaipur, Vaishali Nagar</option>
+                              <option value="JAMGN">JAMGN -- Jammu, Gandhi Nagar</option>
+                              <option value="JDHPCH">JDHPCH -- Jodhpur,Panchbatti/Circuit House Rd</option>
+                              <option value="JDHSCR">JDHSCR -- Jodhpur, Sardarpura C Road</option>
+                              <option value="JLRUE">JLRUE -- Jalandhar, Urban Estate/Model Town</option>
+                              <option value="KARJC">KARJC -- Karnal, Jarnali Colony</option>
+                              <option value="KNUCL">KNUCL -- Kanpur, Civil Lines/Z Square Mall</option>
+                              <option value="KOHTP">KOHTP -- Kolhapur, Tarabai Park</option>
+                              <option value="KOLKM">KOLKM -- Kollam, K Mall</option>
+                              <option value="KOLQP">KOLQP -- Kollam, Quilon Plaza</option>
+                              <option value="KOTKKR">KOTKKR -- Kottayam, Kerala</option>
+                              <option value="KURUK">KURUK -- Kurukshetra, .</option>
+                              <option value="LDHMR">LDHMR -- Ludhiana, Mall Road</option>
+                              <option value="LKOAC">LKOAC -- Lucknow, One Awadh Center</option>
+                              <option value="LKOAG">LKOAG -- Lucknow, Aliganj</option>
+                              <option value="LKOGN">LKOGN -- Lucknow, Gomti Nagar</option>
+                              <option value="LKOHJ">LKOHJ -- Lucknow, Hazratganj</option>
+                              <option value="LKOWEM">LKOWEM -- Lucknow, West End</option>
+                              <option value="MAAAN">MAAAN -- Chennai, Annanagar</option>
+                              <option value="MAABN">MAABN -- Chennai, Besantnagar</option>
+                              <option value="MAABN2">MAABN2 -- Chennai, Besant Nagar2</option>
+                              <option value="MAACPT">MAACPT -- Chennai, Chrompet</option>
+                              <option value="MAAECR">MAAECR -- Chennai, East Coast Road</option>
+                              <option value="MAAEM">MAAEM -- Chennai, Express Mall</option>
+                              <option value="MAAEXB">MAAEXB -- Chennai, Exhibitions</option>
+                              <option value="MAAFVM">MAAFVM -- Chennai, Forum Mall</option>
+                              <option value="MAAIH">MAAIH -- Chennai, Ilford House</option>
+                              <option value="MAAKD">MAAKD -- Chennai, Kodambakkam</option>
+                              <option value="MAAKK">MAAKK -- Chennai, KK Nagar/Ashok Nagar</option>
+                              <option value="MAARKS">MAARKS -- Chennai, R.K. Salai/TTK Road</option>
+                              <option value="MAASP">MAASP -- Chennai, Spencer Plaza/KNK Road</option>
+                              <option value="MAATN">MAATN -- Chennai, T Nagar</option>
+                              <option value="MAAVEL">MAAVEL -- Chennai, Velachery</option>
+                              <option value="MNPLGV">MNPLGV -- Manipal, Green View</option>
+                              <option value="MOHP5">MOHP5 -- Mohali, Phase 5</option>
+                              <option value="MRCWBM">MRCWBM -- B&amp;M Store</option>
+                              <option value="MRCWST">MRCWST -- MRCW Store</option>
+                              <option value="MRW01S">MRW01S -- MRW01 Storage</option>
+                              <option value="MRW02S">MRW02S -- MRW02 Storage</option>
+                              <option value="MRW03S">MRW03S -- MRW03 Storage</option>
+                              <option value="MRW04S">MRW04S -- MRW04 Storage</option>
+                              <option value="MRW05S">MRW05S -- MRW05 Storage</option>
+                              <option value="MRW06S">MRW06S -- MRW06 Storage</option>
+                              <option value="MRW07S">MRW07S -- MRW07 Storage</option>
+                              <option value="MRW08S">MRW08S -- MRW08 Storage</option>
+                              <option value="MRW09S">MRW09S -- MRW09 Storage</option>
+                              <option value="MRW10S">MRW10S -- MRW10 Storage</option>
+                              <option value="MRW11S">MRW11S -- MRW11 Storage</option>
+                              <option value="MYSJLB">MYSJLB -- Mysore, JLB Road</option>
+                              <option value="NAGEM">NAGEM -- Nagpur, Empress Mall</option>
+                              <option value="NAGLCS">NAGLCS -- Nagpur, Law College Square</option>
+                              <option value="NELJNR">NELJNR -- Nellore, JN Road</option>
+                              <option value="NOIGGM">NOIGGM -- Noida, Gardens Galleria Mall</option>
+                              <option value="NOIGIP">NOIGIP -- Noida, Great India Place</option>
+                              <option value="NOILCC">NOILCC -- Noida, Logix City Centre- Home Store</option>
+                              <option value="NOIMOI">NOIMOI -- Noida, Mall of India</option>
+                              <option value="NOISTR">NOISTR -- Noida, Starling</option>
+                              <option value="NOISW">NOISW -- Noida, Spice/Logix City Centre-Garments</option>
+                              <option value="PATFR">PATFR -- Patna, Fraser Road/Budha Marg</option>
+                              <option value="PATPTP">PATPTP -- Patna, Patliputra</option>
+                              <option value="PCW01">PCW01 -- PCW, Rudrapur, Uttarakhand</option>
+                              <option value="PCW01A">PCW01A -- PCW, Noida, UP</option>
+                              <option value="PCW01B">PCW01B -- PCW, Gurgaon, HR</option>
+                              <option value="PCW01C">PCW01C -- PCW, Haridwar, UL</option>
+                              <option value="PCW01D">PCW01D -- PCW, Jammu, JK</option>
+                              <option value="PCW02">PCW02 -- PCW, Ghaziabad, Uttarpradesh</option>
+                              <option value="PCW03">PCW03 -- PCW, Bhubaneshwar, Orissa</option>
+                              <option value="PCW03B">PCW03B -- PCW, Patna</option>
+                              <option value="PCW03C">PCW03C -- PCW, Raipur, Chhattisgarh</option>
+                              <option value="PCW08">PCW08 -- PCW,Vijayawada, AP</option>
+                              <option value="PCW10">PCW10 -- PCW, Ahmedabad, Gujrat</option>
+                              <option value="PKLS9">PKLS9 -- Panchkula, Sector 9</option>
+                              <option value="PNQA2">PNQA2 -- Pune, Arcade 02</option>
+                              <option value="PNQAMN">PNQAMN -- Pune, Amanora</option>
+                              <option value="PNQAND">PNQAND -- Pune, Aundh</option>
+                              <option value="PNQCWD">PNQCWD -- Pune, Chinchwad</option>
+                              <option value="PNQIM">PNQIM -- Pune, Inorbit Mall</option>
+                              <option value="PNQKP">PNQKP -- Pune, Koregaon Park</option>
+                              <option value="PNQPMC">PNQPMC -- Pune, Phoenix Market City</option>
+                              <option value="PNQRDM">PNQRDM -- Pune, R Mall Deccan/ JM Road</option>
+                              <option value="PNQSR">PNQSR -- Pune, Sassoon Road</option>
+                              <option value="PONRS">PONRS -- Pondicherry, Rue Suffren/Mission Street</option>
+                              <option value="PSCSAM">PSCSAM -- PSC, Samplestore</option>
+                              <option value="PTHKT">PTHKT -- Pathankot</option>
+                              <option value="PTLNLB">PTLNLB -- Patiala, New Leela</option>
+                              <option value="RAJCRM">RAJCRM -- Rajkot, Crystal Mall</option>
+                              <option value="RAJTGR">RAJTGR -- Rajkot, Tagore Road</option>
+                              <option value="RANEM">RANEM -- Ranchi, Dangra Toli Chowk</option>
+                              <option value="RANKR">RANKR -- Ranchi, Kanke Road</option>
+                              <option value="RISHI">RISHI -- Rishikesh, Laxman Jhula</option>
+                              <option value="RPRAM">RPRAM -- Raipur, Ambuja Mall</option>
+                              <option value="RPRCM">RPRCM -- Raipur, City Mall</option>
+                              <option value="RPRMM">RPRMM -- Raipur, Magneto Mall</option>
+                              <option value="RPRPND">RPRPND -- Raipur, City Central Mall Pandri</option>
+                              <option value="RRKCL">RRKCL -- Roorkee, Civil Lines</option>
+                              <option value="SANMM">SANMM -- Sangli, SFC Megaa Mall</option>
+                              <option value="SECRM">SECRM -- Secunderabad, Rainbow Mall</option>
+                              <option value="SLGCM">SLGCM -- Siliguri, Cosmos Mall</option>
+                              <option value="STVIM">STVIM -- Surat, Iscon Mall</option>
+                              <option value="STVVRM">STVVRM -- Surat, Virtuous Mall</option>
+                              <option value="THRFN">THRFN -- Thrissur, Fathima Nagar</option>
+                              <option value="THRSC">THRSC -- Thrissur, Sobha City</option>
+                              <option value="TRVANP">TRVANP -- Trivandrum, Anupama</option>
+                              <option value="TRVPAT">TRVPAT -- Trivandrum, Pattom Road</option>
+                              <option value="TRZTN">TRZTN -- Trichy,Thillai Nagar</option>
+                              <option value="UDRRKM">UDRRKM -- Udaipur, RKAY Mall</option>
+                              <option value="UPEXB">UPEXB -- UP, Exhibitions</option>
+                              <option value="VAPCR">VAPCR -- Vapi, Chala Road</option>
+                              <option value="VELKN">VELKN -- Vellore, Krishna Nagar</option>
+                              <option value="VIJRPL">VIJRPL -- Vijayawada, Ripple Mall</option>
+                              <option value="VNSSN">VNSSN -- Varanasi, Shastri Nagar</option>
+                              <option value="VTZSRI">VTZSRI -- Vizag, Siripuram</option>
+                              <option value="YAMGOB">YAMGOB -- Yamunagar, Gobindpuriroad</option>
+
+                            </select>
+                          </td>
+                        </tr>
+                      </table>
+
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </TD>
+            <TD vAlign="top" class="style2">
+              <table>
+                <tr>
+                  <td>
+                    <div id="Panel2" style="height:240px;">
+
+                      <table>
+
+                        <tr>
+                          <td class="headerlabel">PH</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <select size="4" name="lstUnselectedSRC" multiple="multiple" id="lstUnselectedSRC"
+                              class="headerlabel" style="height:358px;width:90px;">
+
+                            </select>
+                          </td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovRightSRC" value=">" id="btnMovRightSRC"
+                                    style="width:50px;" />
+
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovLeftSRC" value="&lt;" id="btnMovLeftSRC"
+                                    style="width:50px;" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovRightAllSRC" value=">>" id="btnMovRightAllSRC"
+                                    style="width:50px;" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type="submit" name="btnMovLeftAllSRC" value="&lt;&lt;" id="btnMovLeftAllSRC"
+                                    style="width:50px;" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td>
+                            <select size="4" name="lstSelectedSRC" multiple="multiple" id="lstSelectedSRC"
+                              class="headerlabel" style="height:358px;width:90px;">
+                              <option value="BM12">mum.mvk</option>
+                              <option value="NWH">NWH</option>
+                              <option value="NWHSTR">nwh.store</option>
+                              <option value="AH08">ph.ahmedabad</option>
+                              <option value="AM09">ph.amroha</option>
+                              <option value="BA13">ph.bangalore</option>
+                              <option value="BJ10">ph.bijnor</option>
+                              <option value="CN15">ph.chennai</option>
+                              <option value="DL11">ph.delhi-a</option>
+                              <option value="DL16">ph.delhi-b</option>
+                              <option value="DMPH">ph.dummy</option>
+                              <option value="AP14">ph.hyderabad</option>
+                              <option value="CH07">ph.indore</option>
+                              <option value="JA02">ph.jaipur</option>
+                              <option value="JD03">ph.jodhpur</option>
+                              <option value="KL05">ph.kolkata</option>
+                              <option value="PSCPH">PSC.SamplePH</option>
+                              <option value="QCDL11">QC.DL11PH</option>
+                              <option value="QCPH">QC.SamplePH</option>
+                              <option value="B2CPH">Web.PH</option>
+
+                            </select>
+                          </td>
+                        </tr>
+                      </table>
+
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+            </TD>
+          </TR>
+          <tr>
+            <!-- <td colspan=2 style="text-align: center"><input type="submit" name="btnSubmit" value="Save" id="btnSubmit"
+                style="color:#993333;background-color:#F0D9D9;font-family:Verdana;font-weight:bold;width:152px;" />
+              <INPUT id="btnClose" type="button" onclick="window.close();" value="Close"
+                style="background-color: #F0D9D9; font-family: Verdana; color: #993333; font-weight: bold; width: 127px;">
+
+              <input type="submit" name="Button1" value="Reset All" id="Button1"
+                style="color:#993333;background-color:#F0D9D9;font-family:Verdana;font-weight:bold;width:152px;" />
+
+            </td> -->
+          </tr>
+        </table>
+
+
+        <!-- End -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        <div colspan=2 style="text-align: center"><input type="submit" name="btnSubmit" value="Save" id="btnSubmit"
+            style="color:#993333;background-color:#F0D9D9;font-family:Verdana;font-weight:bold;width:152px;" />
+          <INPUT id="btnClose" type="button" onclick="window.close();" value="Close"
+            style="background-color: #F0D9D9; font-family: Verdana; color: #993333; font-weight: bold; width: 127px;">
+
+          <input type="submit" name="Button1" value="Reset All" id="Button1"
+            style="color:#993333;background-color:#F0D9D9;font-family:Verdana;font-weight:bold;width:152px;" />
+
+        </div>
       </div>
     </div>
   </div>

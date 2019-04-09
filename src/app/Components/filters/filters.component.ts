@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { switchMap } from 'rxjs/operators';
 import { FilterService } from 'src/app/Services/filter.service';
 
@@ -10,11 +11,13 @@ import { FilterService } from 'src/app/Services/filter.service';
 })
 export class FiltersComponent implements OnInit {
 
+  FilterForm: FormGroup;
   menuId: string;
   FilterList: any[];
-  HideAndShowFilters: any[];
+  HideAndShowFilters: any;
   constructor(private _route: ActivatedRoute,
-    private _filter: FilterService) { }
+    private _filter: FilterService,
+    private _fb: FormBuilder) { }
 
   ngOnInit() {
     this._route.paramMap.subscribe((data) => {
@@ -23,17 +26,34 @@ export class FiltersComponent implements OnInit {
         this.GetReport(this.menuId);
       }
     });
+    this.InitializeFormControls();
+  }
+
+  InitializeFormControls() {
+    this.FilterForm = this._fb.group({
+      // Calendars
+      FromDate: [''],
+      ToDate: [''],
+      Date: [''],
+      UptoDate: [''],
+
+      // Dropdowns
+
+      // Textboxes
+
+      // Radio Button
+      exportAs: ['']
+    });
   }
 
   GetReport(menuId: string) {
-    // this._filter.GetMenuListAndFilterData().subscribe((data) => {
-    //   this.FilterList = data.Table[1];
-    // });
-
-    if (this.FilterList) {
-      // tslint:disable-next-line:triple-equals
-      this.HideAndShowFilters = this.FilterList.filter(x => x.MenuID == menuId);
-    }
+    this._filter.GetMenuListAndFilterData().subscribe((data) => {
+      this.FilterList = data.FilterData;
+      if (this.FilterList) {
+        this.HideAndShowFilters = this.FilterList.filter(x => x.MenuId === Number(menuId));
+        console.log(this.HideAndShowFilters[0].MenuId);
+      }
+    });
   }
 
 }

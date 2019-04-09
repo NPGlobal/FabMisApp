@@ -35,3 +35,8 @@
     color:  rgb(153, 51, 51);
     cursor: pointer;
 }
+
+.modal-content{
+    width: 1000px;
+    margin-left: -94px;
+}

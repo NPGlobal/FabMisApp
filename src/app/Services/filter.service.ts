@@ -6,12 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FilterService {
-
-  origin = 'localhost://';
+  origin = 'https://localhost:44396/';
   constructor(private _http: HttpClient) { }
 
   GetMenuListAndFilterData(): Observable<any> {
-    const apiUrl = this.origin + 'api/Controler/GetMenuListAndFilterData/';
+    const apiUrl = this.origin + 'api/Menu/GetMenuListAndFilterData';
     return this._http.get<any>(apiUrl);
   }
 }
